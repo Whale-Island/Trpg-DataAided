@@ -14,7 +14,7 @@ namespace Trpg_DataAided
         public void InitFromData(Player player)
         {
             this.player = player;
-            textBox37.Text = player.Nickname;
+            NicknameTextBox.Text = player.Nickname;
           
 
         }
@@ -77,6 +77,11 @@ namespace Trpg_DataAided
         private void textBox37_TextChanged(object sender, EventArgs e)
         {
             player.Nickname = sender.ToString();
+        }
+
+        private void textBox42_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
     }
