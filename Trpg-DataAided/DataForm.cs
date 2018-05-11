@@ -5,7 +5,7 @@ namespace Trpg_DataAided
 {
     public partial class DataForm : Form
     {
-        Player player =new Player();
+        Player player = new Player();
         public DataForm()
         {
             InitializeComponent();
@@ -178,17 +178,42 @@ namespace Trpg_DataAided
             float Gain = ((int)(Physique * 0.05)) * 0.2f;
             int Gain_Turn = (int)Gain;
             float SpellResistance = ((int)((Physique * 0.1) + (Magic * 0.2) + (Resolution * 0.1))) * 0.05f;
-            int Exp = (((int)(Lore * 1)) / 5) * 5;
-            float Exp_p = Exp * 0.01f;
+            int Exp = (int)((Lore * 1) / 5) * 5;
             int Hide = 0;
             float Endurance = 20 + ((int)((Strength * 0.5) + (Physique * 1) + (Nimble * 0.5) + (Resolution * 0.2)) / 10) * 20;
             float Load = 15 + (int)((Strength * 0.5) + (Physique * 1) + (Nimble * 0.1) + (Lore * 0.1) + (Resolution * 0.2)) * 5;
             float Energy = 100 + (int)((Strength * 0.2) + (Physique * 1) + (Nimble * 0.2) + (Resolution * 0.5)) * 5;
             int SpellDamage = (int)(Magic * 0.5);
-            float SpellDamage_p = SpellDamage * 0.05f;
             float Nous = 50 + (int)((Magic * 0.2) + (Lore * 0.5) + (Resolution * 0.2) + (Perception * 0.5)) * 10;
             float Sanity = 4 + (int)((Resolution * 0.5) + (Glamour * 0.2) + (Perception * 0.2) + (Inspiration * 0.2));
             int Luck = 0;
+
+            HP_Dice = (int)((player.HP_Addition + HP_Dice) * player.HP_Percent);
+            HP_Recovery = (int)((player.HP_Recovery_Addition + HP_Recovery) * player.HP_Recovery_Percent);
+            MANA = (int)((player.MANA_Addition + MANA) * player.MANA_Percent);
+            MANA_Recovery = (int)((player.MANA_Recovery_Addition + MANA_Recovery) * player.MANA_Recovery_Percent);
+            Speed = (int)((player.Speed_Addition + Speed) * player.Speed_Percent);
+            Chant = (int)((player.Chant_Addition + Chant) * player.Chant_Percent);
+            Accuracy = (int)((player.Accuracy_Addition + Accuracy) * player.Accuracy_Percent);
+            Dodge = (int)((player.Dodge_Addition + Dodge) * player.Dodge_Percent);
+            Critical = (int)((player.Critical_Addition + Critical) * player.Critical_Percent);
+            DamageGain = (int)((player.DamageGain_Addition + DamageGain) * player.DamageGain_Percent);
+            DamageMitigation = (int)((player.DamageMitigation_Addition + DamageMitigation) * player.DamageMitigation_Percent);
+            Gain = (int)((player.Gain_Addition + Gain) * player.Gain_Percent);
+            Gain_Turn = (int)((player.Gain_Addition + Gain_Turn) * player.Gain_Percent);
+            SpellResistance = (int)((player.SpellResistance_Addition + SpellResistance) * player.SpellResistance_Percent);
+            Exp = (int)((player.Exp_Addition + Exp) * player.Exp_Percent);
+            Hide = (int)((player.Hide_Addition + Hide) * player.Hide_Percent);
+            Endurance = (int)((player.Endurance_Addition + Endurance) * player.Endurance_Percent);
+            Load = (int)((player.Load_Addition + Load) * player.Load_Percent);
+            Energy = (int)((player.Energy_Addition + Energy) * player.Energy_Percent);
+            SpellDamage = (int)((player.SpellDamage_Addition + SpellDamage) * player.SpellDamage_Percent);
+            Nous = (int)((player.Nous_Addition + Nous) * player.Nous_Percent);
+            Sanity = (int)((player.Sanity_Addition + Sanity) * player.Sanity_Percent);
+            Luck = (int)((player.Luck_Addition + Luck) * player.Luck_Percent);
+
+            int SpellDamage_p = SpellDamage * 5;
+
 
             HPResultTextBox.Text = "20+" + HP_Dice + "D10";
             HPRecoveryResultTextBox.Text = HP_Recovery.ToString();
@@ -203,12 +228,12 @@ namespace Trpg_DataAided
             DamageMitigationResultTextBox.Text = DamageMitigation.ToString();
             GainResultTextBox.Text = Gain.ToString() + "+" + Gain_Turn + "T";
             SpellResistanceResultTextBox.Text = SpellResistance.ToString();
-            ExpResultTextBox.Text = Exp.ToString() + "/" + Exp_p;
+            ExpResultTextBox.Text = Exp.ToString() + "/" + Exp + "%";
             HideResultTextBox.Text = Hide.ToString();
             EnduranceResultTextBox.Text = Endurance.ToString();
             LoadResultTextBox.Text = Load.ToString() + "s";
             EnergyResultTextBox.Text = Energy.ToString();
-            SpellDamageResultTextBox.Text = SpellDamage.ToString() + "/" + SpellDamage_p;
+            SpellDamageResultTextBox.Text = SpellDamage.ToString() + "/" + SpellDamage_p + "%";
             NousResultTextBox.Text = Nous.ToString();
             SanityResultTextBox.Text = Sanity.ToString() + "D20";
             LuckResultTextBox.Text = Luck.ToString();
