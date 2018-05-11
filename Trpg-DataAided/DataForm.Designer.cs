@@ -28,7 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BaseAttributeGroupBox = new System.Windows.Forms.GroupBox();
+            this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label118 = new System.Windows.Forms.Label();
+            this.HPTextBox = new System.Windows.Forms.TextBox();
+            this.label119 = new System.Windows.Forms.Label();
+            this.HPRecoveryTextBox = new System.Windows.Forms.TextBox();
+            this.label120 = new System.Windows.Forms.Label();
+            this.MANATextBox = new System.Windows.Forms.TextBox();
+            this.label121 = new System.Windows.Forms.Label();
+            this.MANARecoveryTextBox = new System.Windows.Forms.TextBox();
+            this.label122 = new System.Windows.Forms.Label();
+            this.SpeedTextBox = new System.Windows.Forms.TextBox();
+            this.label123 = new System.Windows.Forms.Label();
+            this.ChantTextBox = new System.Windows.Forms.TextBox();
+            this.label124 = new System.Windows.Forms.Label();
+            this.AccuracyTextBox = new System.Windows.Forms.TextBox();
+            this.label125 = new System.Windows.Forms.Label();
+            this.DodgeTextBox = new System.Windows.Forms.TextBox();
+            this.label126 = new System.Windows.Forms.Label();
+            this.CriticalTextBox = new System.Windows.Forms.TextBox();
+            this.label127 = new System.Windows.Forms.Label();
+            this.DamageGainTextBox = new System.Windows.Forms.TextBox();
+            this.label128 = new System.Windows.Forms.Label();
+            this.DamageMitigationTextBox = new System.Windows.Forms.TextBox();
+            this.label129 = new System.Windows.Forms.Label();
+            this.GainTextBox = new System.Windows.Forms.TextBox();
+            this.label130 = new System.Windows.Forms.Label();
+            this.SpellResistanceTextBox = new System.Windows.Forms.TextBox();
+            this.label131 = new System.Windows.Forms.Label();
+            this.ExpTextBox = new System.Windows.Forms.TextBox();
+            this.label132 = new System.Windows.Forms.Label();
+            this.HideTextBox = new System.Windows.Forms.TextBox();
+            this.label133 = new System.Windows.Forms.Label();
+            this.EnduraceTextBox = new System.Windows.Forms.TextBox();
+            this.label134 = new System.Windows.Forms.Label();
+            this.LoadTextBox = new System.Windows.Forms.TextBox();
+            this.label135 = new System.Windows.Forms.Label();
+            this.EnergyTextBox = new System.Windows.Forms.TextBox();
+            this.label136 = new System.Windows.Forms.Label();
+            this.SpellDamageTextBox = new System.Windows.Forms.TextBox();
+            this.label137 = new System.Windows.Forms.Label();
+            this.NousTextBox = new System.Windows.Forms.TextBox();
+            this.label138 = new System.Windows.Forms.Label();
+            this.SanityTextBox = new System.Windows.Forms.TextBox();
+            this.label139 = new System.Windows.Forms.Label();
+            this.LuckTextBox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.label30 = new System.Windows.Forms.Label();
             this.StrengthGrowTextBox = new System.Windows.Forms.TextBox();
@@ -43,7 +88,7 @@
             this.label35 = new System.Windows.Forms.Label();
             this.InspirationGrowTextBox = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.perceptionGrowTextBox = new System.Windows.Forms.TextBox();
+            this.PerceptionGrowTextBox = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.GlamourGrowTextBox = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
@@ -72,7 +117,7 @@
             this.NicknameTextBox = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
             this.LevelTextBox = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.AdditionGroupBox = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.label45 = new System.Windows.Forms.Label();
             this.HPPercentTextBox = new System.Windows.Forms.TextBox();
@@ -205,103 +250,578 @@
             this.label18 = new System.Windows.Forms.Label();
             this.ResolutionAdditionTextBox = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.ResultGroupBox = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
             this.label87 = new System.Windows.Forms.Label();
-            this.textBox84 = new System.Windows.Forms.TextBox();
+            this.HPResultTextBox = new System.Windows.Forms.TextBox();
             this.label88 = new System.Windows.Forms.Label();
-            this.textBox85 = new System.Windows.Forms.TextBox();
+            this.HPRecoveryResultTextBox = new System.Windows.Forms.TextBox();
             this.label89 = new System.Windows.Forms.Label();
-            this.textBox86 = new System.Windows.Forms.TextBox();
+            this.MANAResultTextBox = new System.Windows.Forms.TextBox();
             this.label90 = new System.Windows.Forms.Label();
-            this.textBox87 = new System.Windows.Forms.TextBox();
+            this.MANARecoveryResultTextBox = new System.Windows.Forms.TextBox();
             this.label91 = new System.Windows.Forms.Label();
-            this.textBox88 = new System.Windows.Forms.TextBox();
+            this.SpeedResultTextBox = new System.Windows.Forms.TextBox();
             this.label92 = new System.Windows.Forms.Label();
-            this.textBox89 = new System.Windows.Forms.TextBox();
+            this.ChantResultTextBox = new System.Windows.Forms.TextBox();
             this.label93 = new System.Windows.Forms.Label();
-            this.textBox90 = new System.Windows.Forms.TextBox();
+            this.AccuracyResultTextBox = new System.Windows.Forms.TextBox();
             this.label94 = new System.Windows.Forms.Label();
-            this.textBox91 = new System.Windows.Forms.TextBox();
+            this.DodgeResultTextBox = new System.Windows.Forms.TextBox();
             this.label95 = new System.Windows.Forms.Label();
-            this.textBox92 = new System.Windows.Forms.TextBox();
+            this.CriticalResultTextBox = new System.Windows.Forms.TextBox();
             this.label96 = new System.Windows.Forms.Label();
-            this.textBox93 = new System.Windows.Forms.TextBox();
+            this.DamageGainResultTextBox = new System.Windows.Forms.TextBox();
             this.label97 = new System.Windows.Forms.Label();
-            this.textBox94 = new System.Windows.Forms.TextBox();
+            this.DamageMitigationResultTextBox = new System.Windows.Forms.TextBox();
             this.label98 = new System.Windows.Forms.Label();
-            this.textBox95 = new System.Windows.Forms.TextBox();
+            this.GainResultTextBox = new System.Windows.Forms.TextBox();
             this.label99 = new System.Windows.Forms.Label();
-            this.textBox96 = new System.Windows.Forms.TextBox();
+            this.SpellResistanceResultTextBox = new System.Windows.Forms.TextBox();
             this.label100 = new System.Windows.Forms.Label();
-            this.textBox97 = new System.Windows.Forms.TextBox();
+            this.ExpResultTextBox = new System.Windows.Forms.TextBox();
             this.label101 = new System.Windows.Forms.Label();
-            this.textBox98 = new System.Windows.Forms.TextBox();
+            this.HideResultTextBox = new System.Windows.Forms.TextBox();
             this.label102 = new System.Windows.Forms.Label();
-            this.textBox99 = new System.Windows.Forms.TextBox();
+            this.EnduranceResultTextBox = new System.Windows.Forms.TextBox();
             this.label103 = new System.Windows.Forms.Label();
-            this.textBox100 = new System.Windows.Forms.TextBox();
+            this.LoadResultTextBox = new System.Windows.Forms.TextBox();
             this.label104 = new System.Windows.Forms.Label();
-            this.textBox101 = new System.Windows.Forms.TextBox();
+            this.EnergyResultTextBox = new System.Windows.Forms.TextBox();
             this.label105 = new System.Windows.Forms.Label();
-            this.textBox102 = new System.Windows.Forms.TextBox();
+            this.SpellDamageResultTextBox = new System.Windows.Forms.TextBox();
             this.label106 = new System.Windows.Forms.Label();
-            this.textBox103 = new System.Windows.Forms.TextBox();
+            this.NousResultTextBox = new System.Windows.Forms.TextBox();
             this.label107 = new System.Windows.Forms.Label();
-            this.textBox104 = new System.Windows.Forms.TextBox();
+            this.SanityResultTextBox = new System.Windows.Forms.TextBox();
             this.label108 = new System.Windows.Forms.Label();
-            this.textBox105 = new System.Windows.Forms.TextBox();
+            this.LuckResultTextBox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
             this.label109 = new System.Windows.Forms.Label();
             this.StrengthResultTextBox = new System.Windows.Forms.TextBox();
             this.label110 = new System.Windows.Forms.Label();
-            this.textBox107 = new System.Windows.Forms.TextBox();
+            this.PhysiqueResultTextBox = new System.Windows.Forms.TextBox();
             this.label111 = new System.Windows.Forms.Label();
-            this.textBox108 = new System.Windows.Forms.TextBox();
+            this.NimbleResultTextBox = new System.Windows.Forms.TextBox();
             this.label112 = new System.Windows.Forms.Label();
-            this.textBox109 = new System.Windows.Forms.TextBox();
+            this.MagicResultTextBox = new System.Windows.Forms.TextBox();
             this.label113 = new System.Windows.Forms.Label();
-            this.textBox110 = new System.Windows.Forms.TextBox();
+            this.LoreResultTextBox = new System.Windows.Forms.TextBox();
             this.label114 = new System.Windows.Forms.Label();
-            this.textBox111 = new System.Windows.Forms.TextBox();
+            this.InspirationResultTextBox = new System.Windows.Forms.TextBox();
             this.label115 = new System.Windows.Forms.Label();
-            this.textBox112 = new System.Windows.Forms.TextBox();
+            this.PerceptionResultTextBox = new System.Windows.Forms.TextBox();
             this.label116 = new System.Windows.Forms.Label();
-            this.textBox113 = new System.Windows.Forms.TextBox();
+            this.GlamourResultTextBox = new System.Windows.Forms.TextBox();
             this.label117 = new System.Windows.Forms.Label();
-            this.textBox114 = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox39 = new System.Windows.Forms.TextBox();
-            this.groupBox1.SuspendLayout();
+            this.ResolutionResultTextBox = new System.Windows.Forms.TextBox();
+            this.LogGroupBox = new System.Windows.Forms.GroupBox();
+            this.LogTextBox = new System.Windows.Forms.TextBox();
+            this.BaseAttributeGroupBox.SuspendLayout();
+            this.flowLayoutPanel10.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.AdditionGroupBox.SuspendLayout();
             this.flowLayoutPanel6.SuspendLayout();
             this.flowLayoutPanel7.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.ResultGroupBox.SuspendLayout();
             this.flowLayoutPanel8.SuspendLayout();
             this.flowLayoutPanel9.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.LogGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // BaseAttributeGroupBox
             // 
-            this.groupBox1.Controls.Add(this.flowLayoutPanel4);
-            this.groupBox1.Controls.Add(this.flowLayoutPanel1);
-            this.groupBox1.Controls.Add(this.flowLayoutPanel5);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(10);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(10);
-            this.groupBox1.Size = new System.Drawing.Size(1274, 167);
-            this.groupBox1.TabIndex = 21;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "基本属性";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.BaseAttributeGroupBox.Controls.Add(this.flowLayoutPanel10);
+            this.BaseAttributeGroupBox.Controls.Add(this.flowLayoutPanel4);
+            this.BaseAttributeGroupBox.Controls.Add(this.flowLayoutPanel1);
+            this.BaseAttributeGroupBox.Controls.Add(this.flowLayoutPanel5);
+            this.BaseAttributeGroupBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BaseAttributeGroupBox.Location = new System.Drawing.Point(0, 0);
+            this.BaseAttributeGroupBox.Margin = new System.Windows.Forms.Padding(10);
+            this.BaseAttributeGroupBox.Name = "BaseAttributeGroupBox";
+            this.BaseAttributeGroupBox.Padding = new System.Windows.Forms.Padding(10);
+            this.BaseAttributeGroupBox.Size = new System.Drawing.Size(1274, 156);
+            this.BaseAttributeGroupBox.TabIndex = 21;
+            this.BaseAttributeGroupBox.TabStop = false;
+            this.BaseAttributeGroupBox.Text = "基本属性";
+            // 
+            // flowLayoutPanel10
+            // 
+            this.flowLayoutPanel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel10.Controls.Add(this.label118);
+            this.flowLayoutPanel10.Controls.Add(this.HPTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label119);
+            this.flowLayoutPanel10.Controls.Add(this.HPRecoveryTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label120);
+            this.flowLayoutPanel10.Controls.Add(this.MANATextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label121);
+            this.flowLayoutPanel10.Controls.Add(this.MANARecoveryTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label122);
+            this.flowLayoutPanel10.Controls.Add(this.SpeedTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label123);
+            this.flowLayoutPanel10.Controls.Add(this.ChantTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label124);
+            this.flowLayoutPanel10.Controls.Add(this.AccuracyTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label125);
+            this.flowLayoutPanel10.Controls.Add(this.DodgeTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label126);
+            this.flowLayoutPanel10.Controls.Add(this.CriticalTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label127);
+            this.flowLayoutPanel10.Controls.Add(this.DamageGainTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label128);
+            this.flowLayoutPanel10.Controls.Add(this.DamageMitigationTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label129);
+            this.flowLayoutPanel10.Controls.Add(this.GainTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label130);
+            this.flowLayoutPanel10.Controls.Add(this.SpellResistanceTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label131);
+            this.flowLayoutPanel10.Controls.Add(this.ExpTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label132);
+            this.flowLayoutPanel10.Controls.Add(this.HideTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label133);
+            this.flowLayoutPanel10.Controls.Add(this.EnduraceTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label134);
+            this.flowLayoutPanel10.Controls.Add(this.LoadTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label135);
+            this.flowLayoutPanel10.Controls.Add(this.EnergyTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label136);
+            this.flowLayoutPanel10.Controls.Add(this.SpellDamageTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label137);
+            this.flowLayoutPanel10.Controls.Add(this.NousTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label138);
+            this.flowLayoutPanel10.Controls.Add(this.SanityTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.label139);
+            this.flowLayoutPanel10.Controls.Add(this.LuckTextBox);
+            this.flowLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel10.Location = new System.Drawing.Point(10, 139);
+            this.flowLayoutPanel10.Name = "flowLayoutPanel10";
+            this.flowLayoutPanel10.Padding = new System.Windows.Forms.Padding(3);
+            this.flowLayoutPanel10.Size = new System.Drawing.Size(1254, 63);
+            this.flowLayoutPanel10.TabIndex = 83;
+            this.flowLayoutPanel10.Visible = false;
+            // 
+            // label118
+            // 
+            this.label118.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label118.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label118.Location = new System.Drawing.Point(6, 3);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(53, 27);
+            this.label118.TabIndex = 111;
+            this.label118.Text = "生命   ";
+            this.label118.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // HPTextBox
+            // 
+            this.HPTextBox.Location = new System.Drawing.Point(65, 6);
+            this.HPTextBox.Name = "HPTextBox";
+            this.HPTextBox.Size = new System.Drawing.Size(36, 21);
+            this.HPTextBox.TabIndex = 110;
+            // 
+            // label119
+            // 
+            this.label119.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label119.Location = new System.Drawing.Point(107, 3);
+            this.label119.Name = "label119";
+            this.label119.Size = new System.Drawing.Size(53, 27);
+            this.label119.TabIndex = 113;
+            this.label119.Text = "命回   ";
+            this.label119.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // HPRecoveryTextBox
+            // 
+            this.HPRecoveryTextBox.Location = new System.Drawing.Point(166, 6);
+            this.HPRecoveryTextBox.Name = "HPRecoveryTextBox";
+            this.HPRecoveryTextBox.Size = new System.Drawing.Size(36, 21);
+            this.HPRecoveryTextBox.TabIndex = 112;
+            // 
+            // label120
+            // 
+            this.label120.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label120.Location = new System.Drawing.Point(208, 3);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(53, 27);
+            this.label120.TabIndex = 115;
+            this.label120.Text = "魔法   ";
+            this.label120.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // MANATextBox
+            // 
+            this.MANATextBox.Location = new System.Drawing.Point(267, 6);
+            this.MANATextBox.Name = "MANATextBox";
+            this.MANATextBox.Size = new System.Drawing.Size(36, 21);
+            this.MANATextBox.TabIndex = 114;
+            // 
+            // label121
+            // 
+            this.label121.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label121.Location = new System.Drawing.Point(309, 3);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(53, 27);
+            this.label121.TabIndex = 117;
+            this.label121.Text = "法回   ";
+            this.label121.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // MANARecoveryTextBox
+            // 
+            this.MANARecoveryTextBox.Location = new System.Drawing.Point(368, 6);
+            this.MANARecoveryTextBox.Name = "MANARecoveryTextBox";
+            this.MANARecoveryTextBox.Size = new System.Drawing.Size(36, 21);
+            this.MANARecoveryTextBox.TabIndex = 116;
+            // 
+            // label122
+            // 
+            this.label122.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label122.Location = new System.Drawing.Point(410, 3);
+            this.label122.Name = "label122";
+            this.label122.Size = new System.Drawing.Size(53, 27);
+            this.label122.TabIndex = 119;
+            this.label122.Text = "速度   ";
+            this.label122.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SpeedTextBox
+            // 
+            this.SpeedTextBox.Location = new System.Drawing.Point(469, 6);
+            this.SpeedTextBox.Name = "SpeedTextBox";
+            this.SpeedTextBox.Size = new System.Drawing.Size(36, 21);
+            this.SpeedTextBox.TabIndex = 118;
+            // 
+            // label123
+            // 
+            this.label123.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label123.Location = new System.Drawing.Point(511, 3);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(53, 27);
+            this.label123.TabIndex = 121;
+            this.label123.Text = "咏唱   ";
+            this.label123.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ChantTextBox
+            // 
+            this.ChantTextBox.Location = new System.Drawing.Point(570, 6);
+            this.ChantTextBox.Name = "ChantTextBox";
+            this.ChantTextBox.Size = new System.Drawing.Size(36, 21);
+            this.ChantTextBox.TabIndex = 120;
+            // 
+            // label124
+            // 
+            this.label124.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label124.Location = new System.Drawing.Point(612, 3);
+            this.label124.Name = "label124";
+            this.label124.Size = new System.Drawing.Size(53, 27);
+            this.label124.TabIndex = 123;
+            this.label124.Text = "命中   ";
+            this.label124.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // AccuracyTextBox
+            // 
+            this.AccuracyTextBox.Location = new System.Drawing.Point(671, 6);
+            this.AccuracyTextBox.Name = "AccuracyTextBox";
+            this.AccuracyTextBox.Size = new System.Drawing.Size(36, 21);
+            this.AccuracyTextBox.TabIndex = 122;
+            // 
+            // label125
+            // 
+            this.label125.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label125.Location = new System.Drawing.Point(713, 3);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(53, 27);
+            this.label125.TabIndex = 125;
+            this.label125.Text = "回避   ";
+            this.label125.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // DodgeTextBox
+            // 
+            this.DodgeTextBox.Location = new System.Drawing.Point(772, 6);
+            this.DodgeTextBox.Name = "DodgeTextBox";
+            this.DodgeTextBox.Size = new System.Drawing.Size(36, 21);
+            this.DodgeTextBox.TabIndex = 124;
+            // 
+            // label126
+            // 
+            this.label126.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label126.Location = new System.Drawing.Point(814, 3);
+            this.label126.Name = "label126";
+            this.label126.Size = new System.Drawing.Size(53, 27);
+            this.label126.TabIndex = 127;
+            this.label126.Text = "会心   ";
+            this.label126.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CriticalTextBox
+            // 
+            this.CriticalTextBox.Location = new System.Drawing.Point(873, 6);
+            this.CriticalTextBox.Name = "CriticalTextBox";
+            this.CriticalTextBox.Size = new System.Drawing.Size(36, 21);
+            this.CriticalTextBox.TabIndex = 126;
+            // 
+            // label127
+            // 
+            this.label127.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label127.Location = new System.Drawing.Point(915, 3);
+            this.label127.Name = "label127";
+            this.label127.Size = new System.Drawing.Size(53, 27);
+            this.label127.TabIndex = 129;
+            this.label127.Text = "增伤   ";
+            this.label127.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // DamageGainTextBox
+            // 
+            this.DamageGainTextBox.Location = new System.Drawing.Point(974, 6);
+            this.DamageGainTextBox.Name = "DamageGainTextBox";
+            this.DamageGainTextBox.Size = new System.Drawing.Size(36, 21);
+            this.DamageGainTextBox.TabIndex = 128;
+            // 
+            // label128
+            // 
+            this.label128.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label128.Location = new System.Drawing.Point(1016, 3);
+            this.label128.Name = "label128";
+            this.label128.Size = new System.Drawing.Size(53, 27);
+            this.label128.TabIndex = 131;
+            this.label128.Text = "减伤   ";
+            this.label128.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // DamageMitigationTextBox
+            // 
+            this.DamageMitigationTextBox.Location = new System.Drawing.Point(1075, 6);
+            this.DamageMitigationTextBox.Name = "DamageMitigationTextBox";
+            this.DamageMitigationTextBox.Size = new System.Drawing.Size(36, 21);
+            this.DamageMitigationTextBox.TabIndex = 130;
+            // 
+            // label129
+            // 
+            this.label129.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label129.Location = new System.Drawing.Point(1117, 3);
+            this.label129.Name = "label129";
+            this.label129.Size = new System.Drawing.Size(53, 27);
+            this.label129.TabIndex = 133;
+            this.label129.Text = "增益   ";
+            this.label129.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // GainTextBox
+            // 
+            this.GainTextBox.Location = new System.Drawing.Point(1176, 6);
+            this.GainTextBox.Name = "GainTextBox";
+            this.GainTextBox.Size = new System.Drawing.Size(36, 21);
+            this.GainTextBox.TabIndex = 132;
+            // 
+            // label130
+            // 
+            this.label130.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label130.Location = new System.Drawing.Point(6, 30);
+            this.label130.Name = "label130";
+            this.label130.Size = new System.Drawing.Size(53, 27);
+            this.label130.TabIndex = 135;
+            this.label130.Text = "咒抗   ";
+            this.label130.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SpellResistanceTextBox
+            // 
+            this.SpellResistanceTextBox.Location = new System.Drawing.Point(65, 33);
+            this.SpellResistanceTextBox.Name = "SpellResistanceTextBox";
+            this.SpellResistanceTextBox.Size = new System.Drawing.Size(36, 21);
+            this.SpellResistanceTextBox.TabIndex = 134;
+            // 
+            // label131
+            // 
+            this.label131.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label131.Location = new System.Drawing.Point(107, 30);
+            this.label131.Name = "label131";
+            this.label131.Size = new System.Drawing.Size(53, 27);
+            this.label131.TabIndex = 137;
+            this.label131.Text = "经验   ";
+            this.label131.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ExpTextBox
+            // 
+            this.ExpTextBox.Location = new System.Drawing.Point(166, 33);
+            this.ExpTextBox.Name = "ExpTextBox";
+            this.ExpTextBox.Size = new System.Drawing.Size(36, 21);
+            this.ExpTextBox.TabIndex = 136;
+            // 
+            // label132
+            // 
+            this.label132.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label132.Location = new System.Drawing.Point(208, 30);
+            this.label132.Name = "label132";
+            this.label132.Size = new System.Drawing.Size(53, 27);
+            this.label132.TabIndex = 139;
+            this.label132.Text = "隐藏   ";
+            this.label132.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // HideTextBox
+            // 
+            this.HideTextBox.Location = new System.Drawing.Point(267, 33);
+            this.HideTextBox.Name = "HideTextBox";
+            this.HideTextBox.Size = new System.Drawing.Size(36, 21);
+            this.HideTextBox.TabIndex = 138;
+            // 
+            // label133
+            // 
+            this.label133.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label133.Location = new System.Drawing.Point(309, 30);
+            this.label133.Name = "label133";
+            this.label133.Size = new System.Drawing.Size(53, 27);
+            this.label133.TabIndex = 141;
+            this.label133.Text = "耐力   ";
+            this.label133.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // EnduraceTextBox
+            // 
+            this.EnduraceTextBox.Location = new System.Drawing.Point(368, 33);
+            this.EnduraceTextBox.Name = "EnduraceTextBox";
+            this.EnduraceTextBox.Size = new System.Drawing.Size(36, 21);
+            this.EnduraceTextBox.TabIndex = 140;
+            // 
+            // label134
+            // 
+            this.label134.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label134.Location = new System.Drawing.Point(410, 30);
+            this.label134.Name = "label134";
+            this.label134.Size = new System.Drawing.Size(53, 27);
+            this.label134.TabIndex = 143;
+            this.label134.Text = "负重   ";
+            this.label134.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LoadTextBox
+            // 
+            this.LoadTextBox.Location = new System.Drawing.Point(469, 33);
+            this.LoadTextBox.Name = "LoadTextBox";
+            this.LoadTextBox.Size = new System.Drawing.Size(36, 21);
+            this.LoadTextBox.TabIndex = 142;
+            // 
+            // label135
+            // 
+            this.label135.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label135.Location = new System.Drawing.Point(511, 30);
+            this.label135.Name = "label135";
+            this.label135.Size = new System.Drawing.Size(53, 27);
+            this.label135.TabIndex = 145;
+            this.label135.Text = "精力   ";
+            this.label135.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // EnergyTextBox
+            // 
+            this.EnergyTextBox.Location = new System.Drawing.Point(570, 33);
+            this.EnergyTextBox.Name = "EnergyTextBox";
+            this.EnergyTextBox.Size = new System.Drawing.Size(36, 21);
+            this.EnergyTextBox.TabIndex = 144;
+            // 
+            // label136
+            // 
+            this.label136.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label136.Location = new System.Drawing.Point(612, 30);
+            this.label136.Name = "label136";
+            this.label136.Size = new System.Drawing.Size(53, 27);
+            this.label136.TabIndex = 147;
+            this.label136.Text = "法伤   ";
+            this.label136.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SpellDamageTextBox
+            // 
+            this.SpellDamageTextBox.Location = new System.Drawing.Point(671, 33);
+            this.SpellDamageTextBox.Name = "SpellDamageTextBox";
+            this.SpellDamageTextBox.Size = new System.Drawing.Size(36, 21);
+            this.SpellDamageTextBox.TabIndex = 146;
+            // 
+            // label137
+            // 
+            this.label137.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label137.Location = new System.Drawing.Point(713, 30);
+            this.label137.Name = "label137";
+            this.label137.Size = new System.Drawing.Size(53, 27);
+            this.label137.TabIndex = 149;
+            this.label137.Text = "常识   ";
+            this.label137.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // NousTextBox
+            // 
+            this.NousTextBox.Location = new System.Drawing.Point(772, 33);
+            this.NousTextBox.Name = "NousTextBox";
+            this.NousTextBox.Size = new System.Drawing.Size(36, 21);
+            this.NousTextBox.TabIndex = 148;
+            // 
+            // label138
+            // 
+            this.label138.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label138.Location = new System.Drawing.Point(814, 30);
+            this.label138.Name = "label138";
+            this.label138.Size = new System.Drawing.Size(53, 27);
+            this.label138.TabIndex = 151;
+            this.label138.Text = "理智   ";
+            this.label138.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SanityTextBox
+            // 
+            this.SanityTextBox.Location = new System.Drawing.Point(873, 33);
+            this.SanityTextBox.Name = "SanityTextBox";
+            this.SanityTextBox.Size = new System.Drawing.Size(36, 21);
+            this.SanityTextBox.TabIndex = 150;
+            // 
+            // label139
+            // 
+            this.label139.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label139.Location = new System.Drawing.Point(915, 30);
+            this.label139.Name = "label139";
+            this.label139.Size = new System.Drawing.Size(53, 27);
+            this.label139.TabIndex = 153;
+            this.label139.Text = "幸运   ";
+            this.label139.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // LuckTextBox
+            // 
+            this.LuckTextBox.Location = new System.Drawing.Point(974, 33);
+            this.LuckTextBox.Name = "LuckTextBox";
+            this.LuckTextBox.Size = new System.Drawing.Size(36, 21);
+            this.LuckTextBox.TabIndex = 152;
             // 
             // flowLayoutPanel4
             // 
@@ -319,18 +839,18 @@
             this.flowLayoutPanel4.Controls.Add(this.label35);
             this.flowLayoutPanel4.Controls.Add(this.InspirationGrowTextBox);
             this.flowLayoutPanel4.Controls.Add(this.label36);
-            this.flowLayoutPanel4.Controls.Add(this.perceptionGrowTextBox);
+            this.flowLayoutPanel4.Controls.Add(this.PerceptionGrowTextBox);
             this.flowLayoutPanel4.Controls.Add(this.label37);
             this.flowLayoutPanel4.Controls.Add(this.GlamourGrowTextBox);
             this.flowLayoutPanel4.Controls.Add(this.label38);
             this.flowLayoutPanel4.Controls.Add(this.ResolutionGrowTextBox);
             this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(10, 104);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(10, 99);
             this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(10);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Padding = new System.Windows.Forms.Padding(3);
             this.flowLayoutPanel4.Size = new System.Drawing.Size(1254, 40);
-            this.flowLayoutPanel4.TabIndex = 79;
+            this.flowLayoutPanel4.TabIndex = 82;
             // 
             // label30
             // 
@@ -465,12 +985,12 @@
             this.label36.Text = "感知成长";
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // perceptionGrowTextBox
+            // PerceptionGrowTextBox
             // 
-            this.perceptionGrowTextBox.Location = new System.Drawing.Point(671, 6);
-            this.perceptionGrowTextBox.Name = "perceptionGrowTextBox";
-            this.perceptionGrowTextBox.Size = new System.Drawing.Size(36, 21);
-            this.perceptionGrowTextBox.TabIndex = 122;
+            this.PerceptionGrowTextBox.Location = new System.Drawing.Point(671, 6);
+            this.PerceptionGrowTextBox.Name = "PerceptionGrowTextBox";
+            this.PerceptionGrowTextBox.Size = new System.Drawing.Size(36, 21);
+            this.PerceptionGrowTextBox.TabIndex = 122;
             // 
             // label37
             // 
@@ -514,6 +1034,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.Controls.Add(this.label1);
             this.flowLayoutPanel1.Controls.Add(this.StrengthTextBox);
@@ -538,8 +1059,9 @@
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(10);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(3);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1254, 40);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1254, 35);
             this.flowLayoutPanel1.TabIndex = 78;
+            this.flowLayoutPanel1.Click += new System.EventHandler(this.Focused_Click);
             // 
             // label1
             // 
@@ -553,7 +1075,6 @@
             this.label1.TabIndex = 111;
             this.label1.Text = "力量    ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // StrengthTextBox
             // 
@@ -561,6 +1082,7 @@
             this.StrengthTextBox.Name = "StrengthTextBox";
             this.StrengthTextBox.Size = new System.Drawing.Size(36, 21);
             this.StrengthTextBox.TabIndex = 110;
+            this.StrengthTextBox.Leave += new System.EventHandler(this.StrengthTextBox_Leave);
             // 
             // label2
             // 
@@ -581,6 +1103,7 @@
             this.PhysiqueTextBox.Name = "PhysiqueTextBox";
             this.PhysiqueTextBox.Size = new System.Drawing.Size(36, 21);
             this.PhysiqueTextBox.TabIndex = 112;
+            this.PhysiqueTextBox.Leave += new System.EventHandler(this.PhysiqueTextBox_Leave);
             // 
             // label3
             // 
@@ -601,6 +1124,7 @@
             this.NimbleTextBox.Name = "NimbleTextBox";
             this.NimbleTextBox.Size = new System.Drawing.Size(36, 21);
             this.NimbleTextBox.TabIndex = 114;
+            this.NimbleTextBox.Leave += new System.EventHandler(this.NimbleTextBox_Leave);
             // 
             // label4
             // 
@@ -621,6 +1145,7 @@
             this.MagicTextBox.Name = "MagicTextBox";
             this.MagicTextBox.Size = new System.Drawing.Size(36, 21);
             this.MagicTextBox.TabIndex = 116;
+            this.MagicTextBox.Leave += new System.EventHandler(this.MagicTextBox_Leave);
             // 
             // label5
             // 
@@ -641,6 +1166,7 @@
             this.LoreTextBox.Name = "LoreTextBox";
             this.LoreTextBox.Size = new System.Drawing.Size(36, 21);
             this.LoreTextBox.TabIndex = 118;
+            this.LoreTextBox.Leave += new System.EventHandler(this.LoreTextBox_Leave);
             // 
             // label6
             // 
@@ -661,6 +1187,7 @@
             this.InspirationTextBox.Name = "InspirationTextBox";
             this.InspirationTextBox.Size = new System.Drawing.Size(36, 21);
             this.InspirationTextBox.TabIndex = 120;
+            this.InspirationTextBox.Leave += new System.EventHandler(this.InspirationTextBox_Leave);
             // 
             // label7
             // 
@@ -681,6 +1208,7 @@
             this.PerceptionTextBox.Name = "PerceptionTextBox";
             this.PerceptionTextBox.Size = new System.Drawing.Size(36, 21);
             this.PerceptionTextBox.TabIndex = 122;
+            this.PerceptionTextBox.Leave += new System.EventHandler(this.PerceptionTextBox_Leave);
             // 
             // label8
             // 
@@ -701,6 +1229,7 @@
             this.GlamourTextBox.Name = "GlamourTextBox";
             this.GlamourTextBox.Size = new System.Drawing.Size(36, 21);
             this.GlamourTextBox.TabIndex = 124;
+            this.GlamourTextBox.Leave += new System.EventHandler(this.GlamourTextBox_Leave);
             // 
             // label9
             // 
@@ -721,6 +1250,7 @@
             this.ResolutionTextBox.Name = "ResolutionTextBox";
             this.ResolutionTextBox.Size = new System.Drawing.Size(36, 21);
             this.ResolutionTextBox.TabIndex = 126;
+            this.ResolutionTextBox.Leave += new System.EventHandler(this.ResolutionTextBox_Leave);
             // 
             // flowLayoutPanel5
             // 
@@ -735,7 +1265,7 @@
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
             this.flowLayoutPanel5.Size = new System.Drawing.Size(1254, 40);
             this.flowLayoutPanel5.TabIndex = 74;
-            this.flowLayoutPanel5.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel5_Paint);
+            this.flowLayoutPanel5.Click += new System.EventHandler(this.Focused_Click);
             // 
             // label39
             // 
@@ -756,7 +1286,7 @@
             this.NicknameTextBox.Name = "NicknameTextBox";
             this.NicknameTextBox.Size = new System.Drawing.Size(36, 21);
             this.NicknameTextBox.TabIndex = 114;
-            this.NicknameTextBox.TextChanged += new System.EventHandler(this.textBox37_TextChanged);
+            this.NicknameTextBox.Leave += new System.EventHandler(this.NicknameTextBox_Leave);
             // 
             // label40
             // 
@@ -777,25 +1307,26 @@
             this.LevelTextBox.Name = "LevelTextBox";
             this.LevelTextBox.Size = new System.Drawing.Size(36, 21);
             this.LevelTextBox.TabIndex = 116;
+            this.LevelTextBox.Leave += new System.EventHandler(this.LevelTextBox_Leave);
             // 
-            // groupBox2
+            // AdditionGroupBox
             // 
-            this.groupBox2.Controls.Add(this.flowLayoutPanel6);
-            this.groupBox2.Controls.Add(this.label50);
-            this.groupBox2.Controls.Add(this.flowLayoutPanel7);
-            this.groupBox2.Controls.Add(this.label60);
-            this.groupBox2.Controls.Add(this.flowLayoutPanel3);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.flowLayoutPanel2);
-            this.groupBox2.Controls.Add(this.label28);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox2.Location = new System.Drawing.Point(0, 167);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(10);
-            this.groupBox2.Size = new System.Drawing.Size(1274, 307);
-            this.groupBox2.TabIndex = 54;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "加成";
+            this.AdditionGroupBox.Controls.Add(this.flowLayoutPanel6);
+            this.AdditionGroupBox.Controls.Add(this.label50);
+            this.AdditionGroupBox.Controls.Add(this.flowLayoutPanel7);
+            this.AdditionGroupBox.Controls.Add(this.label60);
+            this.AdditionGroupBox.Controls.Add(this.flowLayoutPanel3);
+            this.AdditionGroupBox.Controls.Add(this.label19);
+            this.AdditionGroupBox.Controls.Add(this.flowLayoutPanel2);
+            this.AdditionGroupBox.Controls.Add(this.label28);
+            this.AdditionGroupBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AdditionGroupBox.Location = new System.Drawing.Point(0, 156);
+            this.AdditionGroupBox.Name = "AdditionGroupBox";
+            this.AdditionGroupBox.Padding = new System.Windows.Forms.Padding(10);
+            this.AdditionGroupBox.Size = new System.Drawing.Size(1274, 307);
+            this.AdditionGroupBox.TabIndex = 54;
+            this.AdditionGroupBox.TabStop = false;
+            this.AdditionGroupBox.Text = "加成";
             // 
             // flowLayoutPanel6
             // 
@@ -850,6 +1381,7 @@
             this.flowLayoutPanel6.Padding = new System.Windows.Forms.Padding(3);
             this.flowLayoutPanel6.Size = new System.Drawing.Size(1254, 61);
             this.flowLayoutPanel6.TabIndex = 82;
+            this.flowLayoutPanel6.Click += new System.EventHandler(this.Focused_Click);
             // 
             // label45
             // 
@@ -871,6 +1403,7 @@
             this.HPPercentTextBox.Name = "HPPercentTextBox";
             this.HPPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.HPPercentTextBox.TabIndex = 154;
+            this.HPPercentTextBox.Leave += new System.EventHandler(this.HPPercentTextBox_Leave);
             // 
             // label46
             // 
@@ -891,6 +1424,7 @@
             this.HPRecoveryPercentTextBox.Name = "HPRecoveryPercentTextBox";
             this.HPRecoveryPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.HPRecoveryPercentTextBox.TabIndex = 156;
+            this.HPRecoveryPercentTextBox.Leave += new System.EventHandler(this.HPRecoveryPercentTextBox_Leave);
             // 
             // label47
             // 
@@ -911,6 +1445,7 @@
             this.MANAPercentTextBox.Name = "MANAPercentTextBox";
             this.MANAPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.MANAPercentTextBox.TabIndex = 158;
+            this.MANAPercentTextBox.Leave += new System.EventHandler(this.MANAPercentTextBox_Leave);
             // 
             // label48
             // 
@@ -931,6 +1466,7 @@
             this.MANARecoveryPercentTextBox.Name = "MANARecoveryPercentTextBox";
             this.MANARecoveryPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.MANARecoveryPercentTextBox.TabIndex = 160;
+            this.MANARecoveryPercentTextBox.Leave += new System.EventHandler(this.MANARecoveryPercentTextBox_Leave);
             // 
             // label49
             // 
@@ -951,6 +1487,7 @@
             this.SpeedPercentTextBox.Name = "SpeedPercentTextBox";
             this.SpeedPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.SpeedPercentTextBox.TabIndex = 162;
+            this.SpeedPercentTextBox.Leave += new System.EventHandler(this.SpeedPercentTextBox_Leave);
             // 
             // label70
             // 
@@ -971,6 +1508,7 @@
             this.ChantPercentTextBox.Name = "ChantPercentTextBox";
             this.ChantPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.ChantPercentTextBox.TabIndex = 164;
+            this.ChantPercentTextBox.Leave += new System.EventHandler(this.ChantPercentTextBox_Leave);
             // 
             // label71
             // 
@@ -991,6 +1529,7 @@
             this.AccuracyPercentTextBox.Name = "AccuracyPercentTextBox";
             this.AccuracyPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.AccuracyPercentTextBox.TabIndex = 166;
+            this.AccuracyPercentTextBox.Leave += new System.EventHandler(this.AccuracyPercentTextBox_Leave);
             // 
             // label72
             // 
@@ -1011,6 +1550,7 @@
             this.DodgePercentTextBox.Name = "DodgePercentTextBox";
             this.DodgePercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.DodgePercentTextBox.TabIndex = 168;
+            this.DodgePercentTextBox.Leave += new System.EventHandler(this.DodgePercentTextBox_Leave);
             // 
             // label73
             // 
@@ -1031,6 +1571,7 @@
             this.CriticalPercentTextBox.Name = "CriticalPercentTextBox";
             this.CriticalPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.CriticalPercentTextBox.TabIndex = 170;
+            this.CriticalPercentTextBox.Leave += new System.EventHandler(this.CriticalPercentTextBox_Leave);
             // 
             // label74
             // 
@@ -1051,6 +1592,7 @@
             this.DamageGainPercentTextBox.Name = "DamageGainPercentTextBox";
             this.DamageGainPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.DamageGainPercentTextBox.TabIndex = 172;
+            this.DamageGainPercentTextBox.Leave += new System.EventHandler(this.DamageGainPercentTextBox_Leave);
             // 
             // label75
             // 
@@ -1071,6 +1613,7 @@
             this.DamageMitigationPercentTextBox.Name = "DamageMitigationPercentTextBox";
             this.DamageMitigationPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.DamageMitigationPercentTextBox.TabIndex = 174;
+            this.DamageMitigationPercentTextBox.Leave += new System.EventHandler(this.DamageMitigationPercentTextBox_Leave);
             // 
             // label76
             // 
@@ -1091,6 +1634,7 @@
             this.GainPercentTextBox.Name = "GainPercentTextBox";
             this.GainPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.GainPercentTextBox.TabIndex = 176;
+            this.GainPercentTextBox.Leave += new System.EventHandler(this.GainPercentTextBox_Leave);
             // 
             // label77
             // 
@@ -1111,6 +1655,7 @@
             this.SpellResistancePercentTextBox.Name = "SpellResistancePercentTextBox";
             this.SpellResistancePercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.SpellResistancePercentTextBox.TabIndex = 178;
+            this.SpellResistancePercentTextBox.Leave += new System.EventHandler(this.SpellResistancePercentTextBox_Leave);
             // 
             // label78
             // 
@@ -1131,6 +1676,7 @@
             this.ExpPercentTextBox.Name = "ExpPercentTextBox";
             this.ExpPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.ExpPercentTextBox.TabIndex = 180;
+            this.ExpPercentTextBox.Leave += new System.EventHandler(this.ExpPercentTextBox_Leave);
             // 
             // label79
             // 
@@ -1151,6 +1697,7 @@
             this.HidePercentTextBox.Name = "HidePercentTextBox";
             this.HidePercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.HidePercentTextBox.TabIndex = 182;
+            this.HidePercentTextBox.Leave += new System.EventHandler(this.HidePercentTextBox_Leave);
             // 
             // label80
             // 
@@ -1171,6 +1718,7 @@
             this.EndurancePercentTextBox.Name = "EndurancePercentTextBox";
             this.EndurancePercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.EndurancePercentTextBox.TabIndex = 184;
+            this.EndurancePercentTextBox.Leave += new System.EventHandler(this.EndurancePercentTextBox_Leave);
             // 
             // label81
             // 
@@ -1191,6 +1739,7 @@
             this.LoadPercentTextBox.Name = "LoadPercentTextBox";
             this.LoadPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.LoadPercentTextBox.TabIndex = 186;
+            this.LoadPercentTextBox.Leave += new System.EventHandler(this.LoadPercentTextBox_Leave);
             // 
             // label82
             // 
@@ -1211,6 +1760,7 @@
             this.EnergyPercentTextBox.Name = "EnergyPercentTextBox";
             this.EnergyPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.EnergyPercentTextBox.TabIndex = 188;
+            this.EnergyPercentTextBox.Leave += new System.EventHandler(this.EnergyPercentTextBox_Leave);
             // 
             // label83
             // 
@@ -1231,6 +1781,7 @@
             this.SpellDamagePercentTextBox.Name = "SpellDamagePercentTextBox";
             this.SpellDamagePercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.SpellDamagePercentTextBox.TabIndex = 190;
+            this.SpellDamagePercentTextBox.Leave += new System.EventHandler(this.SpellDamagePercentTextBox_Leave);
             // 
             // label84
             // 
@@ -1251,6 +1802,7 @@
             this.NousPercentTextBox.Name = "NousPercentTextBox";
             this.NousPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.NousPercentTextBox.TabIndex = 192;
+            this.NousPercentTextBox.Leave += new System.EventHandler(this.NousPercentTextBox_Leave);
             // 
             // label85
             // 
@@ -1271,6 +1823,7 @@
             this.SanityPercentTextBox.Name = "SanityPercentTextBox";
             this.SanityPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.SanityPercentTextBox.TabIndex = 194;
+            this.SanityPercentTextBox.Leave += new System.EventHandler(this.SanityPercentTextBox_Leave);
             // 
             // label86
             // 
@@ -1291,6 +1844,7 @@
             this.LuckPercentTextBox.Name = "LuckPercentTextBox";
             this.LuckPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.LuckPercentTextBox.TabIndex = 196;
+            this.LuckPercentTextBox.Leave += new System.EventHandler(this.LuckPercentTextBox_Leave);
             // 
             // label50
             // 
@@ -1356,6 +1910,7 @@
             this.flowLayoutPanel7.Padding = new System.Windows.Forms.Padding(3);
             this.flowLayoutPanel7.Size = new System.Drawing.Size(1254, 63);
             this.flowLayoutPanel7.TabIndex = 80;
+            this.flowLayoutPanel7.Click += new System.EventHandler(this.Focused_Click);
             // 
             // label51
             // 
@@ -1377,6 +1932,7 @@
             this.HPAdditionTextBox.Name = "HPAdditionTextBox";
             this.HPAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.HPAdditionTextBox.TabIndex = 110;
+            this.HPAdditionTextBox.Leave += new System.EventHandler(this.HPAdditionTextBox_Leave);
             // 
             // label52
             // 
@@ -1397,6 +1953,7 @@
             this.HPRecoveryAdditionTextBox.Name = "HPRecoveryAdditionTextBox";
             this.HPRecoveryAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.HPRecoveryAdditionTextBox.TabIndex = 112;
+            this.HPRecoveryAdditionTextBox.Leave += new System.EventHandler(this.HPRecoveryAdditionTextBox_Leave);
             // 
             // label53
             // 
@@ -1417,6 +1974,7 @@
             this.MANAAdditionTextBox.Name = "MANAAdditionTextBox";
             this.MANAAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.MANAAdditionTextBox.TabIndex = 114;
+            this.MANAAdditionTextBox.Leave += new System.EventHandler(this.MANAAdditionTextBox_Leave);
             // 
             // label54
             // 
@@ -1437,6 +1995,7 @@
             this.MANARecoveryAdditionTextBox.Name = "MANARecoveryAdditionTextBox";
             this.MANARecoveryAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.MANARecoveryAdditionTextBox.TabIndex = 116;
+            this.MANARecoveryAdditionTextBox.Leave += new System.EventHandler(this.MANARecoveryAdditionTextBox_Leave);
             // 
             // label55
             // 
@@ -1457,6 +2016,7 @@
             this.SpeedAdditionTextBox.Name = "SpeedAdditionTextBox";
             this.SpeedAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.SpeedAdditionTextBox.TabIndex = 118;
+            this.SpeedAdditionTextBox.Leave += new System.EventHandler(this.SpeedAdditionTextBox_Leave);
             // 
             // label56
             // 
@@ -1477,6 +2037,7 @@
             this.ChantAdditionTextBox.Name = "ChantAdditionTextBox";
             this.ChantAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.ChantAdditionTextBox.TabIndex = 120;
+            this.ChantAdditionTextBox.Leave += new System.EventHandler(this.ChantAdditionTextBox_Leave);
             // 
             // label57
             // 
@@ -1497,6 +2058,7 @@
             this.AccuracyAdditionTextBox.Name = "AccuracyAdditionTextBox";
             this.AccuracyAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.AccuracyAdditionTextBox.TabIndex = 122;
+            this.AccuracyAdditionTextBox.Leave += new System.EventHandler(this.AccuracyAdditionTextBox_Leave);
             // 
             // label58
             // 
@@ -1537,6 +2099,7 @@
             this.CriticalAdditionTextBox.Name = "CriticalAdditionTextBox";
             this.CriticalAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.CriticalAdditionTextBox.TabIndex = 126;
+            this.CriticalAdditionTextBox.Leave += new System.EventHandler(this.CriticalAdditionTextBox_Leave);
             // 
             // label61
             // 
@@ -1557,6 +2120,7 @@
             this.DamageGainAdditionTextBox.Name = "DamageGainAdditionTextBox";
             this.DamageGainAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.DamageGainAdditionTextBox.TabIndex = 128;
+            this.DamageGainAdditionTextBox.Leave += new System.EventHandler(this.DamageGainAdditionTextBox_Leave);
             // 
             // label62
             // 
@@ -1577,6 +2141,7 @@
             this.DamageMitigationAdditionTextBox.Name = "DamageMitigationAdditionTextBox";
             this.DamageMitigationAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.DamageMitigationAdditionTextBox.TabIndex = 130;
+            this.DamageMitigationAdditionTextBox.Leave += new System.EventHandler(this.DamageMitigationAdditionTextBox_Leave);
             // 
             // label63
             // 
@@ -1597,6 +2162,7 @@
             this.GainAdditionTextBox.Name = "GainAdditionTextBox";
             this.GainAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.GainAdditionTextBox.TabIndex = 132;
+            this.GainAdditionTextBox.Leave += new System.EventHandler(this.GainAdditionTextBox_Leave);
             // 
             // label64
             // 
@@ -1617,6 +2183,7 @@
             this.SpellResistanceAdditionTextBox.Name = "SpellResistanceAdditionTextBox";
             this.SpellResistanceAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.SpellResistanceAdditionTextBox.TabIndex = 134;
+            this.SpellResistanceAdditionTextBox.Leave += new System.EventHandler(this.SpellResistanceAdditionTextBox_Leave);
             // 
             // label65
             // 
@@ -1637,6 +2204,7 @@
             this.ExpAdditionTextBox.Name = "ExpAdditionTextBox";
             this.ExpAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.ExpAdditionTextBox.TabIndex = 136;
+            this.ExpAdditionTextBox.Leave += new System.EventHandler(this.ExpAdditionTextBox_Leave);
             // 
             // label66
             // 
@@ -1657,6 +2225,7 @@
             this.HideAdditionTextBox.Name = "HideAdditionTextBox";
             this.HideAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.HideAdditionTextBox.TabIndex = 138;
+            this.HideAdditionTextBox.Leave += new System.EventHandler(this.HideAdditionTextBox_Leave);
             // 
             // label67
             // 
@@ -1677,6 +2246,7 @@
             this.EnduranceAdditionTextBox.Name = "EnduranceAdditionTextBox";
             this.EnduranceAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.EnduranceAdditionTextBox.TabIndex = 140;
+            this.EnduranceAdditionTextBox.Leave += new System.EventHandler(this.EnduranceAdditionTextBox_Leave);
             // 
             // label68
             // 
@@ -1697,6 +2267,7 @@
             this.LoadAdditionTextBox.Name = "LoadAdditionTextBox";
             this.LoadAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.LoadAdditionTextBox.TabIndex = 142;
+            this.LoadAdditionTextBox.Leave += new System.EventHandler(this.LoadAdditionTextBox_Leave);
             // 
             // label69
             // 
@@ -1717,6 +2288,7 @@
             this.EnergyAdditionTextBox.Name = "EnergyAdditionTextBox";
             this.EnergyAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.EnergyAdditionTextBox.TabIndex = 144;
+            this.EnergyAdditionTextBox.Leave += new System.EventHandler(this.EnergyAdditionTextBox_Leave);
             // 
             // label41
             // 
@@ -1737,6 +2309,7 @@
             this.SpellDamageAdditionTextBox.Name = "SpellDamageAdditionTextBox";
             this.SpellDamageAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.SpellDamageAdditionTextBox.TabIndex = 146;
+            this.SpellDamageAdditionTextBox.Leave += new System.EventHandler(this.SpellDamageAdditionTextBox_Leave);
             // 
             // label42
             // 
@@ -1757,6 +2330,7 @@
             this.NousAdditionTextBox.Name = "NousAdditionTextBox";
             this.NousAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.NousAdditionTextBox.TabIndex = 148;
+            this.NousAdditionTextBox.Leave += new System.EventHandler(this.NousAdditionTextBox_Leave);
             // 
             // label43
             // 
@@ -1777,7 +2351,7 @@
             this.SanityAdditionTextBox.Name = "SanityAdditionTextBox";
             this.SanityAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.SanityAdditionTextBox.TabIndex = 150;
-            this.SanityAdditionTextBox.TextChanged += new System.EventHandler(this.textBox42_TextChanged);
+            this.SanityAdditionTextBox.Leave += new System.EventHandler(this.SanityAdditionTextBox_Leave);
             // 
             // label44
             // 
@@ -1798,6 +2372,7 @@
             this.LuckAdditionTextBox.Name = "LuckAdditionTextBox";
             this.LuckAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.LuckAdditionTextBox.TabIndex = 152;
+            this.LuckAdditionTextBox.Leave += new System.EventHandler(this.LuckAdditionTextBox_Leave);
             // 
             // label60
             // 
@@ -1837,7 +2412,7 @@
             this.flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(3);
             this.flowLayoutPanel3.Size = new System.Drawing.Size(1254, 37);
             this.flowLayoutPanel3.TabIndex = 78;
-            this.flowLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel3_Paint);
+            this.flowLayoutPanel3.Click += new System.EventHandler(this.Focused_Click);
             // 
             // label20
             // 
@@ -1858,6 +2433,7 @@
             this.StrengthPercentTextBox.Name = "StrengthPercentTextBox";
             this.StrengthPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.StrengthPercentTextBox.TabIndex = 128;
+            this.StrengthPercentTextBox.Leave += new System.EventHandler(this.StrengthPercentTextBox_Leave);
             // 
             // label21
             // 
@@ -1878,6 +2454,7 @@
             this.PhysiquePercentTextBox.Name = "PhysiquePercentTextBox";
             this.PhysiquePercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.PhysiquePercentTextBox.TabIndex = 130;
+            this.PhysiquePercentTextBox.Leave += new System.EventHandler(this.PhysiquePercentTextBox_Leave);
             // 
             // label22
             // 
@@ -1898,6 +2475,7 @@
             this.NimblePercentTextBox.Name = "NimblePercentTextBox";
             this.NimblePercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.NimblePercentTextBox.TabIndex = 132;
+            this.NimblePercentTextBox.Leave += new System.EventHandler(this.NimblePercentTextBox_Leave);
             // 
             // label23
             // 
@@ -1918,6 +2496,7 @@
             this.MagicPercentTextBox.Name = "MagicPercentTextBox";
             this.MagicPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.MagicPercentTextBox.TabIndex = 134;
+            this.MagicPercentTextBox.Leave += new System.EventHandler(this.MagicPercentTextBox_Leave);
             // 
             // label24
             // 
@@ -1938,6 +2517,7 @@
             this.LorePercentTextBox.Name = "LorePercentTextBox";
             this.LorePercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.LorePercentTextBox.TabIndex = 136;
+            this.LorePercentTextBox.Leave += new System.EventHandler(this.LorePercentTextBox_Leave);
             // 
             // label25
             // 
@@ -1958,6 +2538,7 @@
             this.InspirationPercentTextBox.Name = "InspirationPercentTextBox";
             this.InspirationPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.InspirationPercentTextBox.TabIndex = 138;
+            this.InspirationPercentTextBox.Leave += new System.EventHandler(this.InspirationPercentTextBox_Leave);
             // 
             // label26
             // 
@@ -1978,6 +2559,7 @@
             this.PerceptionPercentTextBox.Name = "PerceptionPercentTextBox";
             this.PerceptionPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.PerceptionPercentTextBox.TabIndex = 140;
+            this.PerceptionPercentTextBox.Leave += new System.EventHandler(this.PerceptionPercentTextBox_Leave);
             // 
             // label27
             // 
@@ -1998,6 +2580,7 @@
             this.GlamourPercentTextBox.Name = "GlamourPercentTextBox";
             this.GlamourPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.GlamourPercentTextBox.TabIndex = 142;
+            this.GlamourPercentTextBox.Leave += new System.EventHandler(this.GlamourPercentTextBox_Leave);
             // 
             // label29
             // 
@@ -2018,6 +2601,7 @@
             this.ResolutionPercentTextBox.Name = "ResolutionPercentTextBox";
             this.ResolutionPercentTextBox.Size = new System.Drawing.Size(36, 21);
             this.ResolutionPercentTextBox.TabIndex = 144;
+            this.ResolutionPercentTextBox.Leave += new System.EventHandler(this.ResolutionPercentTextBox_Leave);
             // 
             // label19
             // 
@@ -2057,6 +2641,7 @@
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(3);
             this.flowLayoutPanel2.Size = new System.Drawing.Size(1254, 37);
             this.flowLayoutPanel2.TabIndex = 76;
+            this.flowLayoutPanel2.Click += new System.EventHandler(this.Focused_Click);
             // 
             // label10
             // 
@@ -2077,6 +2662,7 @@
             this.StrengthAdditionTextBox.Name = "StrengthAdditionTextBox";
             this.StrengthAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.StrengthAdditionTextBox.TabIndex = 110;
+            this.StrengthAdditionTextBox.Leave += new System.EventHandler(this.StrengthAdditionTextBox_Leave);
             // 
             // label11
             // 
@@ -2097,6 +2683,7 @@
             this.PhysiqueAdditionTextBox.Name = "PhysiqueAdditionTextBox";
             this.PhysiqueAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.PhysiqueAdditionTextBox.TabIndex = 112;
+            this.PhysiqueAdditionTextBox.Leave += new System.EventHandler(this.PhysiqueAdditionTextBox_Leave);
             // 
             // label12
             // 
@@ -2117,6 +2704,7 @@
             this.NimbleAdditionTextBox.Name = "NimbleAdditionTextBox";
             this.NimbleAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.NimbleAdditionTextBox.TabIndex = 114;
+            this.NimbleAdditionTextBox.Leave += new System.EventHandler(this.NimbleAdditionTextBox_Leave);
             // 
             // label13
             // 
@@ -2137,6 +2725,7 @@
             this.MagicAdditionTextBox.Name = "MagicAdditionTextBox";
             this.MagicAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.MagicAdditionTextBox.TabIndex = 116;
+            this.MagicAdditionTextBox.Leave += new System.EventHandler(this.MagicAdditionTextBox_Leave);
             // 
             // label14
             // 
@@ -2150,7 +2739,6 @@
             this.label14.TabIndex = 119;
             this.label14.Text = "知识";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // LoreAdditionTextBox
             // 
@@ -2158,6 +2746,7 @@
             this.LoreAdditionTextBox.Name = "LoreAdditionTextBox";
             this.LoreAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.LoreAdditionTextBox.TabIndex = 118;
+            this.LoreAdditionTextBox.Leave += new System.EventHandler(this.LoreAdditionTextBox_Leave);
             // 
             // label15
             // 
@@ -2178,6 +2767,7 @@
             this.InspirationAdditionTextBox.Name = "InspirationAdditionTextBox";
             this.InspirationAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.InspirationAdditionTextBox.TabIndex = 120;
+            this.InspirationAdditionTextBox.Leave += new System.EventHandler(this.InspirationAdditionTextBox_Leave);
             // 
             // label16
             // 
@@ -2198,6 +2788,7 @@
             this.PerceptionAdditionTextBox.Name = "PerceptionAdditionTextBox";
             this.PerceptionAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.PerceptionAdditionTextBox.TabIndex = 122;
+            this.PerceptionAdditionTextBox.Leave += new System.EventHandler(this.PerceptionAdditionTextBox_Leave);
             // 
             // label17
             // 
@@ -2218,6 +2809,7 @@
             this.GlamourAdditionTextBox.Name = "GlamourAdditionTextBox";
             this.GlamourAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.GlamourAdditionTextBox.TabIndex = 124;
+            this.GlamourAdditionTextBox.Leave += new System.EventHandler(this.GlamourAdditionTextBox_Leave);
             // 
             // label18
             // 
@@ -2238,6 +2830,7 @@
             this.ResolutionAdditionTextBox.Name = "ResolutionAdditionTextBox";
             this.ResolutionAdditionTextBox.Size = new System.Drawing.Size(36, 21);
             this.ResolutionAdditionTextBox.TabIndex = 126;
+            this.ResolutionAdditionTextBox.Leave += new System.EventHandler(this.ResolutionAdditionTextBox_Leave);
             // 
             // label28
             // 
@@ -2250,73 +2843,73 @@
             this.label28.TabIndex = 75;
             this.label28.Text = "属性数值加成";
             // 
-            // groupBox3
+            // ResultGroupBox
             // 
-            this.groupBox3.Controls.Add(this.flowLayoutPanel8);
-            this.groupBox3.Controls.Add(this.flowLayoutPanel9);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox3.Location = new System.Drawing.Point(0, 474);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(10);
-            this.groupBox3.Size = new System.Drawing.Size(1274, 145);
-            this.groupBox3.TabIndex = 55;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "结果";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            this.ResultGroupBox.Controls.Add(this.flowLayoutPanel8);
+            this.ResultGroupBox.Controls.Add(this.flowLayoutPanel9);
+            this.ResultGroupBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ResultGroupBox.Location = new System.Drawing.Point(0, 463);
+            this.ResultGroupBox.Name = "ResultGroupBox";
+            this.ResultGroupBox.Padding = new System.Windows.Forms.Padding(10);
+            this.ResultGroupBox.Size = new System.Drawing.Size(1274, 145);
+            this.ResultGroupBox.TabIndex = 55;
+            this.ResultGroupBox.TabStop = false;
+            this.ResultGroupBox.Text = "结果";
             // 
             // flowLayoutPanel8
             // 
             this.flowLayoutPanel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel8.Controls.Add(this.label87);
-            this.flowLayoutPanel8.Controls.Add(this.textBox84);
+            this.flowLayoutPanel8.Controls.Add(this.HPResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label88);
-            this.flowLayoutPanel8.Controls.Add(this.textBox85);
+            this.flowLayoutPanel8.Controls.Add(this.HPRecoveryResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label89);
-            this.flowLayoutPanel8.Controls.Add(this.textBox86);
+            this.flowLayoutPanel8.Controls.Add(this.MANAResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label90);
-            this.flowLayoutPanel8.Controls.Add(this.textBox87);
+            this.flowLayoutPanel8.Controls.Add(this.MANARecoveryResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label91);
-            this.flowLayoutPanel8.Controls.Add(this.textBox88);
+            this.flowLayoutPanel8.Controls.Add(this.SpeedResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label92);
-            this.flowLayoutPanel8.Controls.Add(this.textBox89);
+            this.flowLayoutPanel8.Controls.Add(this.ChantResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label93);
-            this.flowLayoutPanel8.Controls.Add(this.textBox90);
+            this.flowLayoutPanel8.Controls.Add(this.AccuracyResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label94);
-            this.flowLayoutPanel8.Controls.Add(this.textBox91);
+            this.flowLayoutPanel8.Controls.Add(this.DodgeResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label95);
-            this.flowLayoutPanel8.Controls.Add(this.textBox92);
+            this.flowLayoutPanel8.Controls.Add(this.CriticalResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label96);
-            this.flowLayoutPanel8.Controls.Add(this.textBox93);
+            this.flowLayoutPanel8.Controls.Add(this.DamageGainResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label97);
-            this.flowLayoutPanel8.Controls.Add(this.textBox94);
+            this.flowLayoutPanel8.Controls.Add(this.DamageMitigationResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label98);
-            this.flowLayoutPanel8.Controls.Add(this.textBox95);
+            this.flowLayoutPanel8.Controls.Add(this.GainResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label99);
-            this.flowLayoutPanel8.Controls.Add(this.textBox96);
+            this.flowLayoutPanel8.Controls.Add(this.SpellResistanceResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label100);
-            this.flowLayoutPanel8.Controls.Add(this.textBox97);
+            this.flowLayoutPanel8.Controls.Add(this.ExpResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label101);
-            this.flowLayoutPanel8.Controls.Add(this.textBox98);
+            this.flowLayoutPanel8.Controls.Add(this.HideResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label102);
-            this.flowLayoutPanel8.Controls.Add(this.textBox99);
+            this.flowLayoutPanel8.Controls.Add(this.EnduranceResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label103);
-            this.flowLayoutPanel8.Controls.Add(this.textBox100);
+            this.flowLayoutPanel8.Controls.Add(this.LoadResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label104);
-            this.flowLayoutPanel8.Controls.Add(this.textBox101);
+            this.flowLayoutPanel8.Controls.Add(this.EnergyResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label105);
-            this.flowLayoutPanel8.Controls.Add(this.textBox102);
+            this.flowLayoutPanel8.Controls.Add(this.SpellDamageResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label106);
-            this.flowLayoutPanel8.Controls.Add(this.textBox103);
+            this.flowLayoutPanel8.Controls.Add(this.NousResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label107);
-            this.flowLayoutPanel8.Controls.Add(this.textBox104);
+            this.flowLayoutPanel8.Controls.Add(this.SanityResultTextBox);
             this.flowLayoutPanel8.Controls.Add(this.label108);
-            this.flowLayoutPanel8.Controls.Add(this.textBox105);
+            this.flowLayoutPanel8.Controls.Add(this.LuckResultTextBox);
             this.flowLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel8.Location = new System.Drawing.Point(10, 61);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
             this.flowLayoutPanel8.Padding = new System.Windows.Forms.Padding(3);
             this.flowLayoutPanel8.Size = new System.Drawing.Size(1254, 63);
             this.flowLayoutPanel8.TabIndex = 89;
+            this.flowLayoutPanel8.Click += new System.EventHandler(this.Focused_Click);
             // 
             // label87
             // 
@@ -2332,13 +2925,13 @@
             this.label87.Text = "生命";
             this.label87.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox84
+            // HPResultTextBox
             // 
-            this.textBox84.Enabled = false;
-            this.textBox84.Location = new System.Drawing.Point(41, 6);
-            this.textBox84.Name = "textBox84";
-            this.textBox84.Size = new System.Drawing.Size(36, 21);
-            this.textBox84.TabIndex = 154;
+            this.HPResultTextBox.Enabled = false;
+            this.HPResultTextBox.Location = new System.Drawing.Point(41, 6);
+            this.HPResultTextBox.Name = "HPResultTextBox";
+            this.HPResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.HPResultTextBox.TabIndex = 154;
             // 
             // label88
             // 
@@ -2346,20 +2939,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label88.AutoSize = true;
-            this.label88.Location = new System.Drawing.Point(83, 3);
+            this.label88.Location = new System.Drawing.Point(100, 3);
             this.label88.Name = "label88";
             this.label88.Size = new System.Drawing.Size(29, 27);
             this.label88.TabIndex = 157;
             this.label88.Text = "命回";
             this.label88.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox85
+            // HPRecoveryResultTextBox
             // 
-            this.textBox85.Enabled = false;
-            this.textBox85.Location = new System.Drawing.Point(118, 6);
-            this.textBox85.Name = "textBox85";
-            this.textBox85.Size = new System.Drawing.Size(36, 21);
-            this.textBox85.TabIndex = 156;
+            this.HPRecoveryResultTextBox.Enabled = false;
+            this.HPRecoveryResultTextBox.Location = new System.Drawing.Point(135, 6);
+            this.HPRecoveryResultTextBox.Name = "HPRecoveryResultTextBox";
+            this.HPRecoveryResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.HPRecoveryResultTextBox.TabIndex = 156;
             // 
             // label89
             // 
@@ -2367,20 +2960,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label89.AutoSize = true;
-            this.label89.Location = new System.Drawing.Point(160, 3);
+            this.label89.Location = new System.Drawing.Point(194, 3);
             this.label89.Name = "label89";
             this.label89.Size = new System.Drawing.Size(29, 27);
             this.label89.TabIndex = 159;
             this.label89.Text = "魔法";
             this.label89.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox86
+            // MANAResultTextBox
             // 
-            this.textBox86.Enabled = false;
-            this.textBox86.Location = new System.Drawing.Point(195, 6);
-            this.textBox86.Name = "textBox86";
-            this.textBox86.Size = new System.Drawing.Size(36, 21);
-            this.textBox86.TabIndex = 158;
+            this.MANAResultTextBox.Enabled = false;
+            this.MANAResultTextBox.Location = new System.Drawing.Point(229, 6);
+            this.MANAResultTextBox.Name = "MANAResultTextBox";
+            this.MANAResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.MANAResultTextBox.TabIndex = 158;
             // 
             // label90
             // 
@@ -2388,20 +2981,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label90.AutoSize = true;
-            this.label90.Location = new System.Drawing.Point(237, 3);
+            this.label90.Location = new System.Drawing.Point(288, 3);
             this.label90.Name = "label90";
             this.label90.Size = new System.Drawing.Size(29, 27);
             this.label90.TabIndex = 161;
             this.label90.Text = "法回";
             this.label90.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox87
+            // MANARecoveryResultTextBox
             // 
-            this.textBox87.Enabled = false;
-            this.textBox87.Location = new System.Drawing.Point(272, 6);
-            this.textBox87.Name = "textBox87";
-            this.textBox87.Size = new System.Drawing.Size(36, 21);
-            this.textBox87.TabIndex = 160;
+            this.MANARecoveryResultTextBox.Enabled = false;
+            this.MANARecoveryResultTextBox.Location = new System.Drawing.Point(323, 6);
+            this.MANARecoveryResultTextBox.Name = "MANARecoveryResultTextBox";
+            this.MANARecoveryResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.MANARecoveryResultTextBox.TabIndex = 160;
             // 
             // label91
             // 
@@ -2409,20 +3002,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label91.AutoSize = true;
-            this.label91.Location = new System.Drawing.Point(314, 3);
+            this.label91.Location = new System.Drawing.Point(382, 3);
             this.label91.Name = "label91";
             this.label91.Size = new System.Drawing.Size(29, 27);
             this.label91.TabIndex = 163;
             this.label91.Text = "速度";
             this.label91.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox88
+            // SpeedResultTextBox
             // 
-            this.textBox88.Enabled = false;
-            this.textBox88.Location = new System.Drawing.Point(349, 6);
-            this.textBox88.Name = "textBox88";
-            this.textBox88.Size = new System.Drawing.Size(36, 21);
-            this.textBox88.TabIndex = 162;
+            this.SpeedResultTextBox.Enabled = false;
+            this.SpeedResultTextBox.Location = new System.Drawing.Point(417, 6);
+            this.SpeedResultTextBox.Name = "SpeedResultTextBox";
+            this.SpeedResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.SpeedResultTextBox.TabIndex = 162;
             // 
             // label92
             // 
@@ -2430,20 +3023,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label92.AutoSize = true;
-            this.label92.Location = new System.Drawing.Point(391, 3);
+            this.label92.Location = new System.Drawing.Point(476, 3);
             this.label92.Name = "label92";
             this.label92.Size = new System.Drawing.Size(29, 27);
             this.label92.TabIndex = 165;
             this.label92.Text = "咏唱";
             this.label92.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox89
+            // ChantResultTextBox
             // 
-            this.textBox89.Enabled = false;
-            this.textBox89.Location = new System.Drawing.Point(426, 6);
-            this.textBox89.Name = "textBox89";
-            this.textBox89.Size = new System.Drawing.Size(36, 21);
-            this.textBox89.TabIndex = 164;
+            this.ChantResultTextBox.Enabled = false;
+            this.ChantResultTextBox.Location = new System.Drawing.Point(511, 6);
+            this.ChantResultTextBox.Name = "ChantResultTextBox";
+            this.ChantResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.ChantResultTextBox.TabIndex = 164;
             // 
             // label93
             // 
@@ -2451,20 +3044,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label93.AutoSize = true;
-            this.label93.Location = new System.Drawing.Point(468, 3);
+            this.label93.Location = new System.Drawing.Point(570, 3);
             this.label93.Name = "label93";
             this.label93.Size = new System.Drawing.Size(29, 27);
             this.label93.TabIndex = 167;
             this.label93.Text = "命中";
             this.label93.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox90
+            // AccuracyResultTextBox
             // 
-            this.textBox90.Enabled = false;
-            this.textBox90.Location = new System.Drawing.Point(503, 6);
-            this.textBox90.Name = "textBox90";
-            this.textBox90.Size = new System.Drawing.Size(36, 21);
-            this.textBox90.TabIndex = 166;
+            this.AccuracyResultTextBox.Enabled = false;
+            this.AccuracyResultTextBox.Location = new System.Drawing.Point(605, 6);
+            this.AccuracyResultTextBox.Name = "AccuracyResultTextBox";
+            this.AccuracyResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.AccuracyResultTextBox.TabIndex = 166;
             // 
             // label94
             // 
@@ -2472,20 +3065,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label94.AutoSize = true;
-            this.label94.Location = new System.Drawing.Point(545, 3);
+            this.label94.Location = new System.Drawing.Point(664, 3);
             this.label94.Name = "label94";
             this.label94.Size = new System.Drawing.Size(29, 27);
             this.label94.TabIndex = 169;
             this.label94.Text = "回避";
             this.label94.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox91
+            // DodgeResultTextBox
             // 
-            this.textBox91.Enabled = false;
-            this.textBox91.Location = new System.Drawing.Point(580, 6);
-            this.textBox91.Name = "textBox91";
-            this.textBox91.Size = new System.Drawing.Size(36, 21);
-            this.textBox91.TabIndex = 168;
+            this.DodgeResultTextBox.Enabled = false;
+            this.DodgeResultTextBox.Location = new System.Drawing.Point(699, 6);
+            this.DodgeResultTextBox.Name = "DodgeResultTextBox";
+            this.DodgeResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.DodgeResultTextBox.TabIndex = 168;
             // 
             // label95
             // 
@@ -2493,20 +3086,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label95.AutoSize = true;
-            this.label95.Location = new System.Drawing.Point(622, 3);
+            this.label95.Location = new System.Drawing.Point(758, 3);
             this.label95.Name = "label95";
             this.label95.Size = new System.Drawing.Size(29, 27);
             this.label95.TabIndex = 171;
             this.label95.Text = "会心";
             this.label95.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox92
+            // CriticalResultTextBox
             // 
-            this.textBox92.Enabled = false;
-            this.textBox92.Location = new System.Drawing.Point(657, 6);
-            this.textBox92.Name = "textBox92";
-            this.textBox92.Size = new System.Drawing.Size(36, 21);
-            this.textBox92.TabIndex = 170;
+            this.CriticalResultTextBox.Enabled = false;
+            this.CriticalResultTextBox.Location = new System.Drawing.Point(793, 6);
+            this.CriticalResultTextBox.Name = "CriticalResultTextBox";
+            this.CriticalResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.CriticalResultTextBox.TabIndex = 170;
             // 
             // label96
             // 
@@ -2514,20 +3107,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label96.AutoSize = true;
-            this.label96.Location = new System.Drawing.Point(699, 3);
+            this.label96.Location = new System.Drawing.Point(852, 3);
             this.label96.Name = "label96";
             this.label96.Size = new System.Drawing.Size(29, 27);
             this.label96.TabIndex = 173;
             this.label96.Text = "增伤";
             this.label96.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox93
+            // DamageGainResultTextBox
             // 
-            this.textBox93.Enabled = false;
-            this.textBox93.Location = new System.Drawing.Point(734, 6);
-            this.textBox93.Name = "textBox93";
-            this.textBox93.Size = new System.Drawing.Size(36, 21);
-            this.textBox93.TabIndex = 172;
+            this.DamageGainResultTextBox.Enabled = false;
+            this.DamageGainResultTextBox.Location = new System.Drawing.Point(887, 6);
+            this.DamageGainResultTextBox.Name = "DamageGainResultTextBox";
+            this.DamageGainResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.DamageGainResultTextBox.TabIndex = 172;
             // 
             // label97
             // 
@@ -2535,20 +3128,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label97.AutoSize = true;
-            this.label97.Location = new System.Drawing.Point(776, 3);
+            this.label97.Location = new System.Drawing.Point(946, 3);
             this.label97.Name = "label97";
             this.label97.Size = new System.Drawing.Size(29, 27);
             this.label97.TabIndex = 175;
             this.label97.Text = "减伤";
             this.label97.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox94
+            // DamageMitigationResultTextBox
             // 
-            this.textBox94.Enabled = false;
-            this.textBox94.Location = new System.Drawing.Point(811, 6);
-            this.textBox94.Name = "textBox94";
-            this.textBox94.Size = new System.Drawing.Size(36, 21);
-            this.textBox94.TabIndex = 174;
+            this.DamageMitigationResultTextBox.Enabled = false;
+            this.DamageMitigationResultTextBox.Location = new System.Drawing.Point(981, 6);
+            this.DamageMitigationResultTextBox.Name = "DamageMitigationResultTextBox";
+            this.DamageMitigationResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.DamageMitigationResultTextBox.TabIndex = 174;
             // 
             // label98
             // 
@@ -2556,20 +3149,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label98.AutoSize = true;
-            this.label98.Location = new System.Drawing.Point(853, 3);
+            this.label98.Location = new System.Drawing.Point(1040, 3);
             this.label98.Name = "label98";
             this.label98.Size = new System.Drawing.Size(29, 27);
             this.label98.TabIndex = 177;
             this.label98.Text = "增益";
             this.label98.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox95
+            // GainResultTextBox
             // 
-            this.textBox95.Enabled = false;
-            this.textBox95.Location = new System.Drawing.Point(888, 6);
-            this.textBox95.Name = "textBox95";
-            this.textBox95.Size = new System.Drawing.Size(36, 21);
-            this.textBox95.TabIndex = 176;
+            this.GainResultTextBox.Enabled = false;
+            this.GainResultTextBox.Location = new System.Drawing.Point(1075, 6);
+            this.GainResultTextBox.Name = "GainResultTextBox";
+            this.GainResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.GainResultTextBox.TabIndex = 176;
             // 
             // label99
             // 
@@ -2577,20 +3170,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label99.AutoSize = true;
-            this.label99.Location = new System.Drawing.Point(930, 3);
+            this.label99.Location = new System.Drawing.Point(1134, 3);
             this.label99.Name = "label99";
             this.label99.Size = new System.Drawing.Size(29, 27);
             this.label99.TabIndex = 179;
             this.label99.Text = "咒抗";
             this.label99.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox96
+            // SpellResistanceResultTextBox
             // 
-            this.textBox96.Enabled = false;
-            this.textBox96.Location = new System.Drawing.Point(965, 6);
-            this.textBox96.Name = "textBox96";
-            this.textBox96.Size = new System.Drawing.Size(36, 21);
-            this.textBox96.TabIndex = 178;
+            this.SpellResistanceResultTextBox.Enabled = false;
+            this.SpellResistanceResultTextBox.Location = new System.Drawing.Point(1169, 6);
+            this.SpellResistanceResultTextBox.Name = "SpellResistanceResultTextBox";
+            this.SpellResistanceResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.SpellResistanceResultTextBox.TabIndex = 178;
             // 
             // label100
             // 
@@ -2598,20 +3191,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label100.AutoSize = true;
-            this.label100.Location = new System.Drawing.Point(1007, 3);
+            this.label100.Location = new System.Drawing.Point(6, 30);
             this.label100.Name = "label100";
             this.label100.Size = new System.Drawing.Size(29, 27);
             this.label100.TabIndex = 181;
             this.label100.Text = "经验";
             this.label100.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox97
+            // ExpResultTextBox
             // 
-            this.textBox97.Enabled = false;
-            this.textBox97.Location = new System.Drawing.Point(1042, 6);
-            this.textBox97.Name = "textBox97";
-            this.textBox97.Size = new System.Drawing.Size(36, 21);
-            this.textBox97.TabIndex = 180;
+            this.ExpResultTextBox.Enabled = false;
+            this.ExpResultTextBox.Location = new System.Drawing.Point(41, 33);
+            this.ExpResultTextBox.Name = "ExpResultTextBox";
+            this.ExpResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.ExpResultTextBox.TabIndex = 180;
             // 
             // label101
             // 
@@ -2619,21 +3212,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label101.AutoSize = true;
-            this.label101.Enabled = false;
-            this.label101.Location = new System.Drawing.Point(1084, 3);
+            this.label101.Location = new System.Drawing.Point(100, 30);
             this.label101.Name = "label101";
             this.label101.Size = new System.Drawing.Size(29, 27);
             this.label101.TabIndex = 183;
             this.label101.Text = "隐藏";
             this.label101.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox98
+            // HideResultTextBox
             // 
-            this.textBox98.Enabled = false;
-            this.textBox98.Location = new System.Drawing.Point(1119, 6);
-            this.textBox98.Name = "textBox98";
-            this.textBox98.Size = new System.Drawing.Size(36, 21);
-            this.textBox98.TabIndex = 182;
+            this.HideResultTextBox.Enabled = false;
+            this.HideResultTextBox.Location = new System.Drawing.Point(135, 33);
+            this.HideResultTextBox.Name = "HideResultTextBox";
+            this.HideResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.HideResultTextBox.TabIndex = 182;
             // 
             // label102
             // 
@@ -2641,21 +3233,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label102.AutoSize = true;
-            this.label102.Enabled = false;
-            this.label102.Location = new System.Drawing.Point(1161, 3);
+            this.label102.Location = new System.Drawing.Point(194, 30);
             this.label102.Name = "label102";
             this.label102.Size = new System.Drawing.Size(29, 27);
             this.label102.TabIndex = 185;
             this.label102.Text = "耐力";
             this.label102.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox99
+            // EnduranceResultTextBox
             // 
-            this.textBox99.Enabled = false;
-            this.textBox99.Location = new System.Drawing.Point(1196, 6);
-            this.textBox99.Name = "textBox99";
-            this.textBox99.Size = new System.Drawing.Size(36, 21);
-            this.textBox99.TabIndex = 184;
+            this.EnduranceResultTextBox.Enabled = false;
+            this.EnduranceResultTextBox.Location = new System.Drawing.Point(229, 33);
+            this.EnduranceResultTextBox.Name = "EnduranceResultTextBox";
+            this.EnduranceResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.EnduranceResultTextBox.TabIndex = 184;
             // 
             // label103
             // 
@@ -2663,20 +3254,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label103.AutoSize = true;
-            this.label103.Location = new System.Drawing.Point(6, 30);
+            this.label103.Location = new System.Drawing.Point(288, 30);
             this.label103.Name = "label103";
             this.label103.Size = new System.Drawing.Size(29, 27);
             this.label103.TabIndex = 187;
             this.label103.Text = "负重";
             this.label103.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox100
+            // LoadResultTextBox
             // 
-            this.textBox100.Enabled = false;
-            this.textBox100.Location = new System.Drawing.Point(41, 33);
-            this.textBox100.Name = "textBox100";
-            this.textBox100.Size = new System.Drawing.Size(36, 21);
-            this.textBox100.TabIndex = 186;
+            this.LoadResultTextBox.Enabled = false;
+            this.LoadResultTextBox.Location = new System.Drawing.Point(323, 33);
+            this.LoadResultTextBox.Name = "LoadResultTextBox";
+            this.LoadResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.LoadResultTextBox.TabIndex = 186;
             // 
             // label104
             // 
@@ -2684,20 +3275,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label104.AutoSize = true;
-            this.label104.Location = new System.Drawing.Point(83, 30);
+            this.label104.Location = new System.Drawing.Point(382, 30);
             this.label104.Name = "label104";
             this.label104.Size = new System.Drawing.Size(29, 27);
             this.label104.TabIndex = 189;
             this.label104.Text = "精力";
             this.label104.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox101
+            // EnergyResultTextBox
             // 
-            this.textBox101.Enabled = false;
-            this.textBox101.Location = new System.Drawing.Point(118, 33);
-            this.textBox101.Name = "textBox101";
-            this.textBox101.Size = new System.Drawing.Size(36, 21);
-            this.textBox101.TabIndex = 188;
+            this.EnergyResultTextBox.Enabled = false;
+            this.EnergyResultTextBox.Location = new System.Drawing.Point(417, 33);
+            this.EnergyResultTextBox.Name = "EnergyResultTextBox";
+            this.EnergyResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.EnergyResultTextBox.TabIndex = 188;
             // 
             // label105
             // 
@@ -2705,20 +3296,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label105.AutoSize = true;
-            this.label105.Location = new System.Drawing.Point(160, 30);
+            this.label105.Location = new System.Drawing.Point(476, 30);
             this.label105.Name = "label105";
             this.label105.Size = new System.Drawing.Size(29, 27);
             this.label105.TabIndex = 191;
             this.label105.Text = "法伤";
             this.label105.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox102
+            // SpellDamageResultTextBox
             // 
-            this.textBox102.Enabled = false;
-            this.textBox102.Location = new System.Drawing.Point(195, 33);
-            this.textBox102.Name = "textBox102";
-            this.textBox102.Size = new System.Drawing.Size(36, 21);
-            this.textBox102.TabIndex = 190;
+            this.SpellDamageResultTextBox.Enabled = false;
+            this.SpellDamageResultTextBox.Location = new System.Drawing.Point(511, 33);
+            this.SpellDamageResultTextBox.Name = "SpellDamageResultTextBox";
+            this.SpellDamageResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.SpellDamageResultTextBox.TabIndex = 190;
             // 
             // label106
             // 
@@ -2726,20 +3317,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label106.AutoSize = true;
-            this.label106.Location = new System.Drawing.Point(237, 30);
+            this.label106.Location = new System.Drawing.Point(570, 30);
             this.label106.Name = "label106";
             this.label106.Size = new System.Drawing.Size(29, 27);
             this.label106.TabIndex = 193;
             this.label106.Text = "常识";
             this.label106.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox103
+            // NousResultTextBox
             // 
-            this.textBox103.Enabled = false;
-            this.textBox103.Location = new System.Drawing.Point(272, 33);
-            this.textBox103.Name = "textBox103";
-            this.textBox103.Size = new System.Drawing.Size(36, 21);
-            this.textBox103.TabIndex = 192;
+            this.NousResultTextBox.Enabled = false;
+            this.NousResultTextBox.Location = new System.Drawing.Point(605, 33);
+            this.NousResultTextBox.Name = "NousResultTextBox";
+            this.NousResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.NousResultTextBox.TabIndex = 192;
             // 
             // label107
             // 
@@ -2747,20 +3338,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label107.AutoSize = true;
-            this.label107.Location = new System.Drawing.Point(314, 30);
+            this.label107.Location = new System.Drawing.Point(664, 30);
             this.label107.Name = "label107";
             this.label107.Size = new System.Drawing.Size(29, 27);
             this.label107.TabIndex = 195;
             this.label107.Text = "理智";
             this.label107.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox104
+            // SanityResultTextBox
             // 
-            this.textBox104.Enabled = false;
-            this.textBox104.Location = new System.Drawing.Point(349, 33);
-            this.textBox104.Name = "textBox104";
-            this.textBox104.Size = new System.Drawing.Size(36, 21);
-            this.textBox104.TabIndex = 194;
+            this.SanityResultTextBox.Enabled = false;
+            this.SanityResultTextBox.Location = new System.Drawing.Point(699, 33);
+            this.SanityResultTextBox.Name = "SanityResultTextBox";
+            this.SanityResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.SanityResultTextBox.TabIndex = 194;
             // 
             // label108
             // 
@@ -2768,20 +3359,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label108.AutoSize = true;
-            this.label108.Location = new System.Drawing.Point(391, 30);
+            this.label108.Location = new System.Drawing.Point(758, 30);
             this.label108.Name = "label108";
             this.label108.Size = new System.Drawing.Size(29, 27);
             this.label108.TabIndex = 197;
             this.label108.Text = "幸运";
             this.label108.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox105
+            // LuckResultTextBox
             // 
-            this.textBox105.Enabled = false;
-            this.textBox105.Location = new System.Drawing.Point(426, 33);
-            this.textBox105.Name = "textBox105";
-            this.textBox105.Size = new System.Drawing.Size(36, 21);
-            this.textBox105.TabIndex = 196;
+            this.LuckResultTextBox.Enabled = false;
+            this.LuckResultTextBox.Location = new System.Drawing.Point(793, 33);
+            this.LuckResultTextBox.Name = "LuckResultTextBox";
+            this.LuckResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.LuckResultTextBox.TabIndex = 196;
             // 
             // flowLayoutPanel9
             // 
@@ -2789,27 +3380,28 @@
             this.flowLayoutPanel9.Controls.Add(this.label109);
             this.flowLayoutPanel9.Controls.Add(this.StrengthResultTextBox);
             this.flowLayoutPanel9.Controls.Add(this.label110);
-            this.flowLayoutPanel9.Controls.Add(this.textBox107);
+            this.flowLayoutPanel9.Controls.Add(this.PhysiqueResultTextBox);
             this.flowLayoutPanel9.Controls.Add(this.label111);
-            this.flowLayoutPanel9.Controls.Add(this.textBox108);
+            this.flowLayoutPanel9.Controls.Add(this.NimbleResultTextBox);
             this.flowLayoutPanel9.Controls.Add(this.label112);
-            this.flowLayoutPanel9.Controls.Add(this.textBox109);
+            this.flowLayoutPanel9.Controls.Add(this.MagicResultTextBox);
             this.flowLayoutPanel9.Controls.Add(this.label113);
-            this.flowLayoutPanel9.Controls.Add(this.textBox110);
+            this.flowLayoutPanel9.Controls.Add(this.LoreResultTextBox);
             this.flowLayoutPanel9.Controls.Add(this.label114);
-            this.flowLayoutPanel9.Controls.Add(this.textBox111);
+            this.flowLayoutPanel9.Controls.Add(this.InspirationResultTextBox);
             this.flowLayoutPanel9.Controls.Add(this.label115);
-            this.flowLayoutPanel9.Controls.Add(this.textBox112);
+            this.flowLayoutPanel9.Controls.Add(this.PerceptionResultTextBox);
             this.flowLayoutPanel9.Controls.Add(this.label116);
-            this.flowLayoutPanel9.Controls.Add(this.textBox113);
+            this.flowLayoutPanel9.Controls.Add(this.GlamourResultTextBox);
             this.flowLayoutPanel9.Controls.Add(this.label117);
-            this.flowLayoutPanel9.Controls.Add(this.textBox114);
+            this.flowLayoutPanel9.Controls.Add(this.ResolutionResultTextBox);
             this.flowLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel9.Location = new System.Drawing.Point(10, 24);
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
             this.flowLayoutPanel9.Padding = new System.Windows.Forms.Padding(3);
             this.flowLayoutPanel9.Size = new System.Drawing.Size(1254, 37);
             this.flowLayoutPanel9.TabIndex = 77;
+            this.flowLayoutPanel9.Click += new System.EventHandler(this.Focused_Click);
             // 
             // label109
             // 
@@ -2829,7 +3421,7 @@
             this.StrengthResultTextBox.Enabled = false;
             this.StrengthResultTextBox.Location = new System.Drawing.Point(41, 6);
             this.StrengthResultTextBox.Name = "StrengthResultTextBox";
-            this.StrengthResultTextBox.Size = new System.Drawing.Size(36, 21);
+            this.StrengthResultTextBox.Size = new System.Drawing.Size(53, 21);
             this.StrengthResultTextBox.TabIndex = 128;
             // 
             // label110
@@ -2838,20 +3430,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label110.AutoSize = true;
-            this.label110.Location = new System.Drawing.Point(83, 3);
+            this.label110.Location = new System.Drawing.Point(100, 3);
             this.label110.Name = "label110";
             this.label110.Size = new System.Drawing.Size(29, 27);
             this.label110.TabIndex = 131;
             this.label110.Text = "体质";
             this.label110.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox107
+            // PhysiqueResultTextBox
             // 
-            this.textBox107.Enabled = false;
-            this.textBox107.Location = new System.Drawing.Point(118, 6);
-            this.textBox107.Name = "textBox107";
-            this.textBox107.Size = new System.Drawing.Size(36, 21);
-            this.textBox107.TabIndex = 130;
+            this.PhysiqueResultTextBox.Enabled = false;
+            this.PhysiqueResultTextBox.Location = new System.Drawing.Point(135, 6);
+            this.PhysiqueResultTextBox.Name = "PhysiqueResultTextBox";
+            this.PhysiqueResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.PhysiqueResultTextBox.TabIndex = 130;
             // 
             // label111
             // 
@@ -2859,20 +3451,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label111.AutoSize = true;
-            this.label111.Location = new System.Drawing.Point(160, 3);
+            this.label111.Location = new System.Drawing.Point(194, 3);
             this.label111.Name = "label111";
             this.label111.Size = new System.Drawing.Size(29, 27);
             this.label111.TabIndex = 133;
             this.label111.Text = "灵巧";
             this.label111.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox108
+            // NimbleResultTextBox
             // 
-            this.textBox108.Enabled = false;
-            this.textBox108.Location = new System.Drawing.Point(195, 6);
-            this.textBox108.Name = "textBox108";
-            this.textBox108.Size = new System.Drawing.Size(36, 21);
-            this.textBox108.TabIndex = 132;
+            this.NimbleResultTextBox.Enabled = false;
+            this.NimbleResultTextBox.Location = new System.Drawing.Point(229, 6);
+            this.NimbleResultTextBox.Name = "NimbleResultTextBox";
+            this.NimbleResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.NimbleResultTextBox.TabIndex = 132;
             // 
             // label112
             // 
@@ -2880,20 +3472,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label112.AutoSize = true;
-            this.label112.Location = new System.Drawing.Point(237, 3);
+            this.label112.Location = new System.Drawing.Point(288, 3);
             this.label112.Name = "label112";
             this.label112.Size = new System.Drawing.Size(29, 27);
             this.label112.TabIndex = 135;
             this.label112.Text = "魔力";
             this.label112.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox109
+            // MagicResultTextBox
             // 
-            this.textBox109.Enabled = false;
-            this.textBox109.Location = new System.Drawing.Point(272, 6);
-            this.textBox109.Name = "textBox109";
-            this.textBox109.Size = new System.Drawing.Size(36, 21);
-            this.textBox109.TabIndex = 134;
+            this.MagicResultTextBox.Enabled = false;
+            this.MagicResultTextBox.Location = new System.Drawing.Point(323, 6);
+            this.MagicResultTextBox.Name = "MagicResultTextBox";
+            this.MagicResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.MagicResultTextBox.TabIndex = 134;
             // 
             // label113
             // 
@@ -2901,20 +3493,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label113.AutoSize = true;
-            this.label113.Location = new System.Drawing.Point(314, 3);
+            this.label113.Location = new System.Drawing.Point(382, 3);
             this.label113.Name = "label113";
             this.label113.Size = new System.Drawing.Size(29, 27);
             this.label113.TabIndex = 137;
             this.label113.Text = "知识";
             this.label113.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox110
+            // LoreResultTextBox
             // 
-            this.textBox110.Enabled = false;
-            this.textBox110.Location = new System.Drawing.Point(349, 6);
-            this.textBox110.Name = "textBox110";
-            this.textBox110.Size = new System.Drawing.Size(36, 21);
-            this.textBox110.TabIndex = 136;
+            this.LoreResultTextBox.Enabled = false;
+            this.LoreResultTextBox.Location = new System.Drawing.Point(417, 6);
+            this.LoreResultTextBox.Name = "LoreResultTextBox";
+            this.LoreResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.LoreResultTextBox.TabIndex = 136;
             // 
             // label114
             // 
@@ -2922,20 +3514,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label114.AutoSize = true;
-            this.label114.Location = new System.Drawing.Point(391, 3);
+            this.label114.Location = new System.Drawing.Point(476, 3);
             this.label114.Name = "label114";
             this.label114.Size = new System.Drawing.Size(29, 27);
             this.label114.TabIndex = 139;
             this.label114.Text = "灵感";
             this.label114.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox111
+            // InspirationResultTextBox
             // 
-            this.textBox111.Enabled = false;
-            this.textBox111.Location = new System.Drawing.Point(426, 6);
-            this.textBox111.Name = "textBox111";
-            this.textBox111.Size = new System.Drawing.Size(36, 21);
-            this.textBox111.TabIndex = 138;
+            this.InspirationResultTextBox.Enabled = false;
+            this.InspirationResultTextBox.Location = new System.Drawing.Point(511, 6);
+            this.InspirationResultTextBox.Name = "InspirationResultTextBox";
+            this.InspirationResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.InspirationResultTextBox.TabIndex = 138;
             // 
             // label115
             // 
@@ -2943,20 +3535,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label115.AutoSize = true;
-            this.label115.Location = new System.Drawing.Point(468, 3);
+            this.label115.Location = new System.Drawing.Point(570, 3);
             this.label115.Name = "label115";
             this.label115.Size = new System.Drawing.Size(29, 27);
             this.label115.TabIndex = 141;
             this.label115.Text = "感知";
             this.label115.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox112
+            // PerceptionResultTextBox
             // 
-            this.textBox112.Enabled = false;
-            this.textBox112.Location = new System.Drawing.Point(503, 6);
-            this.textBox112.Name = "textBox112";
-            this.textBox112.Size = new System.Drawing.Size(36, 21);
-            this.textBox112.TabIndex = 140;
+            this.PerceptionResultTextBox.Enabled = false;
+            this.PerceptionResultTextBox.Location = new System.Drawing.Point(605, 6);
+            this.PerceptionResultTextBox.Name = "PerceptionResultTextBox";
+            this.PerceptionResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.PerceptionResultTextBox.TabIndex = 140;
             // 
             // label116
             // 
@@ -2964,20 +3556,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label116.AutoSize = true;
-            this.label116.Location = new System.Drawing.Point(545, 3);
+            this.label116.Location = new System.Drawing.Point(664, 3);
             this.label116.Name = "label116";
             this.label116.Size = new System.Drawing.Size(29, 27);
             this.label116.TabIndex = 143;
             this.label116.Text = "魅力";
             this.label116.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox113
+            // GlamourResultTextBox
             // 
-            this.textBox113.Enabled = false;
-            this.textBox113.Location = new System.Drawing.Point(580, 6);
-            this.textBox113.Name = "textBox113";
-            this.textBox113.Size = new System.Drawing.Size(36, 21);
-            this.textBox113.TabIndex = 142;
+            this.GlamourResultTextBox.Enabled = false;
+            this.GlamourResultTextBox.Location = new System.Drawing.Point(699, 6);
+            this.GlamourResultTextBox.Name = "GlamourResultTextBox";
+            this.GlamourResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.GlamourResultTextBox.TabIndex = 142;
             // 
             // label117
             // 
@@ -2985,66 +3577,69 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label117.AutoSize = true;
-            this.label117.Location = new System.Drawing.Point(622, 3);
+            this.label117.Location = new System.Drawing.Point(758, 3);
             this.label117.Name = "label117";
             this.label117.Size = new System.Drawing.Size(29, 27);
             this.label117.TabIndex = 145;
             this.label117.Text = "意志";
             this.label117.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox114
+            // ResolutionResultTextBox
             // 
-            this.textBox114.Enabled = false;
-            this.textBox114.Location = new System.Drawing.Point(657, 6);
-            this.textBox114.Name = "textBox114";
-            this.textBox114.Size = new System.Drawing.Size(36, 21);
-            this.textBox114.TabIndex = 144;
+            this.ResolutionResultTextBox.Enabled = false;
+            this.ResolutionResultTextBox.Location = new System.Drawing.Point(793, 6);
+            this.ResolutionResultTextBox.Name = "ResolutionResultTextBox";
+            this.ResolutionResultTextBox.Size = new System.Drawing.Size(53, 21);
+            this.ResolutionResultTextBox.TabIndex = 144;
             // 
-            // groupBox4
+            // LogGroupBox
             // 
-            this.groupBox4.CausesValidation = false;
-            this.groupBox4.Controls.Add(this.textBox39);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Location = new System.Drawing.Point(0, 619);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1274, 145);
-            this.groupBox4.TabIndex = 56;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "日志";
+            this.LogGroupBox.CausesValidation = false;
+            this.LogGroupBox.Controls.Add(this.LogTextBox);
+            this.LogGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LogGroupBox.Location = new System.Drawing.Point(0, 608);
+            this.LogGroupBox.Name = "LogGroupBox";
+            this.LogGroupBox.Size = new System.Drawing.Size(1274, 156);
+            this.LogGroupBox.TabIndex = 56;
+            this.LogGroupBox.TabStop = false;
+            this.LogGroupBox.Text = "日志";
             // 
-            // textBox39
+            // LogTextBox
             // 
-            this.textBox39.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox39.Location = new System.Drawing.Point(3, 17);
-            this.textBox39.Multiline = true;
-            this.textBox39.Name = "textBox39";
-            this.textBox39.ReadOnly = true;
-            this.textBox39.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox39.Size = new System.Drawing.Size(1268, 125);
-            this.textBox39.TabIndex = 0;
+            this.LogTextBox.BackColor = System.Drawing.SystemColors.Info;
+            this.LogTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LogTextBox.Location = new System.Drawing.Point(3, 17);
+            this.LogTextBox.Multiline = true;
+            this.LogTextBox.Name = "LogTextBox";
+            this.LogTextBox.ReadOnly = true;
+            this.LogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.LogTextBox.Size = new System.Drawing.Size(1268, 136);
+            this.LogTextBox.TabIndex = 0;
             // 
             // DataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1274, 764);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.LogGroupBox);
+            this.Controls.Add(this.ResultGroupBox);
+            this.Controls.Add(this.AdditionGroupBox);
+            this.Controls.Add(this.BaseAttributeGroupBox);
             this.Name = "DataForm";
             this.Text = "属性";
             this.Activated += new System.EventHandler(this.DataForm_Activated);
-            this.groupBox1.ResumeLayout(false);
+            this.BaseAttributeGroupBox.ResumeLayout(false);
+            this.BaseAttributeGroupBox.PerformLayout();
+            this.flowLayoutPanel10.ResumeLayout(false);
+            this.flowLayoutPanel10.PerformLayout();
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel4.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel5.ResumeLayout(false);
             this.flowLayoutPanel5.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.AdditionGroupBox.ResumeLayout(false);
+            this.AdditionGroupBox.PerformLayout();
             this.flowLayoutPanel6.ResumeLayout(false);
             this.flowLayoutPanel6.PerformLayout();
             this.flowLayoutPanel7.ResumeLayout(false);
@@ -3053,21 +3648,21 @@
             this.flowLayoutPanel3.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
+            this.ResultGroupBox.ResumeLayout(false);
             this.flowLayoutPanel8.ResumeLayout(false);
             this.flowLayoutPanel8.PerformLayout();
             this.flowLayoutPanel9.ResumeLayout(false);
             this.flowLayoutPanel9.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.LogGroupBox.ResumeLayout(false);
+            this.LogGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox BaseAttributeGroupBox;
+        private System.Windows.Forms.GroupBox AdditionGroupBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
@@ -3116,7 +3711,7 @@
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.TextBox CriticalAdditionTextBox;
         private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox ResultGroupBox;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.TextBox DamageGainAdditionTextBox;
         private System.Windows.Forms.Label label62;
@@ -3144,27 +3739,8 @@
         private System.Windows.Forms.TextBox SanityAdditionTextBox;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.TextBox LuckAdditionTextBox;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox39;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox StrengthGrowTextBox;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox PhysiqueGrowTextBox;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox NimbleGrowTextBox;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox MagicGrowTextBox;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox LoreGrowTextBox;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox InspirationGrowTextBox;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox perceptionGrowTextBox;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.TextBox GlamourGrowTextBox;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.TextBox ResolutionGrowTextBox;
+        private System.Windows.Forms.GroupBox LogGroupBox;
+        private System.Windows.Forms.TextBox LogTextBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox StrengthTextBox;
@@ -3207,21 +3783,21 @@
         private System.Windows.Forms.Label label109;
         private System.Windows.Forms.TextBox StrengthResultTextBox;
         private System.Windows.Forms.Label label110;
-        private System.Windows.Forms.TextBox textBox107;
+        private System.Windows.Forms.TextBox PhysiqueResultTextBox;
         private System.Windows.Forms.Label label111;
-        private System.Windows.Forms.TextBox textBox108;
+        private System.Windows.Forms.TextBox NimbleResultTextBox;
         private System.Windows.Forms.Label label112;
-        private System.Windows.Forms.TextBox textBox109;
+        private System.Windows.Forms.TextBox MagicResultTextBox;
         private System.Windows.Forms.Label label113;
-        private System.Windows.Forms.TextBox textBox110;
+        private System.Windows.Forms.TextBox LoreResultTextBox;
         private System.Windows.Forms.Label label114;
-        private System.Windows.Forms.TextBox textBox111;
+        private System.Windows.Forms.TextBox InspirationResultTextBox;
         private System.Windows.Forms.Label label115;
-        private System.Windows.Forms.TextBox textBox112;
+        private System.Windows.Forms.TextBox PerceptionResultTextBox;
         private System.Windows.Forms.Label label116;
-        private System.Windows.Forms.TextBox textBox113;
+        private System.Windows.Forms.TextBox GlamourResultTextBox;
         private System.Windows.Forms.Label label117;
-        private System.Windows.Forms.TextBox textBox114;
+        private System.Windows.Forms.TextBox ResolutionResultTextBox;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.TextBox HPPercentTextBox;
         private System.Windows.Forms.Label label46;
@@ -3267,48 +3843,112 @@
         private System.Windows.Forms.Label label86;
         private System.Windows.Forms.TextBox LuckPercentTextBox;
         private System.Windows.Forms.Label label87;
-        private System.Windows.Forms.TextBox textBox84;
+        private System.Windows.Forms.TextBox HPResultTextBox;
         private System.Windows.Forms.Label label88;
-        private System.Windows.Forms.TextBox textBox85;
+        private System.Windows.Forms.TextBox HPRecoveryResultTextBox;
         private System.Windows.Forms.Label label89;
-        private System.Windows.Forms.TextBox textBox86;
+        private System.Windows.Forms.TextBox MANAResultTextBox;
         private System.Windows.Forms.Label label90;
-        private System.Windows.Forms.TextBox textBox87;
+        private System.Windows.Forms.TextBox MANARecoveryResultTextBox;
         private System.Windows.Forms.Label label91;
-        private System.Windows.Forms.TextBox textBox88;
+        private System.Windows.Forms.TextBox SpeedResultTextBox;
         private System.Windows.Forms.Label label92;
-        private System.Windows.Forms.TextBox textBox89;
+        private System.Windows.Forms.TextBox ChantResultTextBox;
         private System.Windows.Forms.Label label93;
-        private System.Windows.Forms.TextBox textBox90;
+        private System.Windows.Forms.TextBox AccuracyResultTextBox;
         private System.Windows.Forms.Label label94;
-        private System.Windows.Forms.TextBox textBox91;
+        private System.Windows.Forms.TextBox DodgeResultTextBox;
         private System.Windows.Forms.Label label95;
-        private System.Windows.Forms.TextBox textBox92;
+        private System.Windows.Forms.TextBox CriticalResultTextBox;
         private System.Windows.Forms.Label label96;
-        private System.Windows.Forms.TextBox textBox93;
+        private System.Windows.Forms.TextBox DamageGainResultTextBox;
         private System.Windows.Forms.Label label97;
-        private System.Windows.Forms.TextBox textBox94;
+        private System.Windows.Forms.TextBox DamageMitigationResultTextBox;
         private System.Windows.Forms.Label label98;
-        private System.Windows.Forms.TextBox textBox95;
+        private System.Windows.Forms.TextBox GainResultTextBox;
         private System.Windows.Forms.Label label99;
-        private System.Windows.Forms.TextBox textBox96;
+        private System.Windows.Forms.TextBox SpellResistanceResultTextBox;
         private System.Windows.Forms.Label label100;
-        private System.Windows.Forms.TextBox textBox97;
+        private System.Windows.Forms.TextBox ExpResultTextBox;
         private System.Windows.Forms.Label label101;
-        private System.Windows.Forms.TextBox textBox98;
+        private System.Windows.Forms.TextBox HideResultTextBox;
         private System.Windows.Forms.Label label102;
-        private System.Windows.Forms.TextBox textBox99;
+        private System.Windows.Forms.TextBox EnduranceResultTextBox;
         private System.Windows.Forms.Label label103;
-        private System.Windows.Forms.TextBox textBox100;
+        private System.Windows.Forms.TextBox LoadResultTextBox;
         private System.Windows.Forms.Label label104;
-        private System.Windows.Forms.TextBox textBox101;
+        private System.Windows.Forms.TextBox EnergyResultTextBox;
         private System.Windows.Forms.Label label105;
-        private System.Windows.Forms.TextBox textBox102;
+        private System.Windows.Forms.TextBox SpellDamageResultTextBox;
         private System.Windows.Forms.Label label106;
-        private System.Windows.Forms.TextBox textBox103;
+        private System.Windows.Forms.TextBox NousResultTextBox;
         private System.Windows.Forms.Label label107;
-        private System.Windows.Forms.TextBox textBox104;
+        private System.Windows.Forms.TextBox SanityResultTextBox;
         private System.Windows.Forms.Label label108;
-        private System.Windows.Forms.TextBox textBox105;
+        private System.Windows.Forms.TextBox LuckResultTextBox;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;
+        private System.Windows.Forms.Label label118;
+        private System.Windows.Forms.TextBox HPTextBox;
+        private System.Windows.Forms.Label label119;
+        private System.Windows.Forms.TextBox HPRecoveryTextBox;
+        private System.Windows.Forms.Label label120;
+        private System.Windows.Forms.TextBox MANATextBox;
+        private System.Windows.Forms.Label label121;
+        private System.Windows.Forms.TextBox MANARecoveryTextBox;
+        private System.Windows.Forms.Label label122;
+        private System.Windows.Forms.TextBox SpeedTextBox;
+        private System.Windows.Forms.Label label123;
+        private System.Windows.Forms.TextBox ChantTextBox;
+        private System.Windows.Forms.Label label124;
+        private System.Windows.Forms.TextBox AccuracyTextBox;
+        private System.Windows.Forms.Label label125;
+        private System.Windows.Forms.TextBox DodgeTextBox;
+        private System.Windows.Forms.Label label126;
+        private System.Windows.Forms.TextBox CriticalTextBox;
+        private System.Windows.Forms.Label label127;
+        private System.Windows.Forms.TextBox DamageGainTextBox;
+        private System.Windows.Forms.Label label128;
+        private System.Windows.Forms.TextBox DamageMitigationTextBox;
+        private System.Windows.Forms.Label label129;
+        private System.Windows.Forms.TextBox GainTextBox;
+        private System.Windows.Forms.Label label130;
+        private System.Windows.Forms.TextBox SpellResistanceTextBox;
+        private System.Windows.Forms.Label label131;
+        private System.Windows.Forms.TextBox ExpTextBox;
+        private System.Windows.Forms.Label label132;
+        private System.Windows.Forms.TextBox HideTextBox;
+        private System.Windows.Forms.Label label133;
+        private System.Windows.Forms.TextBox EnduraceTextBox;
+        private System.Windows.Forms.Label label134;
+        private System.Windows.Forms.TextBox LoadTextBox;
+        private System.Windows.Forms.Label label135;
+        private System.Windows.Forms.TextBox EnergyTextBox;
+        private System.Windows.Forms.Label label136;
+        private System.Windows.Forms.TextBox SpellDamageTextBox;
+        private System.Windows.Forms.Label label137;
+        private System.Windows.Forms.TextBox NousTextBox;
+        private System.Windows.Forms.Label label138;
+        private System.Windows.Forms.TextBox SanityTextBox;
+        private System.Windows.Forms.Label label139;
+        private System.Windows.Forms.TextBox LuckTextBox;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox StrengthGrowTextBox;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox PhysiqueGrowTextBox;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox NimbleGrowTextBox;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox MagicGrowTextBox;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox LoreGrowTextBox;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox InspirationGrowTextBox;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox PerceptionGrowTextBox;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.TextBox GlamourGrowTextBox;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TextBox ResolutionGrowTextBox;
     }
 }

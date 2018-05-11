@@ -3,7 +3,7 @@
     public class Player
     {
         public int ID { get; set; }
-        public string Nickname { get; set; }
+        public string Nickname { get; set; } = "";
         public int Level { get; set; }
 
         #region 基本属性
@@ -16,6 +16,29 @@
         public float Perception { get; set; }
         public float Glamour { get; set; }
         public float Resolution { get; set; }
+
+        public float HP { get; set; } = 20;
+        public float HP_Recovery { get; set; } = 4;
+        public float MANA { get; set; }
+        public float MANA_Recovery { get; set; }
+        public float Speed { get; set; } = 100;
+        public float Chant { get; set; }
+        public float Accuracy { get; set; } = 0.15f;
+        public float Dodge { get; set; }
+        public float Critical { get; set; }
+        public float DamageGain { get; set; }
+        public float DamageMitigation { get; set; }
+        public float Gain { get; set; }
+        public float SpellResistance { get; set; }
+        public float Exp { get; set; }
+        public float Hide { get; set; }
+        public float Endurance { get; set; } = 20;
+        public float Load { get; set; } = 15;
+        public float Energy { get; set; } = 100;
+        public float SpellDamage { get; set; }
+        public float Nous { get; set; } = 50;
+        public float Sanity { get; set; }
+        public float Luck { get; set; }
         #endregion
 
         #region 成长值
@@ -43,15 +66,15 @@
         #endregion
 
         #region 属性百分比加成
-        public float Strength_Percent { get; set; }
-        public float Physique_Percent { get; set; }
-        public float Nimble_Percent { get; set; }
-        public float Magic_Percent { get; set; }
-        public float Lore_Percent { get; set; }
-        public float Inspiration_Percent { get; set; }
-        public float Perception_Percent { get; set; }
-        public float Glamour_Percent { get; set; }
-        public float Resolution_Percent { get; set; }
+        public float Strength_Percent { get; set; } = 1;
+        public float Physique_Percent { get; set; } = 1;
+        public float Nimble_Percent { get; set; } = 1;
+        public float Magic_Percent { get; set; } = 1;
+        public float Lore_Percent { get; set; } = 1;
+        public float Inspiration_Percent { get; set; } = 1;
+        public float Perception_Percent { get; set; } = 1;
+        public float Glamour_Percent { get; set; } = 1;
+        public float Resolution_Percent { get; set; } = 1;
         #endregion
 
         #region 特性数值加成
@@ -80,28 +103,28 @@
         #endregion
 
         #region 特性百分比加成
-        public float HP_Percent { get; set; }
-        public float HP_Recovery_Percent { get; set; }
-        public float MANA_Percent { get; set; }
-        public float MANA_Recovery_Percent { get; set; }
-        public float Speed_Percent { get; set; }
-        public float Chant_Percent { get; set; }
-        public float Accuracy_Percent { get; set; }
-        public float Dodge_Percent { get; set; }
-        public float Critical_Percent { get; set; }
-        public float DamageGain_Percent { get; set; }
-        public float DamageMitigation_Percent { get; set; }
-        public float Gain_Percent { get; set; }
-        public float SpellResistance_Percent { get; set; }
-        public float Exp_Percent { get; set; }
-        public float Hide_Percent { get; set; }
-        public float Endurance_Percent { get; set; }
-        public float Load_Percent { get; set; }
-        public float Energy_Percent { get; set; }
-        public float SpellDamage_Percent { get; set; }
-        public float Nous_Percent { get; set; }
-        public float Sanity_Percent { get; set; }
-        public float Luck_Percent { get; set; }
+        public float HP_Percent { get; set; } = 1;
+        public float HP_Recovery_Percent { get; set; } = 1;
+        public float MANA_Percent { get; set; } = 1;
+        public float MANA_Recovery_Percent { get; set; } = 1;
+        public float Speed_Percent { get; set; } = 1;
+        public float Chant_Percent { get; set; } = 1;
+        public float Accuracy_Percent { get; set; } = 1;
+        public float Dodge_Percent { get; set; } = 1;
+        public float Critical_Percent { get; set; } = 1;
+        public float DamageGain_Percent { get; set; } = 1;
+        public float DamageMitigation_Percent { get; set; } = 1;
+        public float Gain_Percent { get; set; } = 1;
+        public float SpellResistance_Percent { get; set; } = 1;
+        public float Exp_Percent { get; set; } = 1;
+        public float Hide_Percent { get; set; } = 1;
+        public float Endurance_Percent { get; set; } = 1;
+        public float Load_Percent { get; set; } = 1;
+        public float Energy_Percent { get; set; } = 1;
+        public float SpellDamage_Percent { get; set; } = 1;
+        public float Nous_Percent { get; set; } = 1;
+        public float Sanity_Percent { get; set; } = 1;
+        public float Luck_Percent { get; set; } = 1;
         #endregion
 
 
