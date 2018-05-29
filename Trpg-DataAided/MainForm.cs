@@ -13,7 +13,7 @@ namespace Trpg_DataAided
                 InitializeComponent();
                 Init();
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("出错了。。。/r/n" + ex.Message);
             }

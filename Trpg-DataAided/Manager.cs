@@ -17,7 +17,7 @@ namespace Trpg_DataAided
             Player player = new Player
             {
                 Nickname = "asd",
-                Level = 1,
+                
 
             };
 
@@ -39,7 +39,7 @@ namespace Trpg_DataAided
         {
             Player player = new Player
             {
-                Level = 0
+                
             };
 
             list.Add(player);
