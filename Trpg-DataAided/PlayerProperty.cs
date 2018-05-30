@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Trpg_DataAided
 {
+    [Serializable]
     public class PlayerProperty
     {
         public int Level { get; set; }

@@ -347,10 +347,10 @@
             this.BaseAttributeGroupBox.Controls.Add(this.flowLayoutPanel5);
             this.BaseAttributeGroupBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.BaseAttributeGroupBox.Location = new System.Drawing.Point(0, 25);
-            this.BaseAttributeGroupBox.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.BaseAttributeGroupBox.Margin = new System.Windows.Forms.Padding(10);
             this.BaseAttributeGroupBox.Name = "BaseAttributeGroupBox";
-            this.BaseAttributeGroupBox.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.BaseAttributeGroupBox.Size = new System.Drawing.Size(1274, 221);
+            this.BaseAttributeGroupBox.Padding = new System.Windows.Forms.Padding(10);
+            this.BaseAttributeGroupBox.Size = new System.Drawing.Size(1283, 221);
             this.BaseAttributeGroupBox.TabIndex = 21;
             this.BaseAttributeGroupBox.TabStop = false;
             this.BaseAttributeGroupBox.Text = "基本属性";
@@ -405,8 +405,8 @@
             this.flowLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel10.Location = new System.Drawing.Point(10, 139);
             this.flowLayoutPanel10.Name = "flowLayoutPanel10";
-            this.flowLayoutPanel10.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.flowLayoutPanel10.Size = new System.Drawing.Size(1254, 63);
+            this.flowLayoutPanel10.Padding = new System.Windows.Forms.Padding(3);
+            this.flowLayoutPanel10.Size = new System.Drawing.Size(1263, 63);
             this.flowLayoutPanel10.TabIndex = 83;
             this.flowLayoutPanel10.Visible = false;
             // 
@@ -852,10 +852,10 @@
             this.flowLayoutPanel4.Controls.Add(this.ResolutionGrowTextBox);
             this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(10, 99);
-            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(10);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(1254, 40);
+            this.flowLayoutPanel4.Padding = new System.Windows.Forms.Padding(3);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(1263, 40);
             this.flowLayoutPanel4.TabIndex = 82;
             // 
             // label30
@@ -1071,10 +1071,10 @@
             this.flowLayoutPanel1.Controls.Add(this.ResolutionTextBox);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 64);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(10);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1254, 35);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(3);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1263, 35);
             this.flowLayoutPanel1.TabIndex = 78;
             this.flowLayoutPanel1.Click += new System.EventHandler(this.Focused_Click);
             // 
@@ -1278,9 +1278,9 @@
             this.flowLayoutPanel5.Controls.Add(this.DownLevelButton);
             this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel5.Location = new System.Drawing.Point(10, 24);
-            this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(10);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(1254, 40);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(1263, 40);
             this.flowLayoutPanel5.TabIndex = 74;
             this.flowLayoutPanel5.Click += new System.EventHandler(this.Focused_Click);
             // 
@@ -1303,7 +1303,6 @@
             this.NicknameTextBox.Name = "NicknameTextBox";
             this.NicknameTextBox.Size = new System.Drawing.Size(36, 21);
             this.NicknameTextBox.TabIndex = 114;
-            this.NicknameTextBox.Leave += new System.EventHandler(this.NicknameTextBox_Leave);
             // 
             // label40
             // 
@@ -1329,7 +1328,7 @@
             // UpLevelButton
             // 
             this.UpLevelButton.Location = new System.Drawing.Point(156, 2);
-            this.UpLevelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UpLevelButton.Margin = new System.Windows.Forms.Padding(2);
             this.UpLevelButton.Name = "UpLevelButton";
             this.UpLevelButton.Size = new System.Drawing.Size(24, 18);
             this.UpLevelButton.TabIndex = 118;
@@ -1340,7 +1339,7 @@
             // DownLevelButton
             // 
             this.DownLevelButton.Location = new System.Drawing.Point(184, 2);
-            this.DownLevelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DownLevelButton.Margin = new System.Windows.Forms.Padding(2);
             this.DownLevelButton.Name = "DownLevelButton";
             this.DownLevelButton.Size = new System.Drawing.Size(24, 18);
             this.DownLevelButton.TabIndex = 119;
@@ -1361,8 +1360,8 @@
             this.AdditionGroupBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.AdditionGroupBox.Location = new System.Drawing.Point(0, 246);
             this.AdditionGroupBox.Name = "AdditionGroupBox";
-            this.AdditionGroupBox.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.AdditionGroupBox.Size = new System.Drawing.Size(1274, 307);
+            this.AdditionGroupBox.Padding = new System.Windows.Forms.Padding(10);
+            this.AdditionGroupBox.Size = new System.Drawing.Size(1283, 307);
             this.AdditionGroupBox.TabIndex = 54;
             this.AdditionGroupBox.TabStop = false;
             this.AdditionGroupBox.Text = "加成";
@@ -1417,8 +1416,8 @@
             this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel6.Location = new System.Drawing.Point(10, 233);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(1254, 61);
+            this.flowLayoutPanel6.Padding = new System.Windows.Forms.Padding(3);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(1263, 61);
             this.flowLayoutPanel6.TabIndex = 82;
             this.flowLayoutPanel6.Click += new System.EventHandler(this.Focused_Click);
             // 
@@ -1891,7 +1890,7 @@
             this.label50.Dock = System.Windows.Forms.DockStyle.Top;
             this.label50.Location = new System.Drawing.Point(10, 215);
             this.label50.Name = "label50";
-            this.label50.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.label50.Padding = new System.Windows.Forms.Padding(3);
             this.label50.Size = new System.Drawing.Size(95, 18);
             this.label50.TabIndex = 81;
             this.label50.Text = "特性百分比加成";
@@ -1946,8 +1945,8 @@
             this.flowLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel7.Location = new System.Drawing.Point(10, 152);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(1254, 63);
+            this.flowLayoutPanel7.Padding = new System.Windows.Forms.Padding(3);
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(1263, 63);
             this.flowLayoutPanel7.TabIndex = 80;
             this.flowLayoutPanel7.Click += new System.EventHandler(this.Focused_Click);
             // 
@@ -2419,7 +2418,7 @@
             this.label60.Dock = System.Windows.Forms.DockStyle.Top;
             this.label60.Location = new System.Drawing.Point(10, 134);
             this.label60.Name = "label60";
-            this.label60.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.label60.Padding = new System.Windows.Forms.Padding(3);
             this.label60.Size = new System.Drawing.Size(83, 18);
             this.label60.TabIndex = 79;
             this.label60.Text = "特性数值加成";
@@ -2448,8 +2447,8 @@
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(10, 97);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(1254, 37);
+            this.flowLayoutPanel3.Padding = new System.Windows.Forms.Padding(3);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(1263, 37);
             this.flowLayoutPanel3.TabIndex = 78;
             this.flowLayoutPanel3.Click += new System.EventHandler(this.Focused_Click);
             // 
@@ -2648,7 +2647,7 @@
             this.label19.Dock = System.Windows.Forms.DockStyle.Top;
             this.label19.Location = new System.Drawing.Point(10, 79);
             this.label19.Name = "label19";
-            this.label19.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.label19.Padding = new System.Windows.Forms.Padding(3);
             this.label19.Size = new System.Drawing.Size(95, 18);
             this.label19.TabIndex = 77;
             this.label19.Text = "属性百分比加成";
@@ -2677,8 +2676,8 @@
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(10, 42);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1254, 37);
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(3);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1263, 37);
             this.flowLayoutPanel2.TabIndex = 76;
             this.flowLayoutPanel2.Click += new System.EventHandler(this.Focused_Click);
             // 
@@ -2877,7 +2876,7 @@
             this.label28.Dock = System.Windows.Forms.DockStyle.Top;
             this.label28.Location = new System.Drawing.Point(10, 24);
             this.label28.Name = "label28";
-            this.label28.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.label28.Padding = new System.Windows.Forms.Padding(3);
             this.label28.Size = new System.Drawing.Size(83, 18);
             this.label28.TabIndex = 75;
             this.label28.Text = "属性数值加成";
@@ -2889,8 +2888,8 @@
             this.ResultGroupBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.ResultGroupBox.Location = new System.Drawing.Point(0, 553);
             this.ResultGroupBox.Name = "ResultGroupBox";
-            this.ResultGroupBox.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.ResultGroupBox.Size = new System.Drawing.Size(1274, 145);
+            this.ResultGroupBox.Padding = new System.Windows.Forms.Padding(10);
+            this.ResultGroupBox.Size = new System.Drawing.Size(1283, 145);
             this.ResultGroupBox.TabIndex = 55;
             this.ResultGroupBox.TabStop = false;
             this.ResultGroupBox.Text = "结果";
@@ -2945,8 +2944,8 @@
             this.flowLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel8.Location = new System.Drawing.Point(10, 61);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(1254, 63);
+            this.flowLayoutPanel8.Padding = new System.Windows.Forms.Padding(3);
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(1263, 63);
             this.flowLayoutPanel8.TabIndex = 89;
             this.flowLayoutPanel8.Click += new System.EventHandler(this.Focused_Click);
             // 
@@ -3437,8 +3436,8 @@
             this.flowLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel9.Location = new System.Drawing.Point(10, 24);
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
-            this.flowLayoutPanel9.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.flowLayoutPanel9.Size = new System.Drawing.Size(1254, 37);
+            this.flowLayoutPanel9.Padding = new System.Windows.Forms.Padding(3);
+            this.flowLayoutPanel9.Size = new System.Drawing.Size(1263, 37);
             this.flowLayoutPanel9.TabIndex = 77;
             this.flowLayoutPanel9.Click += new System.EventHandler(this.Focused_Click);
             // 
@@ -3638,7 +3637,7 @@
             this.LogGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LogGroupBox.Location = new System.Drawing.Point(0, 698);
             this.LogGroupBox.Name = "LogGroupBox";
-            this.LogGroupBox.Size = new System.Drawing.Size(1274, 66);
+            this.LogGroupBox.Size = new System.Drawing.Size(1283, 145);
             this.LogGroupBox.TabIndex = 56;
             this.LogGroupBox.TabStop = false;
             this.LogGroupBox.Text = "日志";
@@ -3652,7 +3651,7 @@
             this.LogTextBox.Name = "LogTextBox";
             this.LogTextBox.ReadOnly = true;
             this.LogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LogTextBox.Size = new System.Drawing.Size(1268, 46);
+            this.LogTextBox.Size = new System.Drawing.Size(1277, 125);
             this.LogTextBox.TabIndex = 0;
             // 
             // MenuStrip
@@ -3662,7 +3661,7 @@
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
             this.MenuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.MenuStrip.Size = new System.Drawing.Size(1274, 25);
+            this.MenuStrip.Size = new System.Drawing.Size(1283, 25);
             this.MenuStrip.TabIndex = 57;
             this.MenuStrip.Text = "menuStrip1";
             // 
@@ -3678,7 +3677,7 @@
             // 
             this.SaveMenuItem.Name = "SaveMenuItem";
             this.SaveMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.SaveMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.SaveMenuItem.Size = new System.Drawing.Size(144, 22);
             this.SaveMenuItem.Text = "保存";
             this.SaveMenuItem.Click += new System.EventHandler(this.SaveMenuItem_Click);
             // 
@@ -3686,7 +3685,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1274, 764);
+            this.ClientSize = new System.Drawing.Size(1283, 843);
             this.Controls.Add(this.LogGroupBox);
             this.Controls.Add(this.ResultGroupBox);
             this.Controls.Add(this.AdditionGroupBox);

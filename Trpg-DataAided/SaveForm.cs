@@ -16,5 +16,19 @@ namespace Trpg_DataAided
         {
             InitializeComponent();
         }
+
+        public int Category;
+        public string Description;
+
+        private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Category = CategoryComboBox.SelectedIndex;
+        }
+
+        private void DescriptionTextBox_TextChanged(object sender, EventArgs e)
+        {
+            Description = DescriptionTextBox.Text;
+        }
+
     }
 }

@@ -15,7 +15,7 @@ namespace Trpg_DataAided
             }
             catch (Exception ex)
             {
-                MessageBox.Show("出错了。。。/r/n" + ex.Message);
+                MessageBox.Show("出错了。。。\n" + ex.Message);
             }
 
         }
@@ -23,20 +23,21 @@ namespace Trpg_DataAided
         private void Init()
         {
             dataGridView1.AutoGenerateColumns = true;
-            dataGridView1.DataSource = Manager.Instance.list;
+            if (Manager.Instance.list.Count > 0)
+                dataGridView1.DataSource = Manager.Instance.list;
 
         }
 
         private void DataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int index = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+            int id = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
 
             if (dataForm != null)
             {
                 dataForm.Close();
             }
             dataForm = new DataForm();
-            dataForm.InitFromData(Manager.Instance.list[index]);
+            dataForm.InitFromData(Manager.Instance.list.Find(p => p.ID == id));
 
             dataForm.Show();
         }
@@ -69,6 +70,7 @@ namespace Trpg_DataAided
             Manager.Instance.Create();
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = Manager.Instance.list;
+
         }
 
         private void RemoveToolStripMenuItem_Click(object sender, EventArgs e)

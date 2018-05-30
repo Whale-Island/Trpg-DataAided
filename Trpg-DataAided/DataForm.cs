@@ -1,11 +1,15 @@
 ﻿using System;
+using System.Text;
 using System.Windows.Forms;
 
 namespace Trpg_DataAided
 {
     public partial class DataForm : Form
     {
-        Player player = new Player();
+        int id;
+        PlayerProperty Property = new PlayerProperty();
+        StringBuilder log = new StringBuilder();
+
         public DataForm()
         {
             InitializeComponent();
@@ -14,6 +18,7 @@ namespace Trpg_DataAided
         private void Focused_Click(object sender, EventArgs e)
         {
             BaseAttributeGroupBox.Focus();
+
         }
 
         private void Focused_Click(object sender, MouseEventArgs e)
@@ -23,7 +28,14 @@ namespace Trpg_DataAided
 
         public void InitFromData(Player player)
         {
-            this.player = player;
+            id = player.ID;
+            NicknameTextBox.Text = player.Nickname;
+            Property = player.CurrentProperty;
+            foreach (PlayerSnapshot snapshot in player.SnapshotList)
+            {
+                log.Append(string.Format("时间：{0} 类型：{1} 原因：{2}\r\n", snapshot.Date, snapshot.Category, snapshot.Description));
+            }
+            LogTextBox.Text = log.ToString();
         }
 
         private void DataForm_Shown(object sender, EventArgs e)
@@ -40,151 +52,165 @@ namespace Trpg_DataAided
 
         private void UpLevelButton_Click(object sender, EventArgs e)
         {
-            player.CurrentProperty.Level++;
+            Property.Level++;
+            LevelTextBox.Text = Property.Level.ToString();
+            RefreshResult();
         }
 
         private void DownLevelButton_Click(object sender, EventArgs e)
         {
-            player.CurrentProperty.Level--;
+            Property.Level--;
+            LevelTextBox.Text = Property.Level.ToString();
+            RefreshResult();
         }
 
         private void SaveMenuItem_Click(object sender, EventArgs e)
         {
-            SaveData();
+            SaveForm form = new SaveForm();
+            DialogResult result = form.ShowDialog();
+            if (DialogResult.Yes == result)
+            {
+                PlayerSnapshot snapshot = new PlayerSnapshot()
+                {
+                    Date = DateTime.Now,
+                    Category = form.Category,
+                    Description = form.Description,
+                    Property = Property
+                };
+                Manager.Instance.Save(id, NicknameTextBox.Text, snapshot);
+
+                log.Append(string.Format("时间：{0} 类型：{1} 原因：{2}\r\n", snapshot.Date, snapshot.Category, snapshot.Description));
+                LogTextBox.Text = log.ToString();
+
+                MessageBox.Show("保存成功!\r\ntest");
+            }
         }
 
         public void RefreshDate()
         {
-            NicknameTextBox.Text = player.Nickname;
-            LevelTextBox.Text = player.CurrentProperty.Level.ToString();
+            LevelTextBox.Text = Property.Level.ToString();
 
-            StrengthTextBox.Text = player.CurrentProperty.Strength.ToString();
-            PhysiqueTextBox.Text = player.CurrentProperty.Physique.ToString();
-            NimbleTextBox.Text = player.CurrentProperty.Nimble.ToString();
-            MagicTextBox.Text = player.CurrentProperty.Magic.ToString();
-            LoreTextBox.Text = player.CurrentProperty.Lore.ToString();
-            InspirationTextBox.Text = player.CurrentProperty.Inspiration.ToString();
-            PerceptionTextBox.Text = player.CurrentProperty.Perception.ToString();
-            GlamourTextBox.Text = player.CurrentProperty.Glamour.ToString();
-            ResolutionTextBox.Text = player.CurrentProperty.Resolution.ToString();
+            StrengthTextBox.Text = Property.Strength.ToString();
+            PhysiqueTextBox.Text = Property.Physique.ToString();
+            NimbleTextBox.Text = Property.Nimble.ToString();
+            MagicTextBox.Text = Property.Magic.ToString();
+            LoreTextBox.Text = Property.Lore.ToString();
+            InspirationTextBox.Text = Property.Inspiration.ToString();
+            PerceptionTextBox.Text = Property.Perception.ToString();
+            GlamourTextBox.Text = Property.Glamour.ToString();
+            ResolutionTextBox.Text = Property.Resolution.ToString();
 
-            StrengthGrowTextBox.Text = player.CurrentProperty.Strength_Grow.ToString();
-            PhysiqueGrowTextBox.Text = player.CurrentProperty.Physique_Grow.ToString();
-            NimbleGrowTextBox.Text = player.CurrentProperty.Nimble_Grow.ToString();
-            MagicGrowTextBox.Text = player.CurrentProperty.Magic_Grow.ToString();
-            LoreGrowTextBox.Text = player.CurrentProperty.Lore_Grow.ToString();
-            InspirationGrowTextBox.Text = player.CurrentProperty.Inspiration_Grow.ToString();
-            PerceptionGrowTextBox.Text = player.CurrentProperty.Perception_Grow.ToString();
-            GlamourGrowTextBox.Text = player.CurrentProperty.Glamour_Grow.ToString();
-            ResolutionGrowTextBox.Text = player.CurrentProperty.Resolution_Grow.ToString();
+            StrengthGrowTextBox.Text = Property.Strength_Grow.ToString();
+            PhysiqueGrowTextBox.Text = Property.Physique_Grow.ToString();
+            NimbleGrowTextBox.Text = Property.Nimble_Grow.ToString();
+            MagicGrowTextBox.Text = Property.Magic_Grow.ToString();
+            LoreGrowTextBox.Text = Property.Lore_Grow.ToString();
+            InspirationGrowTextBox.Text = Property.Inspiration_Grow.ToString();
+            PerceptionGrowTextBox.Text = Property.Perception_Grow.ToString();
+            GlamourGrowTextBox.Text = Property.Glamour_Grow.ToString();
+            ResolutionGrowTextBox.Text = Property.Resolution_Grow.ToString();
 
-            HPTextBox.Text = player.CurrentProperty.HP.ToString();
-            HPRecoveryTextBox.Text = player.CurrentProperty.HP_Recovery.ToString();
-            MANATextBox.Text = player.CurrentProperty.MANA.ToString();
-            MANARecoveryTextBox.Text = player.CurrentProperty.MANA_Recovery.ToString();
-            SpeedTextBox.Text = player.CurrentProperty.Speed.ToString();
-            ChantTextBox.Text = player.CurrentProperty.Chant.ToString();
-            AccuracyTextBox.Text = player.CurrentProperty.Accuracy.ToString();
-            DodgeTextBox.Text = player.CurrentProperty.Dodge.ToString();
-            CriticalTextBox.Text = player.CurrentProperty.Critical.ToString();
-            DamageGainTextBox.Text = player.CurrentProperty.DamageGain.ToString();
-            DamageMitigationTextBox.Text = player.CurrentProperty.DamageMitigation.ToString();
-            GainTextBox.Text = player.CurrentProperty.Gain.ToString();
-            SpellResistanceTextBox.Text = player.CurrentProperty.SpellResistance.ToString();
-            ExpTextBox.Text = player.CurrentProperty.Exp.ToString();
-            HideTextBox.Text = player.CurrentProperty.Hide.ToString();
-            EnduraceTextBox.Text = player.CurrentProperty.Endurance.ToString();
-            LoadTextBox.Text = player.CurrentProperty.Load.ToString();
-            EnergyTextBox.Text = player.CurrentProperty.Energy.ToString();
-            SpellDamageTextBox.Text = player.CurrentProperty.SpellDamage.ToString();
-            NousTextBox.Text = player.CurrentProperty.Nous.ToString();
-            SanityTextBox.Text = player.CurrentProperty.Sanity.ToString();
-            LuckTextBox.Text = player.CurrentProperty.Luck.ToString();
+            HPTextBox.Text = Property.HP.ToString();
+            HPRecoveryTextBox.Text = Property.HP_Recovery.ToString();
+            MANATextBox.Text = Property.MANA.ToString();
+            MANARecoveryTextBox.Text = Property.MANA_Recovery.ToString();
+            SpeedTextBox.Text = Property.Speed.ToString();
+            ChantTextBox.Text = Property.Chant.ToString();
+            AccuracyTextBox.Text = Property.Accuracy.ToString();
+            DodgeTextBox.Text = Property.Dodge.ToString();
+            CriticalTextBox.Text = Property.Critical.ToString();
+            DamageGainTextBox.Text = Property.DamageGain.ToString();
+            DamageMitigationTextBox.Text = Property.DamageMitigation.ToString();
+            GainTextBox.Text = Property.Gain.ToString();
+            SpellResistanceTextBox.Text = Property.SpellResistance.ToString();
+            ExpTextBox.Text = Property.Exp.ToString();
+            HideTextBox.Text = Property.Hide.ToString();
+            EnduraceTextBox.Text = Property.Endurance.ToString();
+            LoadTextBox.Text = Property.Load.ToString();
+            EnergyTextBox.Text = Property.Energy.ToString();
+            SpellDamageTextBox.Text = Property.SpellDamage.ToString();
+            NousTextBox.Text = Property.Nous.ToString();
+            SanityTextBox.Text = Property.Sanity.ToString();
+            LuckTextBox.Text = Property.Luck.ToString();
 
-            StrengthAdditionTextBox.Text = player.CurrentProperty.Strength_Addition.ToString();
-            PhysiqueAdditionTextBox.Text = player.CurrentProperty.Physique_Addition.ToString();
-            NimbleAdditionTextBox.Text = player.CurrentProperty.Nimble_Addition.ToString();
-            MagicAdditionTextBox.Text = player.CurrentProperty.Magic_Addition.ToString();
-            LoreAdditionTextBox.Text = player.CurrentProperty.Lore_Addition.ToString();
-            InspirationAdditionTextBox.Text = player.CurrentProperty.Inspiration_Addition.ToString();
-            PerceptionAdditionTextBox.Text = player.CurrentProperty.Perception_Addition.ToString();
-            GlamourAdditionTextBox.Text = player.CurrentProperty.Glamour_Addition.ToString();
-            ResolutionAdditionTextBox.Text = player.CurrentProperty.Resolution_Addition.ToString();
+            StrengthAdditionTextBox.Text = Property.Strength_Addition.ToString();
+            PhysiqueAdditionTextBox.Text = Property.Physique_Addition.ToString();
+            NimbleAdditionTextBox.Text = Property.Nimble_Addition.ToString();
+            MagicAdditionTextBox.Text = Property.Magic_Addition.ToString();
+            LoreAdditionTextBox.Text = Property.Lore_Addition.ToString();
+            InspirationAdditionTextBox.Text = Property.Inspiration_Addition.ToString();
+            PerceptionAdditionTextBox.Text = Property.Perception_Addition.ToString();
+            GlamourAdditionTextBox.Text = Property.Glamour_Addition.ToString();
+            ResolutionAdditionTextBox.Text = Property.Resolution_Addition.ToString();
 
-            StrengthPercentTextBox.Text = player.CurrentProperty.Strength_Percent.ToString();
-            PhysiquePercentTextBox.Text = player.CurrentProperty.Physique_Percent.ToString();
-            NimblePercentTextBox.Text = player.CurrentProperty.Nimble_Percent.ToString();
-            MagicPercentTextBox.Text = player.CurrentProperty.Magic_Percent.ToString();
-            LorePercentTextBox.Text = player.CurrentProperty.Lore_Percent.ToString();
-            InspirationPercentTextBox.Text = player.CurrentProperty.Inspiration_Percent.ToString();
-            PerceptionPercentTextBox.Text = player.CurrentProperty.Perception_Percent.ToString();
-            GlamourPercentTextBox.Text = player.CurrentProperty.Glamour_Percent.ToString();
-            ResolutionPercentTextBox.Text = player.CurrentProperty.Resolution_Percent.ToString();
+            StrengthPercentTextBox.Text = Property.Strength_Percent.ToString();
+            PhysiquePercentTextBox.Text = Property.Physique_Percent.ToString();
+            NimblePercentTextBox.Text = Property.Nimble_Percent.ToString();
+            MagicPercentTextBox.Text = Property.Magic_Percent.ToString();
+            LorePercentTextBox.Text = Property.Lore_Percent.ToString();
+            InspirationPercentTextBox.Text = Property.Inspiration_Percent.ToString();
+            PerceptionPercentTextBox.Text = Property.Perception_Percent.ToString();
+            GlamourPercentTextBox.Text = Property.Glamour_Percent.ToString();
+            ResolutionPercentTextBox.Text = Property.Resolution_Percent.ToString();
 
-            HPAdditionTextBox.Text = player.CurrentProperty.HP_Addition.ToString();
-            HPRecoveryAdditionTextBox.Text = player.CurrentProperty.HP_Recovery_Addition.ToString();
-            MANAAdditionTextBox.Text = player.CurrentProperty.MANA_Addition.ToString();
-            MANARecoveryAdditionTextBox.Text = player.CurrentProperty.MANA_Recovery_Addition.ToString();
-            SpeedAdditionTextBox.Text = player.CurrentProperty.Speed_Addition.ToString();
-            ChantAdditionTextBox.Text = player.CurrentProperty.Chant_Addition.ToString();
-            AccuracyAdditionTextBox.Text = player.CurrentProperty.Accuracy_Addition.ToString();
-            DodgeAdditionTextBox.Text = player.CurrentProperty.Dodge_Addition.ToString();
-            CriticalAdditionTextBox.Text = player.CurrentProperty.Critical_Addition.ToString();
-            DamageGainAdditionTextBox.Text = player.CurrentProperty.DamageGain_Addition.ToString();
-            DamageMitigationAdditionTextBox.Text = player.CurrentProperty.DamageMitigation_Addition.ToString();
-            GainAdditionTextBox.Text = player.CurrentProperty.Gain_Addition.ToString();
-            SpellResistanceAdditionTextBox.Text = player.CurrentProperty.SpellResistance_Addition.ToString();
-            ExpAdditionTextBox.Text = player.CurrentProperty.Exp_Addition.ToString();
-            HideAdditionTextBox.Text = player.CurrentProperty.Hide_Addition.ToString();
-            EnduranceAdditionTextBox.Text = player.CurrentProperty.Endurance_Addition.ToString();
-            LoadAdditionTextBox.Text = player.CurrentProperty.Load_Addition.ToString();
-            EnergyAdditionTextBox.Text = player.CurrentProperty.Energy_Addition.ToString();
-            SpellDamageAdditionTextBox.Text = player.CurrentProperty.SpellDamage_Addition.ToString();
-            NousAdditionTextBox.Text = player.CurrentProperty.Nous_Addition.ToString();
-            SanityAdditionTextBox.Text = player.CurrentProperty.Sanity_Addition.ToString();
-            LuckAdditionTextBox.Text = player.CurrentProperty.Luck_Addition.ToString();
+            HPAdditionTextBox.Text = Property.HP_Addition.ToString();
+            HPRecoveryAdditionTextBox.Text = Property.HP_Recovery_Addition.ToString();
+            MANAAdditionTextBox.Text = Property.MANA_Addition.ToString();
+            MANARecoveryAdditionTextBox.Text = Property.MANA_Recovery_Addition.ToString();
+            SpeedAdditionTextBox.Text = Property.Speed_Addition.ToString();
+            ChantAdditionTextBox.Text = Property.Chant_Addition.ToString();
+            AccuracyAdditionTextBox.Text = Property.Accuracy_Addition.ToString();
+            DodgeAdditionTextBox.Text = Property.Dodge_Addition.ToString();
+            CriticalAdditionTextBox.Text = Property.Critical_Addition.ToString();
+            DamageGainAdditionTextBox.Text = Property.DamageGain_Addition.ToString();
+            DamageMitigationAdditionTextBox.Text = Property.DamageMitigation_Addition.ToString();
+            GainAdditionTextBox.Text = Property.Gain_Addition.ToString();
+            SpellResistanceAdditionTextBox.Text = Property.SpellResistance_Addition.ToString();
+            ExpAdditionTextBox.Text = Property.Exp_Addition.ToString();
+            HideAdditionTextBox.Text = Property.Hide_Addition.ToString();
+            EnduranceAdditionTextBox.Text = Property.Endurance_Addition.ToString();
+            LoadAdditionTextBox.Text = Property.Load_Addition.ToString();
+            EnergyAdditionTextBox.Text = Property.Energy_Addition.ToString();
+            SpellDamageAdditionTextBox.Text = Property.SpellDamage_Addition.ToString();
+            NousAdditionTextBox.Text = Property.Nous_Addition.ToString();
+            SanityAdditionTextBox.Text = Property.Sanity_Addition.ToString();
+            LuckAdditionTextBox.Text = Property.Luck_Addition.ToString();
 
-            HPPercentTextBox.Text = player.CurrentProperty.HP_Percent.ToString();
-            HPRecoveryPercentTextBox.Text = player.CurrentProperty.HP_Recovery_Percent.ToString();
-            MANAPercentTextBox.Text = player.CurrentProperty.MANA_Percent.ToString();
-            MANARecoveryPercentTextBox.Text = player.CurrentProperty.MANA_Recovery_Percent.ToString();
-            SpeedPercentTextBox.Text = player.CurrentProperty.Speed_Percent.ToString();
-            ChantPercentTextBox.Text = player.CurrentProperty.Chant_Percent.ToString();
-            AccuracyPercentTextBox.Text = player.CurrentProperty.Accuracy_Percent.ToString();
-            DodgePercentTextBox.Text = player.CurrentProperty.Dodge_Percent.ToString();
-            CriticalPercentTextBox.Text = player.CurrentProperty.Critical_Percent.ToString();
-            DamageGainPercentTextBox.Text = player.CurrentProperty.DamageGain_Percent.ToString();
-            DamageMitigationPercentTextBox.Text = player.CurrentProperty.DamageMitigation_Percent.ToString();
-            GainPercentTextBox.Text = player.CurrentProperty.Gain_Percent.ToString();
-            SpellResistancePercentTextBox.Text = player.CurrentProperty.SpellResistance_Percent.ToString();
-            ExpPercentTextBox.Text = player.CurrentProperty.Exp_Percent.ToString();
-            HidePercentTextBox.Text = player.CurrentProperty.Hide_Percent.ToString();
-            EndurancePercentTextBox.Text = player.CurrentProperty.Endurance_Percent.ToString();
-            LoadPercentTextBox.Text = player.CurrentProperty.Load_Percent.ToString();
-            EnergyPercentTextBox.Text = player.CurrentProperty.Energy_Percent.ToString();
-            SpellDamagePercentTextBox.Text = player.CurrentProperty.SpellDamage_Percent.ToString();
-            NousPercentTextBox.Text = player.CurrentProperty.Nous_Percent.ToString();
-            SanityPercentTextBox.Text = player.CurrentProperty.Sanity_Percent.ToString();
-            LuckPercentTextBox.Text = player.CurrentProperty.Luck_Percent.ToString();
-        }
-
-        private void SaveData()
-        {
-
-            MessageBox.Show("保存成功！");
+            HPPercentTextBox.Text = Property.HP_Percent.ToString();
+            HPRecoveryPercentTextBox.Text = Property.HP_Recovery_Percent.ToString();
+            MANAPercentTextBox.Text = Property.MANA_Percent.ToString();
+            MANARecoveryPercentTextBox.Text = Property.MANA_Recovery_Percent.ToString();
+            SpeedPercentTextBox.Text = Property.Speed_Percent.ToString();
+            ChantPercentTextBox.Text = Property.Chant_Percent.ToString();
+            AccuracyPercentTextBox.Text = Property.Accuracy_Percent.ToString();
+            DodgePercentTextBox.Text = Property.Dodge_Percent.ToString();
+            CriticalPercentTextBox.Text = Property.Critical_Percent.ToString();
+            DamageGainPercentTextBox.Text = Property.DamageGain_Percent.ToString();
+            DamageMitigationPercentTextBox.Text = Property.DamageMitigation_Percent.ToString();
+            GainPercentTextBox.Text = Property.Gain_Percent.ToString();
+            SpellResistancePercentTextBox.Text = Property.SpellResistance_Percent.ToString();
+            ExpPercentTextBox.Text = Property.Exp_Percent.ToString();
+            HidePercentTextBox.Text = Property.Hide_Percent.ToString();
+            EndurancePercentTextBox.Text = Property.Endurance_Percent.ToString();
+            LoadPercentTextBox.Text = Property.Load_Percent.ToString();
+            EnergyPercentTextBox.Text = Property.Energy_Percent.ToString();
+            SpellDamagePercentTextBox.Text = Property.SpellDamage_Percent.ToString();
+            NousPercentTextBox.Text = Property.Nous_Percent.ToString();
+            SanityPercentTextBox.Text = Property.Sanity_Percent.ToString();
+            LuckPercentTextBox.Text = Property.Luck_Percent.ToString();
         }
 
         private void RefreshResult()
         {
-            float Strength = (player.CurrentProperty.Strength + (player.CurrentProperty.Level - 1) * player.CurrentProperty.Strength_Grow + player.CurrentProperty.Strength_Addition) * player.CurrentProperty.Strength_Percent;
-            float Physique = (player.CurrentProperty.Physique + (player.CurrentProperty.Level - 1) * player.CurrentProperty.Physique_Grow + player.CurrentProperty.Physique_Addition) * player.CurrentProperty.Physique_Percent;
-            float Nimble = (player.CurrentProperty.Nimble + (player.CurrentProperty.Level - 1) * player.CurrentProperty.Nimble_Grow + player.CurrentProperty.Nimble_Addition) * player.CurrentProperty.Nimble_Percent;
-            float Magic = (player.CurrentProperty.Magic + (player.CurrentProperty.Level - 1) * player.CurrentProperty.Magic_Grow + player.CurrentProperty.Magic_Addition) * player.CurrentProperty.Magic_Percent;
-            float Lore = (player.CurrentProperty.Lore + (player.CurrentProperty.Level - 1) * player.CurrentProperty.Lore_Grow + player.CurrentProperty.Lore_Addition) * player.CurrentProperty.Lore_Percent;
-            float Inspiration = (player.CurrentProperty.Inspiration + (player.CurrentProperty.Level - 1) * player.CurrentProperty.Inspiration_Grow + player.CurrentProperty.Inspiration_Addition) * player.CurrentProperty.Inspiration_Percent;
-            float Perception = (player.CurrentProperty.Perception + (player.CurrentProperty.Level - 1) * player.CurrentProperty.Perception_Grow + player.CurrentProperty.Perception_Addition) * player.CurrentProperty.Perception_Percent;
-            float Glamour = (player.CurrentProperty.Glamour + (player.CurrentProperty.Level - 1) * player.CurrentProperty.Glamour_Grow + player.CurrentProperty.Glamour_Addition) * player.CurrentProperty.Glamour_Percent;
-            float Resolution = (player.CurrentProperty.Resolution + (player.CurrentProperty.Level - 1) * player.CurrentProperty.Resolution_Grow + player.CurrentProperty.Resolution_Addition) * player.CurrentProperty.Resolution_Percent;
+            float Strength = (Property.Strength + (Property.Level - 1) * Property.Strength_Grow + Property.Strength_Addition) * Property.Strength_Percent;
+            float Physique = (Property.Physique + (Property.Level - 1) * Property.Physique_Grow + Property.Physique_Addition) * Property.Physique_Percent;
+            float Nimble = (Property.Nimble + (Property.Level - 1) * Property.Nimble_Grow + Property.Nimble_Addition) * Property.Nimble_Percent;
+            float Magic = (Property.Magic + (Property.Level - 1) * Property.Magic_Grow + Property.Magic_Addition) * Property.Magic_Percent;
+            float Lore = (Property.Lore + (Property.Level - 1) * Property.Lore_Grow + Property.Lore_Addition) * Property.Lore_Percent;
+            float Inspiration = (Property.Inspiration + (Property.Level - 1) * Property.Inspiration_Grow + Property.Inspiration_Addition) * Property.Inspiration_Percent;
+            float Perception = (Property.Perception + (Property.Level - 1) * Property.Perception_Grow + Property.Perception_Addition) * Property.Perception_Percent;
+            float Glamour = (Property.Glamour + (Property.Level - 1) * Property.Glamour_Grow + Property.Glamour_Addition) * Property.Glamour_Percent;
+            float Resolution = (Property.Resolution + (Property.Level - 1) * Property.Resolution_Grow + Property.Resolution_Addition) * Property.Resolution_Percent;
 
             StrengthResultTextBox.Text = Strength.ToString();
             PhysiqueResultTextBox.Text = Physique.ToString();
@@ -220,29 +246,29 @@ namespace Trpg_DataAided
             float Sanity = 4 + (int)((Resolution * 0.5) + (Glamour * 0.2) + (Perception * 0.2) + (Inspiration * 0.2));
             int Luck = 0;
 
-            HP_Dice = (int)((player.CurrentProperty.HP_Addition + HP_Dice) * player.CurrentProperty.HP_Percent);
-            HP_Recovery = (int)((player.CurrentProperty.HP_Recovery_Addition + HP_Recovery) * player.CurrentProperty.HP_Recovery_Percent);
-            MANA = (int)((player.CurrentProperty.MANA_Addition + MANA) * player.CurrentProperty.MANA_Percent);
-            MANA_Recovery = (int)((player.CurrentProperty.MANA_Recovery_Addition + MANA_Recovery) * player.CurrentProperty.MANA_Recovery_Percent);
-            Speed = (int)((player.CurrentProperty.Speed_Addition + Speed) * player.CurrentProperty.Speed_Percent);
-            Chant = (int)((player.CurrentProperty.Chant_Addition + Chant) * player.CurrentProperty.Chant_Percent);
-            Accuracy = (int)((player.CurrentProperty.Accuracy_Addition + Accuracy) * player.CurrentProperty.Accuracy_Percent);
-            Dodge = (int)((player.CurrentProperty.Dodge_Addition + Dodge) * player.CurrentProperty.Dodge_Percent);
-            Critical = (int)((player.CurrentProperty.Critical_Addition + Critical) * player.CurrentProperty.Critical_Percent);
-            DamageGain = (int)((player.CurrentProperty.DamageGain_Addition + DamageGain) * player.CurrentProperty.DamageGain_Percent);
-            DamageMitigation = (int)((player.CurrentProperty.DamageMitigation_Addition + DamageMitigation) * player.CurrentProperty.DamageMitigation_Percent);
-            Gain = (int)((player.CurrentProperty.Gain_Addition + Gain) * player.CurrentProperty.Gain_Percent);
-            Gain_Turn = (int)((player.CurrentProperty.Gain_Addition + Gain_Turn) * player.CurrentProperty.Gain_Percent);
-            SpellResistance = (int)((player.CurrentProperty.SpellResistance_Addition + SpellResistance) * player.CurrentProperty.SpellResistance_Percent);
-            Exp = (int)((player.CurrentProperty.Exp_Addition + Exp) * player.CurrentProperty.Exp_Percent);
-            Hide = (int)((player.CurrentProperty.Hide_Addition + Hide) * player.CurrentProperty.Hide_Percent);
-            Endurance = (int)((player.CurrentProperty.Endurance_Addition + Endurance) * player.CurrentProperty.Endurance_Percent);
-            Load = (int)((player.CurrentProperty.Load_Addition + Load) * player.CurrentProperty.Load_Percent);
-            Energy = (int)((player.CurrentProperty.Energy_Addition + Energy) * player.CurrentProperty.Energy_Percent);
-            SpellDamage = (int)((player.CurrentProperty.SpellDamage_Addition + SpellDamage) * player.CurrentProperty.SpellDamage_Percent);
-            Nous = (int)((player.CurrentProperty.Nous_Addition + Nous) * player.CurrentProperty.Nous_Percent);
-            Sanity = (int)((player.CurrentProperty.Sanity_Addition + Sanity) * player.CurrentProperty.Sanity_Percent);
-            Luck = (int)((player.CurrentProperty.Luck_Addition + Luck) * player.CurrentProperty.Luck_Percent);
+            HP_Dice = (int)((Property.HP_Addition + HP_Dice) * Property.HP_Percent);
+            HP_Recovery = (int)((Property.HP_Recovery_Addition + HP_Recovery) * Property.HP_Recovery_Percent);
+            MANA = (int)((Property.MANA_Addition + MANA) * Property.MANA_Percent);
+            MANA_Recovery = (int)((Property.MANA_Recovery_Addition + MANA_Recovery) * Property.MANA_Recovery_Percent);
+            Speed = (int)((Property.Speed_Addition + Speed) * Property.Speed_Percent);
+            Chant = (int)((Property.Chant_Addition + Chant) * Property.Chant_Percent);
+            Accuracy = (int)((Property.Accuracy_Addition + Accuracy) * Property.Accuracy_Percent);
+            Dodge = (int)((Property.Dodge_Addition + Dodge) * Property.Dodge_Percent);
+            Critical = (int)((Property.Critical_Addition + Critical) * Property.Critical_Percent);
+            DamageGain = (int)((Property.DamageGain_Addition + DamageGain) * Property.DamageGain_Percent);
+            DamageMitigation = (int)((Property.DamageMitigation_Addition + DamageMitigation) * Property.DamageMitigation_Percent);
+            Gain = (int)((Property.Gain_Addition + Gain) * Property.Gain_Percent);
+            Gain_Turn = (int)((Property.Gain_Addition + Gain_Turn) * Property.Gain_Percent);
+            SpellResistance = (int)((Property.SpellResistance_Addition + SpellResistance) * Property.SpellResistance_Percent);
+            Exp = (int)((Property.Exp_Addition + Exp) * Property.Exp_Percent);
+            Hide = (int)((Property.Hide_Addition + Hide) * Property.Hide_Percent);
+            Endurance = (int)((Property.Endurance_Addition + Endurance) * Property.Endurance_Percent);
+            Load = (int)((Property.Load_Addition + Load) * Property.Load_Percent);
+            Energy = (int)((Property.Energy_Addition + Energy) * Property.Energy_Percent);
+            SpellDamage = (int)((Property.SpellDamage_Addition + SpellDamage) * Property.SpellDamage_Percent);
+            Nous = (int)((Property.Nous_Addition + Nous) * Property.Nous_Percent);
+            Sanity = (int)((Property.Sanity_Addition + Sanity) * Property.Sanity_Percent);
+            Luck = (int)((Property.Luck_Addition + Luck) * Property.Luck_Percent);
 
             int SpellDamage_p = SpellDamage * 5;
 
@@ -273,13 +299,6 @@ namespace Trpg_DataAided
 
         #region TextBox_Leave
 
-
-        private void NicknameTextBox_Leave(object sender, EventArgs e)
-        {
-            if (!player.Nickname.Equals(NicknameTextBox.Text))
-                player.Nickname = NicknameTextBox.Text;
-        }
-
         private void LevelTextBox_Leave(object sender, EventArgs e)
         {
             if (!int.TryParse(LevelTextBox.Text, out int Text))
@@ -287,9 +306,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Level != Text)
+            else if (Property.Level != Text)
             {
-                player.CurrentProperty.Level = Text;
+                Property.Level = Text;
 
                 RefreshResult();
             }
@@ -302,9 +321,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Strength != Text)
+            else if (Property.Strength != Text)
             {
-                player.CurrentProperty.Strength = Text;
+                Property.Strength = Text;
 
                 RefreshResult();
             }
@@ -317,9 +336,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Physique != Text)
+            else if (Property.Physique != Text)
             {
-                player.CurrentProperty.Physique = Text;
+                Property.Physique = Text;
 
                 RefreshResult();
             }
@@ -332,9 +351,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Nimble != Text)
+            else if (Property.Nimble != Text)
             {
-                player.CurrentProperty.Nimble = Text;
+                Property.Nimble = Text;
 
                 RefreshResult();
             }
@@ -347,9 +366,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Magic != Text)
+            else if (Property.Magic != Text)
             {
-                player.CurrentProperty.Magic = Text;
+                Property.Magic = Text;
 
                 RefreshResult();
             }
@@ -362,9 +381,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Lore != Text)
+            else if (Property.Lore != Text)
             {
-                player.CurrentProperty.Lore = Text;
+                Property.Lore = Text;
 
                 RefreshResult();
             }
@@ -377,9 +396,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Inspiration != Text)
+            else if (Property.Inspiration != Text)
             {
-                player.CurrentProperty.Inspiration = Text;
+                Property.Inspiration = Text;
 
                 RefreshResult();
             }
@@ -392,9 +411,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Perception != Text)
+            else if (Property.Perception != Text)
             {
-                player.CurrentProperty.Perception = Text;
+                Property.Perception = Text;
 
                 RefreshResult();
             }
@@ -407,9 +426,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Glamour != Text)
+            else if (Property.Glamour != Text)
             {
-                player.CurrentProperty.Glamour = Text;
+                Property.Glamour = Text;
 
                 RefreshResult();
             }
@@ -422,9 +441,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Resolution != Text)
+            else if (Property.Resolution != Text)
             {
-                player.CurrentProperty.Resolution = Text;
+                Property.Resolution = Text;
 
                 RefreshResult();
             }
@@ -437,9 +456,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Strength_Grow != Text)
+            else if (Property.Strength_Grow != Text)
             {
-                player.CurrentProperty.Strength_Grow = Text;
+                Property.Strength_Grow = Text;
 
                 RefreshResult();
             }
@@ -452,9 +471,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Physique_Grow != Text)
+            else if (Property.Physique_Grow != Text)
             {
-                player.CurrentProperty.Physique_Grow = Text;
+                Property.Physique_Grow = Text;
 
                 RefreshResult();
             }
@@ -467,9 +486,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Nimble_Grow != Text)
+            else if (Property.Nimble_Grow != Text)
             {
-                player.CurrentProperty.Nimble_Grow = Text;
+                Property.Nimble_Grow = Text;
 
                 RefreshResult();
             }
@@ -482,9 +501,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Magic_Grow != Text)
+            else if (Property.Magic_Grow != Text)
             {
-                player.CurrentProperty.Magic_Grow = Text;
+                Property.Magic_Grow = Text;
 
                 RefreshResult();
             }
@@ -497,9 +516,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Lore_Grow != Text)
+            else if (Property.Lore_Grow != Text)
             {
-                player.CurrentProperty.Lore_Grow = Text;
+                Property.Lore_Grow = Text;
 
                 RefreshResult();
             }
@@ -512,9 +531,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Inspiration_Grow != Text)
+            else if (Property.Inspiration_Grow != Text)
             {
-                player.CurrentProperty.Inspiration_Grow = Text;
+                Property.Inspiration_Grow = Text;
 
                 RefreshResult();
             }
@@ -527,9 +546,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Perception_Grow != Text)
+            else if (Property.Perception_Grow != Text)
             {
-                player.CurrentProperty.Perception_Grow = Text;
+                Property.Perception_Grow = Text;
 
                 RefreshResult();
             }
@@ -542,9 +561,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Glamour_Grow != Text)
+            else if (Property.Glamour_Grow != Text)
             {
-                player.CurrentProperty.Glamour_Grow = Text;
+                Property.Glamour_Grow = Text;
 
                 RefreshResult();
             }
@@ -557,9 +576,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Resolution_Grow != Text)
+            else if (Property.Resolution_Grow != Text)
             {
-                player.CurrentProperty.Resolution_Grow = Text;
+                Property.Resolution_Grow = Text;
 
                 RefreshResult();
             }
@@ -572,9 +591,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Strength_Addition != Text)
+            else if (Property.Strength_Addition != Text)
             {
-                player.CurrentProperty.Strength_Addition = Text;
+                Property.Strength_Addition = Text;
 
                 RefreshResult();
             }
@@ -587,9 +606,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Physique_Addition != Text)
+            else if (Property.Physique_Addition != Text)
             {
-                player.CurrentProperty.Physique_Addition = Text;
+                Property.Physique_Addition = Text;
 
                 RefreshResult();
             }
@@ -602,9 +621,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Nimble_Addition != Text)
+            else if (Property.Nimble_Addition != Text)
             {
-                player.CurrentProperty.Nimble_Addition = Text;
+                Property.Nimble_Addition = Text;
 
                 RefreshResult();
             }
@@ -617,9 +636,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Magic_Addition != Text)
+            else if (Property.Magic_Addition != Text)
             {
-                player.CurrentProperty.Magic_Addition = Text;
+                Property.Magic_Addition = Text;
 
                 RefreshResult();
             }
@@ -632,9 +651,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Lore_Addition != Text)
+            else if (Property.Lore_Addition != Text)
             {
-                player.CurrentProperty.Lore_Addition = Text;
+                Property.Lore_Addition = Text;
 
                 RefreshResult();
             }
@@ -647,9 +666,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Inspiration_Addition != Text)
+            else if (Property.Inspiration_Addition != Text)
             {
-                player.CurrentProperty.Inspiration_Addition = Text;
+                Property.Inspiration_Addition = Text;
 
                 RefreshResult();
             }
@@ -662,9 +681,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Perception_Addition != Text)
+            else if (Property.Perception_Addition != Text)
             {
-                player.CurrentProperty.Perception_Addition = Text;
+                Property.Perception_Addition = Text;
 
                 RefreshResult();
             }
@@ -677,9 +696,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Glamour_Addition != Text)
+            else if (Property.Glamour_Addition != Text)
             {
-                player.CurrentProperty.Glamour_Addition = Text;
+                Property.Glamour_Addition = Text;
 
                 RefreshResult();
             }
@@ -692,9 +711,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Resolution_Addition != Text)
+            else if (Property.Resolution_Addition != Text)
             {
-                player.CurrentProperty.Resolution_Addition = Text;
+                Property.Resolution_Addition = Text;
 
                 RefreshResult();
             }
@@ -707,9 +726,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Strength_Percent != Text)
+            else if (Property.Strength_Percent != Text)
             {
-                player.CurrentProperty.Strength_Percent = Text;
+                Property.Strength_Percent = Text;
 
                 RefreshResult();
             }
@@ -722,9 +741,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Physique_Percent != Text)
+            else if (Property.Physique_Percent != Text)
             {
-                player.CurrentProperty.Physique_Percent = Text;
+                Property.Physique_Percent = Text;
 
                 RefreshResult();
             }
@@ -737,9 +756,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Nimble_Percent != Text)
+            else if (Property.Nimble_Percent != Text)
             {
-                player.CurrentProperty.Nimble_Percent = Text;
+                Property.Nimble_Percent = Text;
 
                 RefreshResult();
             }
@@ -752,9 +771,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Magic_Percent != Text)
+            else if (Property.Magic_Percent != Text)
             {
-                player.CurrentProperty.Magic_Percent = Text;
+                Property.Magic_Percent = Text;
 
                 RefreshResult();
             }
@@ -767,9 +786,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Lore_Percent != Text)
+            else if (Property.Lore_Percent != Text)
             {
-                player.CurrentProperty.Lore_Percent = Text;
+                Property.Lore_Percent = Text;
 
                 RefreshResult();
             }
@@ -782,9 +801,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Inspiration_Percent != Text)
+            else if (Property.Inspiration_Percent != Text)
             {
-                player.CurrentProperty.Inspiration_Percent = Text;
+                Property.Inspiration_Percent = Text;
 
                 RefreshResult();
             }
@@ -797,9 +816,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Perception_Percent != Text)
+            else if (Property.Perception_Percent != Text)
             {
-                player.CurrentProperty.Perception_Percent = Text;
+                Property.Perception_Percent = Text;
 
                 RefreshResult();
             }
@@ -812,9 +831,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Glamour_Percent != Text)
+            else if (Property.Glamour_Percent != Text)
             {
-                player.CurrentProperty.Glamour_Percent = Text;
+                Property.Glamour_Percent = Text;
 
                 RefreshResult();
             }
@@ -827,9 +846,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Resolution_Percent != Text)
+            else if (Property.Resolution_Percent != Text)
             {
-                player.CurrentProperty.Resolution_Percent = Text;
+                Property.Resolution_Percent = Text;
 
                 RefreshResult();
             }
@@ -842,9 +861,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.HP_Addition != Text)
+            else if (Property.HP_Addition != Text)
             {
-                player.CurrentProperty.HP_Addition = Text;
+                Property.HP_Addition = Text;
 
                 RefreshResult();
             }
@@ -857,9 +876,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.HP_Recovery_Addition != Text)
+            else if (Property.HP_Recovery_Addition != Text)
             {
-                player.CurrentProperty.HP_Recovery_Addition = Text;
+                Property.HP_Recovery_Addition = Text;
 
                 RefreshResult();
             }
@@ -872,9 +891,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.MANA_Addition != Text)
+            else if (Property.MANA_Addition != Text)
             {
-                player.CurrentProperty.MANA_Addition = Text;
+                Property.MANA_Addition = Text;
 
                 RefreshResult();
             }
@@ -887,9 +906,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.MANA_Recovery_Addition != Text)
+            else if (Property.MANA_Recovery_Addition != Text)
             {
-                player.CurrentProperty.MANA_Recovery_Addition = Text;
+                Property.MANA_Recovery_Addition = Text;
 
                 RefreshResult();
             }
@@ -902,9 +921,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Speed_Addition != Text)
+            else if (Property.Speed_Addition != Text)
             {
-                player.CurrentProperty.Speed_Addition = Text;
+                Property.Speed_Addition = Text;
 
                 RefreshResult();
             }
@@ -917,9 +936,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Chant_Addition != Text)
+            else if (Property.Chant_Addition != Text)
             {
-                player.CurrentProperty.Chant_Addition = Text;
+                Property.Chant_Addition = Text;
 
                 RefreshResult();
             }
@@ -932,9 +951,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Accuracy_Addition != Text)
+            else if (Property.Accuracy_Addition != Text)
             {
-                player.CurrentProperty.Accuracy_Addition = Text;
+                Property.Accuracy_Addition = Text;
 
                 RefreshResult();
             }
@@ -947,9 +966,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Critical_Addition != Text)
+            else if (Property.Critical_Addition != Text)
             {
-                player.CurrentProperty.Critical_Addition = Text;
+                Property.Critical_Addition = Text;
 
                 RefreshResult();
             }
@@ -962,9 +981,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.DamageGain_Addition != Text)
+            else if (Property.DamageGain_Addition != Text)
             {
-                player.CurrentProperty.DamageGain_Addition = Text;
+                Property.DamageGain_Addition = Text;
 
                 RefreshResult();
             }
@@ -977,9 +996,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.DamageMitigation_Addition != Text)
+            else if (Property.DamageMitigation_Addition != Text)
             {
-                player.CurrentProperty.DamageMitigation_Addition = Text;
+                Property.DamageMitigation_Addition = Text;
 
                 RefreshResult();
             }
@@ -992,9 +1011,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Gain_Addition != Text)
+            else if (Property.Gain_Addition != Text)
             {
-                player.CurrentProperty.Gain_Addition = Text;
+                Property.Gain_Addition = Text;
 
                 RefreshResult();
             }
@@ -1007,9 +1026,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.SpellResistance_Addition != Text)
+            else if (Property.SpellResistance_Addition != Text)
             {
-                player.CurrentProperty.SpellResistance_Addition = Text;
+                Property.SpellResistance_Addition = Text;
 
                 RefreshResult();
             }
@@ -1022,9 +1041,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Exp_Addition != Text)
+            else if (Property.Exp_Addition != Text)
             {
-                player.CurrentProperty.Exp_Addition = Text;
+                Property.Exp_Addition = Text;
 
                 RefreshResult();
             }
@@ -1037,9 +1056,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Hide_Addition != Text)
+            else if (Property.Hide_Addition != Text)
             {
-                player.CurrentProperty.Hide_Addition = Text;
+                Property.Hide_Addition = Text;
 
                 RefreshResult();
             }
@@ -1052,9 +1071,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Endurance_Addition != Text)
+            else if (Property.Endurance_Addition != Text)
             {
-                player.CurrentProperty.Endurance_Addition = Text;
+                Property.Endurance_Addition = Text;
 
                 RefreshResult();
             }
@@ -1067,9 +1086,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Load_Addition != Text)
+            else if (Property.Load_Addition != Text)
             {
-                player.CurrentProperty.Load_Addition = Text;
+                Property.Load_Addition = Text;
 
                 RefreshResult();
             }
@@ -1082,9 +1101,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Energy_Addition != Text)
+            else if (Property.Energy_Addition != Text)
             {
-                player.CurrentProperty.Energy_Addition = Text;
+                Property.Energy_Addition = Text;
 
                 RefreshResult();
             }
@@ -1097,9 +1116,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.SpellDamage_Addition != Text)
+            else if (Property.SpellDamage_Addition != Text)
             {
-                player.CurrentProperty.SpellDamage_Addition = Text;
+                Property.SpellDamage_Addition = Text;
 
                 RefreshResult();
             }
@@ -1112,9 +1131,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Nous_Addition != Text)
+            else if (Property.Nous_Addition != Text)
             {
-                player.CurrentProperty.Nous_Addition = Text;
+                Property.Nous_Addition = Text;
 
                 RefreshResult();
             }
@@ -1127,9 +1146,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Sanity_Addition != Text)
+            else if (Property.Sanity_Addition != Text)
             {
-                player.CurrentProperty.Sanity_Addition = Text;
+                Property.Sanity_Addition = Text;
 
                 RefreshResult();
             }
@@ -1142,9 +1161,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Luck_Addition != Text)
+            else if (Property.Luck_Addition != Text)
             {
-                player.CurrentProperty.Luck_Addition = Text;
+                Property.Luck_Addition = Text;
 
                 RefreshResult();
             }
@@ -1157,9 +1176,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.HP_Percent != Text)
+            else if (Property.HP_Percent != Text)
             {
-                player.CurrentProperty.HP_Percent = Text;
+                Property.HP_Percent = Text;
 
                 RefreshResult();
             }
@@ -1172,9 +1191,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.HP_Recovery_Percent != Text)
+            else if (Property.HP_Recovery_Percent != Text)
             {
-                player.CurrentProperty.HP_Recovery_Percent = Text;
+                Property.HP_Recovery_Percent = Text;
 
                 RefreshResult();
             }
@@ -1187,9 +1206,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.MANA_Percent != Text)
+            else if (Property.MANA_Percent != Text)
             {
-                player.CurrentProperty.MANA_Percent = Text;
+                Property.MANA_Percent = Text;
 
                 RefreshResult();
             }
@@ -1202,9 +1221,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.MANA_Recovery_Percent != Text)
+            else if (Property.MANA_Recovery_Percent != Text)
             {
-                player.CurrentProperty.MANA_Recovery_Percent = Text;
+                Property.MANA_Recovery_Percent = Text;
 
                 RefreshResult();
             }
@@ -1217,9 +1236,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Speed_Percent != Text)
+            else if (Property.Speed_Percent != Text)
             {
-                player.CurrentProperty.Speed_Percent = Text;
+                Property.Speed_Percent = Text;
 
                 RefreshResult();
             }
@@ -1232,9 +1251,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Chant_Percent != Text)
+            else if (Property.Chant_Percent != Text)
             {
-                player.CurrentProperty.Chant_Percent = Text;
+                Property.Chant_Percent = Text;
 
                 RefreshResult();
             }
@@ -1247,9 +1266,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Accuracy_Percent != Text)
+            else if (Property.Accuracy_Percent != Text)
             {
-                player.CurrentProperty.Accuracy_Percent = Text;
+                Property.Accuracy_Percent = Text;
 
                 RefreshResult();
             }
@@ -1262,9 +1281,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Dodge_Percent != Text)
+            else if (Property.Dodge_Percent != Text)
             {
-                player.CurrentProperty.Dodge_Percent = Text;
+                Property.Dodge_Percent = Text;
 
                 RefreshResult();
             }
@@ -1277,9 +1296,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Critical_Percent != Text)
+            else if (Property.Critical_Percent != Text)
             {
-                player.CurrentProperty.Critical_Percent = Text;
+                Property.Critical_Percent = Text;
 
                 RefreshResult();
             }
@@ -1292,9 +1311,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.DamageGain_Percent != Text)
+            else if (Property.DamageGain_Percent != Text)
             {
-                player.CurrentProperty.DamageGain_Percent = Text;
+                Property.DamageGain_Percent = Text;
 
                 RefreshResult();
             }
@@ -1307,9 +1326,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.DamageMitigation_Percent != Text)
+            else if (Property.DamageMitigation_Percent != Text)
             {
-                player.CurrentProperty.DamageMitigation_Percent = Text;
+                Property.DamageMitigation_Percent = Text;
 
                 RefreshResult();
             }
@@ -1322,9 +1341,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Gain_Percent != Text)
+            else if (Property.Gain_Percent != Text)
             {
-                player.CurrentProperty.Gain_Percent = Text;
+                Property.Gain_Percent = Text;
 
                 RefreshResult();
             }
@@ -1337,9 +1356,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.SpellResistance_Percent != Text)
+            else if (Property.SpellResistance_Percent != Text)
             {
-                player.CurrentProperty.SpellResistance_Percent = Text;
+                Property.SpellResistance_Percent = Text;
 
                 RefreshResult();
             }
@@ -1352,9 +1371,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Exp_Percent != Text)
+            else if (Property.Exp_Percent != Text)
             {
-                player.CurrentProperty.Exp_Percent = Text;
+                Property.Exp_Percent = Text;
 
                 RefreshResult();
             }
@@ -1367,9 +1386,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Hide_Percent != Text)
+            else if (Property.Hide_Percent != Text)
             {
-                player.CurrentProperty.Hide_Percent = Text;
+                Property.Hide_Percent = Text;
 
                 RefreshResult();
             }
@@ -1382,9 +1401,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Endurance_Percent != Text)
+            else if (Property.Endurance_Percent != Text)
             {
-                player.CurrentProperty.Endurance_Percent = Text;
+                Property.Endurance_Percent = Text;
 
                 RefreshResult();
             }
@@ -1397,9 +1416,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Load_Percent != Text)
+            else if (Property.Load_Percent != Text)
             {
-                player.CurrentProperty.Load_Percent = Text;
+                Property.Load_Percent = Text;
 
                 RefreshResult();
             }
@@ -1412,9 +1431,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Energy_Percent != Text)
+            else if (Property.Energy_Percent != Text)
             {
-                player.CurrentProperty.Energy_Percent = Text;
+                Property.Energy_Percent = Text;
 
                 RefreshResult();
             }
@@ -1427,9 +1446,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.SpellDamage_Percent != Text)
+            else if (Property.SpellDamage_Percent != Text)
             {
-                player.CurrentProperty.SpellDamage_Percent = Text;
+                Property.SpellDamage_Percent = Text;
 
                 RefreshResult();
             }
@@ -1442,9 +1461,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Nous_Percent != Text)
+            else if (Property.Nous_Percent != Text)
             {
-                player.CurrentProperty.Nous_Percent = Text;
+                Property.Nous_Percent = Text;
 
                 RefreshResult();
             }
@@ -1457,9 +1476,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Sanity_Percent != Text)
+            else if (Property.Sanity_Percent != Text)
             {
-                player.CurrentProperty.Sanity_Percent = Text;
+                Property.Sanity_Percent = Text;
 
                 RefreshResult();
             }
@@ -1472,9 +1491,9 @@ namespace Trpg_DataAided
                 MessageBox.Show("必须输入数字！");
                 RefreshDate();
             }
-            else if (player.CurrentProperty.Luck_Percent != Text)
+            else if (Property.Luck_Percent != Text)
             {
-                player.CurrentProperty.Luck_Percent = Text;
+                Property.Luck_Percent = Text;
 
                 RefreshResult();
             }

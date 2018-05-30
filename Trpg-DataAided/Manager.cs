@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Trpg_DataAided
 {
@@ -9,41 +11,42 @@ namespace Trpg_DataAided
         private Manager() { Init(); }
         public static Manager Instance { get { return manager; } }
 
+        private int index;
 
-        public List<Player> list = new List<Player>();
+        public List<Player> list;
 
         public void Init()
         {
-            Player player = new Player
-            {
-                Nickname = "asd",
-                
-
-            };
-
-            list.Add(player);
+            Serializer.Deserialize(out list);
+            if (list == null) list = new List<Player>();
+            index = list.Count > 0 ? list[list.Count - 1].ID + 1 : 1;
         }
 
-        public void Save(Player player)
+        public void Save(int id, string Nickname, PlayerSnapshot snapshot)
         {
-            int index = list.FindIndex(p => p.ID == player.ID);
-            list[index] = player;
+            var player = list.Find(p => p.ID == id);
+            player.Nickname = Nickname;
+            player.SnapshotList.Add(snapshot);
+            player.CurrentProperty = snapshot.Property;
+
+            Serializer.Serialize(list);
         }
 
         internal void Remove(int id)
         {
             list.RemoveAll(p => p.ID == id);
+            Serializer.Serialize(list);
         }
 
         internal void Create()
         {
             Player player = new Player
             {
-                
+                ID = index++
             };
 
             list.Add(player);
-            player.ID = list.IndexOf(player);
+            Serializer.Serialize(list);
         }
     }
 }
