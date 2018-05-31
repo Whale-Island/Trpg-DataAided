@@ -17,7 +17,7 @@ namespace Trpg_DataAided
 
         public void Init()
         {
-            Serializer.Deserialize(out list);
+            Tool.Deserialize(out list);
             if (list == null) list = new List<Player>();
             index = list.Count > 0 ? list[list.Count - 1].ID + 1 : 1;
         }
@@ -27,26 +27,32 @@ namespace Trpg_DataAided
             var player = list.Find(p => p.ID == id);
             player.Nickname = Nickname;
             player.SnapshotList.Add(snapshot);
-            player.CurrentProperty = snapshot.Property;
+            player.CurrentProperty = (PlayerProperty)Tool.CopyOjbect(snapshot.Property);
 
-            Serializer.Serialize(list);
+            Tool.Serialize(list);
         }
 
         internal void Remove(int id)
         {
             list.RemoveAll(p => p.ID == id);
-            Serializer.Serialize(list);
+            Tool.Serialize(list);
         }
 
         internal void Create()
         {
             Player player = new Player
             {
-                ID = index++
+                ID = index++,
+                Nickname = "未命名",
             };
-
+            player.SnapshotList.Add(new PlayerSnapshot() {
+                Date = DateTime.Now,
+                Category = CategoryEnum.Init,
+                Description = "初始化!",
+                Property = (PlayerProperty)Tool.CopyOjbect(player.CurrentProperty),
+            });
             list.Add(player);
-            Serializer.Serialize(list);
+            Tool.Serialize(list);
         }
     }
 }

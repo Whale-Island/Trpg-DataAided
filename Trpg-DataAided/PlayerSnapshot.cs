@@ -11,9 +11,9 @@ namespace Trpg_DataAided
     {
         public DateTime Date { get; set; }
         /// <summary>
-        /// 0.升级 1.降级 2.修改属性
+        ///  0.升级 1.降级 2.修改属性
         /// </summary>
-        public int Category { get; set; }
+        public CategoryEnum Category { get; set; }
         public string Description { get; set; }
         public PlayerProperty Property { get; set; }
     }

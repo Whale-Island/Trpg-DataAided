@@ -15,17 +15,17 @@ namespace Trpg_DataAided
         static void Main()
         {
 
-            //try
+            try
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new MainForm());
             }
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("出错了。。。/r/n" + ex.Message);
-            //}
-          
+            catch (Exception ex)
+            {
+                MessageBox.Show("出错了。。。\r\n" + ex.Message);
+            }
+
         }
     }
 }

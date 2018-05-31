@@ -7,8 +7,10 @@ namespace Trpg_DataAided
     public partial class DataForm : Form
     {
         int id;
-        PlayerProperty Property = new PlayerProperty();
+        PlayerProperty Property;
+        PlayerProperty PreProperty;
         StringBuilder log = new StringBuilder();
+        Object locker = new Object();
 
         public DataForm()
         {
@@ -30,7 +32,13 @@ namespace Trpg_DataAided
         {
             id = player.ID;
             NicknameTextBox.Text = player.Nickname;
-            Property = player.CurrentProperty;
+            Property = (PlayerProperty)Tool.CopyOjbect(player.CurrentProperty);
+
+            if (player.SnapshotList.Count > 1)
+                PreProperty = (PlayerProperty)Tool.CopyOjbect(player.SnapshotList[player.SnapshotList.Count - 2].Property);
+            else
+                PreProperty = (PlayerProperty)Tool.CopyOjbect(Property);
+
             foreach (PlayerSnapshot snapshot in player.SnapshotList)
             {
                 log.Append(string.Format("时间：{0} 类型：{1} 原因：{2}\r\n", snapshot.Date, snapshot.Category, snapshot.Description));
@@ -52,16 +60,79 @@ namespace Trpg_DataAided
 
         private void UpLevelButton_Click(object sender, EventArgs e)
         {
-            Property.Level++;
-            LevelTextBox.Text = Property.Level.ToString();
-            RefreshResult();
+            lock (locker)
+            {
+                PreProperty = (PlayerProperty)Tool.CopyOjbect(Property);
+                Property.Level++;
+                LevelTextBox.Text = Property.Level.ToString();
+
+                Property.Strength_Grow_Value += Property.Strength_Grow;
+                Property.Physique_Grow_Value += Property.Physique_Grow;
+                Property.Nimble_Grow_Value += Property.Nimble_Grow;
+                Property.Magic_Grow_Value += Property.Magic_Grow;
+                Property.Lore_Grow_Value += Property.Lore_Grow;
+                Property.Inspiration_Grow_Value += Property.Inspiration_Grow;
+                Property.Perception_Grow_Value += Property.Perception_Grow;
+                Property.Glamour_Grow_Value += Property.Glamour_Grow;
+                Property.Resolution_Grow_Value += Property.Resolution_Grow;
+
+                PlayerSnapshot snapshot = new PlayerSnapshot()
+                {
+                    Date = DateTime.Now,
+                    Category = CategoryEnum.Upgrade,
+                    Description = "升级自动保存",
+                    Property = (PlayerProperty)Tool.CopyOjbect(Property)
+                };
+                Manager.Instance.Save(id, NicknameTextBox.Text, snapshot);
+
+                log.Append(string.Format("时间：{0} 类型：{1} 原因：{2}\r\n", snapshot.Date, snapshot.Category, snapshot.Description));
+                LogTextBox.Text = log.ToString();
+
+                RefreshDate();
+                RefreshResult();
+            }
         }
 
         private void DownLevelButton_Click(object sender, EventArgs e)
         {
-            Property.Level--;
-            LevelTextBox.Text = Property.Level.ToString();
-            RefreshResult();
+            lock (locker)
+            {
+                if (Property.Level > 1)
+                {
+                    PreProperty = (PlayerProperty)Tool.CopyOjbect(Property);
+                    Property.Level--;
+                    LevelTextBox.Text = Property.Level.ToString();
+                    Player player = Manager.Instance.list.Find(p => p.ID == id);
+                    PlayerProperty temp = player.SnapshotList.FindLast(s => s.Property.Level == Property.Level).Property;
+
+                    Property.Strength_Grow_Value = temp.Strength_Grow_Value;
+                    Property.Physique_Grow_Value = temp.Physique_Grow_Value;
+                    Property.Nimble_Grow_Value = temp.Nimble_Grow_Value;
+                    Property.Magic_Grow_Value = temp.Magic_Grow_Value;
+                    Property.Lore_Grow_Value = temp.Lore_Grow_Value;
+                    Property.Inspiration_Grow_Value = temp.Inspiration_Grow_Value;
+                    Property.Perception_Grow_Value = temp.Perception_Grow_Value;
+                    Property.Glamour_Grow_Value = temp.Glamour_Grow_Value;
+                    Property.Resolution_Grow_Value = temp.Resolution_Grow_Value;
+
+                    PlayerSnapshot snapshot = new PlayerSnapshot()
+                    {
+                        Date = DateTime.Now,
+                        Category = CategoryEnum.Downgrade,
+                        Description = "降级自动保存！",
+                        Property = (PlayerProperty)Tool.CopyOjbect(Property)
+                    };
+                    Manager.Instance.Save(id, NicknameTextBox.Text, snapshot);
+
+                    log.Append(string.Format("时间：{0} 类型：{1} 原因：{2}\r\n", snapshot.Date, snapshot.Category, snapshot.Description));
+                    LogTextBox.Text = log.ToString();
+
+                    RefreshDate();
+                    RefreshResult();
+                }
+                else
+                    MessageBox.Show("等级不可小于1！");
+            }
         }
 
         private void SaveMenuItem_Click(object sender, EventArgs e)
@@ -73,7 +144,7 @@ namespace Trpg_DataAided
                 PlayerSnapshot snapshot = new PlayerSnapshot()
                 {
                     Date = DateTime.Now,
-                    Category = form.Category,
+                    Category = CategoryEnum.Modify,
                     Description = form.Description,
                     Property = Property
                 };
@@ -82,7 +153,7 @@ namespace Trpg_DataAided
                 log.Append(string.Format("时间：{0} 类型：{1} 原因：{2}\r\n", snapshot.Date, snapshot.Category, snapshot.Description));
                 LogTextBox.Text = log.ToString();
 
-                MessageBox.Show("保存成功!\r\ntest");
+                MessageBox.Show("保存成功!");
             }
         }
 
@@ -110,28 +181,38 @@ namespace Trpg_DataAided
             GlamourGrowTextBox.Text = Property.Glamour_Grow.ToString();
             ResolutionGrowTextBox.Text = Property.Resolution_Grow.ToString();
 
-            HPTextBox.Text = Property.HP.ToString();
-            HPRecoveryTextBox.Text = Property.HP_Recovery.ToString();
-            MANATextBox.Text = Property.MANA.ToString();
-            MANARecoveryTextBox.Text = Property.MANA_Recovery.ToString();
-            SpeedTextBox.Text = Property.Speed.ToString();
-            ChantTextBox.Text = Property.Chant.ToString();
-            AccuracyTextBox.Text = Property.Accuracy.ToString();
-            DodgeTextBox.Text = Property.Dodge.ToString();
-            CriticalTextBox.Text = Property.Critical.ToString();
-            DamageGainTextBox.Text = Property.DamageGain.ToString();
-            DamageMitigationTextBox.Text = Property.DamageMitigation.ToString();
-            GainTextBox.Text = Property.Gain.ToString();
-            SpellResistanceTextBox.Text = Property.SpellResistance.ToString();
-            ExpTextBox.Text = Property.Exp.ToString();
-            HideTextBox.Text = Property.Hide.ToString();
-            EnduraceTextBox.Text = Property.Endurance.ToString();
-            LoadTextBox.Text = Property.Load.ToString();
-            EnergyTextBox.Text = Property.Energy.ToString();
-            SpellDamageTextBox.Text = Property.SpellDamage.ToString();
-            NousTextBox.Text = Property.Nous.ToString();
-            SanityTextBox.Text = Property.Sanity.ToString();
-            LuckTextBox.Text = Property.Luck.ToString();
+            StrengthGrowValueTextBox.Text = Property.Strength_Grow_Value.ToString();
+            PhysiqueGrowValueTextBox.Text = Property.Physique_Grow_Value.ToString();
+            NimbleGrowValueTextBox.Text = Property.Nimble_Grow_Value.ToString();
+            MagicGrowValueTextBox.Text = Property.Magic_Grow_Value.ToString();
+            LoreGrowValueTextBox.Text = Property.Lore_Grow_Value.ToString();
+            InspirationGrowValueTextBox.Text = Property.Inspiration_Grow_Value.ToString();
+            PerceptionGrowValueTextBox.Text = Property.Perception_Grow_Value.ToString();
+            GlamourGrowValueTextBox.Text = Property.Glamour_Grow_Value.ToString();
+            ResolutionGrowValueTextBox.Text = Property.Resolution_Grow_Value.ToString();
+
+            //HPTextBox.Text = Property.HP.ToString();
+            //HPRecoveryTextBox.Text = Property.HP_Recovery.ToString();
+            //MANATextBox.Text = Property.MANA.ToString();
+            //MANARecoveryTextBox.Text = Property.MANA_Recovery.ToString();
+            //SpeedTextBox.Text = Property.Speed.ToString();
+            //ChantTextBox.Text = Property.Chant.ToString();
+            //AccuracyTextBox.Text = Property.Accuracy.ToString();
+            //DodgeTextBox.Text = Property.Dodge.ToString();
+            //CriticalTextBox.Text = Property.Critical.ToString();
+            //DamageGainTextBox.Text = Property.DamageGain.ToString();
+            //DamageMitigationTextBox.Text = Property.DamageMitigation.ToString();
+            //GainTextBox.Text = Property.Gain.ToString();
+            //SpellResistanceTextBox.Text = Property.SpellResistance.ToString();
+            //ExpTextBox.Text = Property.Exp.ToString();
+            //HideTextBox.Text = Property.Hide.ToString();
+            //EnduraceTextBox.Text = Property.Endurance.ToString();
+            //LoadTextBox.Text = Property.Load.ToString();
+            //EnergyTextBox.Text = Property.Energy.ToString();
+            //SpellDamageTextBox.Text = Property.SpellDamage.ToString();
+            //NousTextBox.Text = Property.Nous.ToString();
+            //SanityTextBox.Text = Property.Sanity.ToString();
+            //LuckTextBox.Text = Property.Luck.ToString();
 
             StrengthAdditionTextBox.Text = Property.Strength_Addition.ToString();
             PhysiqueAdditionTextBox.Text = Property.Physique_Addition.ToString();
@@ -202,15 +283,15 @@ namespace Trpg_DataAided
 
         private void RefreshResult()
         {
-            float Strength = (Property.Strength + (Property.Level - 1) * Property.Strength_Grow + Property.Strength_Addition) * Property.Strength_Percent;
-            float Physique = (Property.Physique + (Property.Level - 1) * Property.Physique_Grow + Property.Physique_Addition) * Property.Physique_Percent;
-            float Nimble = (Property.Nimble + (Property.Level - 1) * Property.Nimble_Grow + Property.Nimble_Addition) * Property.Nimble_Percent;
-            float Magic = (Property.Magic + (Property.Level - 1) * Property.Magic_Grow + Property.Magic_Addition) * Property.Magic_Percent;
-            float Lore = (Property.Lore + (Property.Level - 1) * Property.Lore_Grow + Property.Lore_Addition) * Property.Lore_Percent;
-            float Inspiration = (Property.Inspiration + (Property.Level - 1) * Property.Inspiration_Grow + Property.Inspiration_Addition) * Property.Inspiration_Percent;
-            float Perception = (Property.Perception + (Property.Level - 1) * Property.Perception_Grow + Property.Perception_Addition) * Property.Perception_Percent;
-            float Glamour = (Property.Glamour + (Property.Level - 1) * Property.Glamour_Grow + Property.Glamour_Addition) * Property.Glamour_Percent;
-            float Resolution = (Property.Resolution + (Property.Level - 1) * Property.Resolution_Grow + Property.Resolution_Addition) * Property.Resolution_Percent;
+            float Strength = (Property.Strength + Property.Strength_Grow_Value + Property.Strength_Addition) * Property.Strength_Percent;
+            float Physique = (Property.Physique + Property.Physique_Grow_Value + Property.Physique_Addition) * Property.Physique_Percent;
+            float Nimble = (Property.Nimble + Property.Nimble_Grow_Value + Property.Nimble_Addition) * Property.Nimble_Percent;
+            float Magic = (Property.Magic + Property.Magic_Grow_Value + Property.Magic_Addition) * Property.Magic_Percent;
+            float Lore = (Property.Lore + Property.Lore_Grow_Value + Property.Lore_Addition) * Property.Lore_Percent;
+            float Inspiration = (Property.Inspiration + Property.Inspiration_Grow_Value + Property.Inspiration_Addition) * Property.Inspiration_Percent;
+            float Perception = (Property.Perception + Property.Perception_Grow_Value + Property.Perception_Addition) * Property.Perception_Percent;
+            float Glamour = (Property.Glamour + Property.Glamour_Grow_Value + Property.Glamour_Addition) * Property.Glamour_Percent;
+            float Resolution = (Property.Resolution + Property.Resolution_Grow_Value + Property.Resolution_Addition) * Property.Resolution_Percent;
 
             StrengthResultTextBox.Text = Strength.ToString();
             PhysiqueResultTextBox.Text = Physique.ToString();
@@ -1503,5 +1584,451 @@ namespace Trpg_DataAided
 
         #endregion
 
+        #region Label_Enter
+        private void StrengthLabel_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(StrengthLabel, PreProperty.Strength.ToString());
+        }
+
+        private void PhysiqueLabel_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(PhysiqueLabel, PreProperty.Physique.ToString());
+        }
+
+        private void NimbleLabel_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(NimbleLabel, PreProperty.Nimble.ToString());
+        }
+
+        private void MagicLabel_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(MagicLabel, PreProperty.Magic.ToString());
+        }
+
+        private void LoreLabel_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(LoreLabel, PreProperty.Lore.ToString());
+        }
+
+        private void InspirationLabel_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(InspirationLabel, PreProperty.Inspiration.ToString());
+        }
+
+        private void PerceptionLabel_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(PerceptionLabel, PreProperty.Perception.ToString());
+        }
+
+        private void GlamourLabel_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(GlamourLabel, PreProperty.Glamour.ToString());
+        }
+
+        private void ResolutionLabel_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(ResolutionLabel, PreProperty.Resolution.ToString());
+        }
+
+        private void label30_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label30, PreProperty.Strength_Grow.ToString());
+        }
+
+        private void label31_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label31, PreProperty.Physique_Grow.ToString());
+        }
+
+        private void label32_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label32, PreProperty.Nimble_Grow.ToString());
+        }
+
+        private void label33_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label33, PreProperty.Magic_Grow.ToString());
+        }
+
+        private void label34_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label34, PreProperty.Lore_Grow.ToString());
+        }
+
+        private void label35_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label35, PreProperty.Inspiration_Grow.ToString());
+        }
+
+        private void label36_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label36, PreProperty.Perception_Grow.ToString());
+        }
+
+        private void label37_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label37, PreProperty.Glamour_Grow.ToString());
+        }
+
+        private void label38_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label38, PreProperty.Resolution_Grow.ToString());
+        }
+
+        private void label119_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label119, PreProperty.Strength_Grow_Value.ToString());
+        }
+
+        private void label120_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label120, PreProperty.Physique_Grow_Value.ToString());
+        }
+
+        private void label121_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label121, PreProperty.Nimble_Grow_Value.ToString());
+        }
+
+        private void label122_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label122, PreProperty.Magic_Grow_Value.ToString());
+        }
+
+        private void label123_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label123, PreProperty.Lore_Grow_Value.ToString());
+        }
+
+        private void label124_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label124, PreProperty.Inspiration_Grow_Value.ToString());
+        }
+
+        private void label125_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label125, PreProperty.Perception_Grow_Value.ToString());
+        }
+
+        private void label126_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label126, PreProperty.Glamour_Grow_Value.ToString());
+        }
+
+        private void label127_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label127, PreProperty.Resolution_Grow_Value.ToString());
+        }
+
+        private void label10_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label10, PreProperty.Strength_Addition.ToString());
+        }
+
+        private void label11_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label11, PreProperty.Physique_Addition.ToString());
+        }
+
+        private void label12_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label12, PreProperty.Nimble_Addition.ToString());
+        }
+
+        private void label13_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label13, PreProperty.Magic_Addition.ToString());
+        }
+
+        private void label14_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label14, PreProperty.Lore_Addition.ToString());
+        }
+
+        private void label15_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label15, PreProperty.Inspiration_Addition.ToString());
+        }
+
+        private void label16_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label16, PreProperty.Perception_Addition.ToString());
+        }
+
+        private void label17_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label17, PreProperty.Glamour_Addition.ToString());
+        }
+
+        private void label18_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label18, PreProperty.Resolution_Addition.ToString());
+        }
+
+        private void label20_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label20, PreProperty.Strength_Percent.ToString());
+        }
+
+        private void label21_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label21, PreProperty.Physique_Percent.ToString());
+        }
+
+        private void label22_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label22, PreProperty.Nimble_Percent.ToString());
+        }
+
+        private void label23_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label23, PreProperty.Magic_Percent.ToString());
+        }
+
+        private void label24_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label24, PreProperty.Lore_Percent.ToString());
+        }
+
+        private void label25_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label25, PreProperty.Inspiration_Percent.ToString());
+        }
+
+        private void label26_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label26, PreProperty.Perception_Percent.ToString());
+        }
+
+        private void label27_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label27, PreProperty.Glamour_Percent.ToString());
+        }
+
+        private void label29_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label29, PreProperty.Resolution_Percent.ToString());
+        }
+
+        private void label51_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label51, PreProperty.HP_Addition.ToString());
+        }
+
+        private void label52_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label52, PreProperty.HP_Recovery_Addition.ToString());
+        }
+
+        private void label53_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label53, PreProperty.MANA_Addition.ToString());
+        }
+
+        private void label54_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label54, PreProperty.MANA_Recovery_Addition.ToString());
+        }
+
+        private void label55_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label55, PreProperty.Speed_Addition.ToString());
+        }
+
+        private void label56_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label56, PreProperty.Chant_Addition.ToString());
+        }
+
+        private void label57_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label57, PreProperty.Accuracy_Addition.ToString());
+        }
+
+        private void label58_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label58, PreProperty.Dodge_Addition.ToString());
+        }
+
+        private void label59_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label59, PreProperty.Critical_Addition.ToString());
+        }
+
+        private void label61_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label61, PreProperty.DamageGain_Addition.ToString());
+        }
+
+        private void label62_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label62, PreProperty.DamageMitigation_Addition.ToString());
+        }
+
+        private void label63_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label63, PreProperty.Gain_Addition.ToString());
+        }
+
+        private void label64_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label64, PreProperty.SpellResistance_Addition.ToString());
+        }
+
+        private void label65_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label65, PreProperty.Exp_Addition.ToString());
+        }
+
+        private void label66_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label66, PreProperty.Hide_Addition.ToString());
+        }
+
+        private void label67_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label67, PreProperty.Endurance_Addition.ToString());
+        }
+
+        private void label68_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label68, PreProperty.Load_Addition.ToString());
+        }
+
+        private void label69_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label69, PreProperty.Energy_Addition.ToString());
+        }
+
+        private void label41_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label41, PreProperty.SpellDamage_Addition.ToString());
+        }
+
+        private void label42_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label42, PreProperty.Nous_Addition.ToString());
+        }
+
+        private void label43_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label43, PreProperty.Sanity_Addition.ToString());
+        }
+
+        private void label44_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label44, PreProperty.Luck_Addition.ToString());
+        }
+
+        private void label45_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label45, PreProperty.HP_Percent.ToString());
+        }
+
+        private void label46_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label46, PreProperty.HP_Recovery_Percent.ToString());
+        }
+
+        private void label47_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label47, PreProperty.MANA_Percent.ToString());
+        }
+
+        private void label48_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label48, PreProperty.MANA_Recovery_Percent.ToString());
+        }
+
+        private void label49_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label49, PreProperty.Speed_Percent.ToString());
+        }
+
+        private void label70_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label70, PreProperty.Chant_Percent.ToString());
+        }
+
+        private void label71_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label71, PreProperty.Accuracy_Percent.ToString());
+        }
+
+        private void label72_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label72, PreProperty.Dodge_Percent.ToString());
+        }
+
+        private void label73_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label73, PreProperty.Critical_Percent.ToString());
+        }
+
+        private void label74_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label74, PreProperty.DamageGain_Percent.ToString());
+        }
+
+        private void label75_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label75, PreProperty.DamageMitigation_Percent.ToString());
+        }
+
+        private void label76_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label76, PreProperty.Gain_Percent.ToString());
+        }
+
+        private void label77_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label77, PreProperty.SpellResistance_Percent.ToString());
+        }
+
+        private void label78_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label78, PreProperty.Exp_Percent.ToString());
+        }
+
+        private void label79_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label79, PreProperty.Hide_Percent.ToString());
+        }
+
+        private void label80_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label80, PreProperty.Endurance_Percent.ToString());
+        }
+
+        private void label81_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label81, PreProperty.Load_Percent.ToString());
+        }
+
+        private void label82_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label82, PreProperty.Energy_Percent.ToString());
+        }
+
+        private void label83_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label83, PreProperty.SpellDamage_Percent.ToString());
+        }
+
+        private void label84_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label84, PreProperty.Nous_Percent.ToString());
+        }
+
+        private void label85_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label85, PreProperty.Sanity_Percent.ToString());
+        }
+
+        private void label86_MouseEnter(object sender, EventArgs e)
+        {
+            ToolTip.SetToolTip(label86, PreProperty.Luck_Percent.ToString());
+        }
+        #endregion
     }
 }

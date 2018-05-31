@@ -22,31 +22,31 @@ namespace Trpg_DataAided
         public float Glamour { get; set; }
         public float Resolution { get; set; }
 
-        public float HP { get; set; } = 20;
-        public float HP_Recovery { get; set; } = 4;
-        public float MANA { get; set; }
-        public float MANA_Recovery { get; set; }
-        public float Speed { get; set; } = 100;
-        public float Chant { get; set; }
-        public float Accuracy { get; set; } = 0.15f;
-        public float Dodge { get; set; }
-        public float Critical { get; set; }
-        public float DamageGain { get; set; }
-        public float DamageMitigation { get; set; }
-        public float Gain { get; set; }
-        public float SpellResistance { get; set; }
-        public float Exp { get; set; }
-        public float Hide { get; set; }
-        public float Endurance { get; set; } = 20;
-        public float Load { get; set; } = 15;
-        public float Energy { get; set; } = 100;
-        public float SpellDamage { get; set; }
-        public float Nous { get; set; } = 50;
-        public float Sanity { get; set; }
-        public float Luck { get; set; }
+        //public float HP { get; set; } = 20;
+        //public float HP_Recovery { get; set; } = 4;
+        //public float MANA { get; set; }
+        //public float MANA_Recovery { get; set; }
+        //public float Speed { get; set; } = 100;
+        //public float Chant { get; set; }
+        //public float Accuracy { get; set; } = 0.15f;
+        //public float Dodge { get; set; }
+        //public float Critical { get; set; }
+        //public float DamageGain { get; set; }
+        //public float DamageMitigation { get; set; }
+        //public float Gain { get; set; }
+        //public float SpellResistance { get; set; }
+        //public float Exp { get; set; }
+        //public float Hide { get; set; }
+        //public float Endurance { get; set; } = 20;
+        //public float Load { get; set; } = 15;
+        //public float Energy { get; set; } = 100;
+        //public float SpellDamage { get; set; }
+        //public float Nous { get; set; } = 50;
+        //public float Sanity { get; set; }
+        //public float Luck { get; set; }
         #endregion
 
-        #region 成长值
+        #region 成长
         public float Strength_Grow { get; set; }
         public float Physique_Grow { get; set; }
         public float Nimble_Grow { get; set; }
@@ -56,6 +56,18 @@ namespace Trpg_DataAided
         public float Perception_Grow { get; set; }
         public float Glamour_Grow { get; set; }
         public float Resolution_Grow { get; set; }
+        #endregion
+
+        #region 成长值
+        public float Strength_Grow_Value { get; set; }
+        public float Physique_Grow_Value { get; set; }
+        public float Nimble_Grow_Value { get; set; }
+        public float Magic_Grow_Value { get; set; }
+        public float Lore_Grow_Value { get; set; }
+        public float Inspiration_Grow_Value { get; set; }
+        public float Perception_Grow_Value { get; set; }
+        public float Glamour_Grow_Value { get; set; }
+        public float Resolution_Grow_Value{ get; set; }
         #endregion
 
         #region 属性数值加成
@@ -130,6 +142,8 @@ namespace Trpg_DataAided
         public float Nous_Percent { get; set; } = 1;
         public float Sanity_Percent { get; set; } = 1;
         public float Luck_Percent { get; set; } = 1;
+
+
         #endregion
 
     }

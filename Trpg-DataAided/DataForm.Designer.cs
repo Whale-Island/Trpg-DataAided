@@ -28,52 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.BaseAttributeGroupBox = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label118 = new System.Windows.Forms.Label();
-            this.HPTextBox = new System.Windows.Forms.TextBox();
             this.label119 = new System.Windows.Forms.Label();
-            this.HPRecoveryTextBox = new System.Windows.Forms.TextBox();
+            this.StrengthGrowValueTextBox = new System.Windows.Forms.TextBox();
             this.label120 = new System.Windows.Forms.Label();
-            this.MANATextBox = new System.Windows.Forms.TextBox();
+            this.PhysiqueGrowValueTextBox = new System.Windows.Forms.TextBox();
             this.label121 = new System.Windows.Forms.Label();
-            this.MANARecoveryTextBox = new System.Windows.Forms.TextBox();
+            this.NimbleGrowValueTextBox = new System.Windows.Forms.TextBox();
             this.label122 = new System.Windows.Forms.Label();
-            this.SpeedTextBox = new System.Windows.Forms.TextBox();
+            this.MagicGrowValueTextBox = new System.Windows.Forms.TextBox();
             this.label123 = new System.Windows.Forms.Label();
-            this.ChantTextBox = new System.Windows.Forms.TextBox();
+            this.LoreGrowValueTextBox = new System.Windows.Forms.TextBox();
             this.label124 = new System.Windows.Forms.Label();
-            this.AccuracyTextBox = new System.Windows.Forms.TextBox();
+            this.InspirationGrowValueTextBox = new System.Windows.Forms.TextBox();
             this.label125 = new System.Windows.Forms.Label();
-            this.DodgeTextBox = new System.Windows.Forms.TextBox();
+            this.PerceptionGrowValueTextBox = new System.Windows.Forms.TextBox();
             this.label126 = new System.Windows.Forms.Label();
-            this.CriticalTextBox = new System.Windows.Forms.TextBox();
+            this.GlamourGrowValueTextBox = new System.Windows.Forms.TextBox();
             this.label127 = new System.Windows.Forms.Label();
-            this.DamageGainTextBox = new System.Windows.Forms.TextBox();
-            this.label128 = new System.Windows.Forms.Label();
-            this.DamageMitigationTextBox = new System.Windows.Forms.TextBox();
-            this.label129 = new System.Windows.Forms.Label();
-            this.GainTextBox = new System.Windows.Forms.TextBox();
-            this.label130 = new System.Windows.Forms.Label();
-            this.SpellResistanceTextBox = new System.Windows.Forms.TextBox();
-            this.label131 = new System.Windows.Forms.Label();
-            this.ExpTextBox = new System.Windows.Forms.TextBox();
-            this.label132 = new System.Windows.Forms.Label();
-            this.HideTextBox = new System.Windows.Forms.TextBox();
-            this.label133 = new System.Windows.Forms.Label();
-            this.EnduraceTextBox = new System.Windows.Forms.TextBox();
-            this.label134 = new System.Windows.Forms.Label();
-            this.LoadTextBox = new System.Windows.Forms.TextBox();
-            this.label135 = new System.Windows.Forms.Label();
-            this.EnergyTextBox = new System.Windows.Forms.TextBox();
-            this.label136 = new System.Windows.Forms.Label();
-            this.SpellDamageTextBox = new System.Windows.Forms.TextBox();
-            this.label137 = new System.Windows.Forms.Label();
-            this.NousTextBox = new System.Windows.Forms.TextBox();
-            this.label138 = new System.Windows.Forms.Label();
-            this.SanityTextBox = new System.Windows.Forms.TextBox();
-            this.label139 = new System.Windows.Forms.Label();
-            this.LuckTextBox = new System.Windows.Forms.TextBox();
+            this.ResolutionGrowValueTextBox = new System.Windows.Forms.TextBox();
+            this.label118 = new System.Windows.Forms.Label();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.label30 = new System.Windows.Forms.Label();
             this.StrengthGrowTextBox = new System.Windows.Forms.TextBox();
@@ -94,23 +70,23 @@
             this.label38 = new System.Windows.Forms.Label();
             this.ResolutionGrowTextBox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.StrengthLabel = new System.Windows.Forms.Label();
             this.StrengthTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.PhysiqueLabel = new System.Windows.Forms.Label();
             this.PhysiqueTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.NimbleLabel = new System.Windows.Forms.Label();
             this.NimbleTextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.MagicLabel = new System.Windows.Forms.Label();
             this.MagicTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.LoreLabel = new System.Windows.Forms.Label();
             this.LoreTextBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.InspirationLabel = new System.Windows.Forms.Label();
             this.InspirationTextBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.PerceptionLabel = new System.Windows.Forms.Label();
             this.PerceptionTextBox = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.GlamourLabel = new System.Windows.Forms.Label();
             this.GlamourTextBox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.ResolutionLabel = new System.Windows.Forms.Label();
             this.ResolutionTextBox = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.label39 = new System.Windows.Forms.Label();
@@ -322,6 +298,7 @@
             this.MenuStrip = new System.Windows.Forms.MenuStrip();
             this.保存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SaveMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.BaseAttributeGroupBox.SuspendLayout();
             this.flowLayoutPanel10.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
@@ -342,6 +319,7 @@
             // BaseAttributeGroupBox
             // 
             this.BaseAttributeGroupBox.Controls.Add(this.flowLayoutPanel10);
+            this.BaseAttributeGroupBox.Controls.Add(this.label118);
             this.BaseAttributeGroupBox.Controls.Add(this.flowLayoutPanel4);
             this.BaseAttributeGroupBox.Controls.Add(this.flowLayoutPanel1);
             this.BaseAttributeGroupBox.Controls.Add(this.flowLayoutPanel5);
@@ -350,484 +328,250 @@
             this.BaseAttributeGroupBox.Margin = new System.Windows.Forms.Padding(10);
             this.BaseAttributeGroupBox.Name = "BaseAttributeGroupBox";
             this.BaseAttributeGroupBox.Padding = new System.Windows.Forms.Padding(10);
-            this.BaseAttributeGroupBox.Size = new System.Drawing.Size(1283, 221);
+            this.BaseAttributeGroupBox.Size = new System.Drawing.Size(1283, 196);
             this.BaseAttributeGroupBox.TabIndex = 21;
             this.BaseAttributeGroupBox.TabStop = false;
             this.BaseAttributeGroupBox.Text = "基本属性";
             // 
             // flowLayoutPanel10
             // 
+            this.flowLayoutPanel10.AutoSize = true;
             this.flowLayoutPanel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel10.Controls.Add(this.label118);
-            this.flowLayoutPanel10.Controls.Add(this.HPTextBox);
             this.flowLayoutPanel10.Controls.Add(this.label119);
-            this.flowLayoutPanel10.Controls.Add(this.HPRecoveryTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.StrengthGrowValueTextBox);
             this.flowLayoutPanel10.Controls.Add(this.label120);
-            this.flowLayoutPanel10.Controls.Add(this.MANATextBox);
+            this.flowLayoutPanel10.Controls.Add(this.PhysiqueGrowValueTextBox);
             this.flowLayoutPanel10.Controls.Add(this.label121);
-            this.flowLayoutPanel10.Controls.Add(this.MANARecoveryTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.NimbleGrowValueTextBox);
             this.flowLayoutPanel10.Controls.Add(this.label122);
-            this.flowLayoutPanel10.Controls.Add(this.SpeedTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.MagicGrowValueTextBox);
             this.flowLayoutPanel10.Controls.Add(this.label123);
-            this.flowLayoutPanel10.Controls.Add(this.ChantTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.LoreGrowValueTextBox);
             this.flowLayoutPanel10.Controls.Add(this.label124);
-            this.flowLayoutPanel10.Controls.Add(this.AccuracyTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.InspirationGrowValueTextBox);
             this.flowLayoutPanel10.Controls.Add(this.label125);
-            this.flowLayoutPanel10.Controls.Add(this.DodgeTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.PerceptionGrowValueTextBox);
             this.flowLayoutPanel10.Controls.Add(this.label126);
-            this.flowLayoutPanel10.Controls.Add(this.CriticalTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.GlamourGrowValueTextBox);
             this.flowLayoutPanel10.Controls.Add(this.label127);
-            this.flowLayoutPanel10.Controls.Add(this.DamageGainTextBox);
-            this.flowLayoutPanel10.Controls.Add(this.label128);
-            this.flowLayoutPanel10.Controls.Add(this.DamageMitigationTextBox);
-            this.flowLayoutPanel10.Controls.Add(this.label129);
-            this.flowLayoutPanel10.Controls.Add(this.GainTextBox);
-            this.flowLayoutPanel10.Controls.Add(this.label130);
-            this.flowLayoutPanel10.Controls.Add(this.SpellResistanceTextBox);
-            this.flowLayoutPanel10.Controls.Add(this.label131);
-            this.flowLayoutPanel10.Controls.Add(this.ExpTextBox);
-            this.flowLayoutPanel10.Controls.Add(this.label132);
-            this.flowLayoutPanel10.Controls.Add(this.HideTextBox);
-            this.flowLayoutPanel10.Controls.Add(this.label133);
-            this.flowLayoutPanel10.Controls.Add(this.EnduraceTextBox);
-            this.flowLayoutPanel10.Controls.Add(this.label134);
-            this.flowLayoutPanel10.Controls.Add(this.LoadTextBox);
-            this.flowLayoutPanel10.Controls.Add(this.label135);
-            this.flowLayoutPanel10.Controls.Add(this.EnergyTextBox);
-            this.flowLayoutPanel10.Controls.Add(this.label136);
-            this.flowLayoutPanel10.Controls.Add(this.SpellDamageTextBox);
-            this.flowLayoutPanel10.Controls.Add(this.label137);
-            this.flowLayoutPanel10.Controls.Add(this.NousTextBox);
-            this.flowLayoutPanel10.Controls.Add(this.label138);
-            this.flowLayoutPanel10.Controls.Add(this.SanityTextBox);
-            this.flowLayoutPanel10.Controls.Add(this.label139);
-            this.flowLayoutPanel10.Controls.Add(this.LuckTextBox);
+            this.flowLayoutPanel10.Controls.Add(this.ResolutionGrowValueTextBox);
             this.flowLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flowLayoutPanel10.Location = new System.Drawing.Point(10, 139);
+            this.flowLayoutPanel10.Location = new System.Drawing.Point(10, 151);
+            this.flowLayoutPanel10.Margin = new System.Windows.Forms.Padding(10);
             this.flowLayoutPanel10.Name = "flowLayoutPanel10";
             this.flowLayoutPanel10.Padding = new System.Windows.Forms.Padding(3);
-            this.flowLayoutPanel10.Size = new System.Drawing.Size(1263, 63);
-            this.flowLayoutPanel10.TabIndex = 83;
-            this.flowLayoutPanel10.Visible = false;
-            // 
-            // label118
-            // 
-            this.label118.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label118.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label118.Location = new System.Drawing.Point(6, 3);
-            this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(53, 27);
-            this.label118.TabIndex = 111;
-            this.label118.Text = "生命   ";
-            this.label118.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // HPTextBox
-            // 
-            this.HPTextBox.Location = new System.Drawing.Point(65, 6);
-            this.HPTextBox.Name = "HPTextBox";
-            this.HPTextBox.Size = new System.Drawing.Size(36, 21);
-            this.HPTextBox.TabIndex = 110;
+            this.flowLayoutPanel10.Size = new System.Drawing.Size(1263, 35);
+            this.flowLayoutPanel10.TabIndex = 84;
+            this.flowLayoutPanel10.Click += new System.EventHandler(this.Focused_Click);
             // 
             // label119
             // 
             this.label119.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label119.Location = new System.Drawing.Point(107, 3);
+            this.label119.AutoSize = true;
+            this.label119.Location = new System.Drawing.Point(6, 3);
             this.label119.Name = "label119";
             this.label119.Size = new System.Drawing.Size(53, 27);
-            this.label119.TabIndex = 113;
-            this.label119.Text = "命回   ";
+            this.label119.TabIndex = 111;
+            this.label119.Text = "力量    ";
             this.label119.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label119.MouseEnter += new System.EventHandler(this.label119_MouseEnter);
             // 
-            // HPRecoveryTextBox
+            // StrengthGrowValueTextBox
             // 
-            this.HPRecoveryTextBox.Location = new System.Drawing.Point(166, 6);
-            this.HPRecoveryTextBox.Name = "HPRecoveryTextBox";
-            this.HPRecoveryTextBox.Size = new System.Drawing.Size(36, 21);
-            this.HPRecoveryTextBox.TabIndex = 112;
+            this.StrengthGrowValueTextBox.Enabled = false;
+            this.StrengthGrowValueTextBox.Location = new System.Drawing.Point(65, 6);
+            this.StrengthGrowValueTextBox.Name = "StrengthGrowValueTextBox";
+            this.StrengthGrowValueTextBox.Size = new System.Drawing.Size(36, 21);
+            this.StrengthGrowValueTextBox.TabIndex = 110;
             // 
             // label120
             // 
             this.label120.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label120.Location = new System.Drawing.Point(208, 3);
+            this.label120.AutoSize = true;
+            this.label120.Location = new System.Drawing.Point(107, 3);
             this.label120.Name = "label120";
             this.label120.Size = new System.Drawing.Size(53, 27);
-            this.label120.TabIndex = 115;
-            this.label120.Text = "魔法   ";
+            this.label120.TabIndex = 113;
+            this.label120.Text = "体质    ";
             this.label120.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label120.MouseEnter += new System.EventHandler(this.label120_MouseEnter);
             // 
-            // MANATextBox
+            // PhysiqueGrowValueTextBox
             // 
-            this.MANATextBox.Location = new System.Drawing.Point(267, 6);
-            this.MANATextBox.Name = "MANATextBox";
-            this.MANATextBox.Size = new System.Drawing.Size(36, 21);
-            this.MANATextBox.TabIndex = 114;
+            this.PhysiqueGrowValueTextBox.Enabled = false;
+            this.PhysiqueGrowValueTextBox.Location = new System.Drawing.Point(166, 6);
+            this.PhysiqueGrowValueTextBox.Name = "PhysiqueGrowValueTextBox";
+            this.PhysiqueGrowValueTextBox.Size = new System.Drawing.Size(36, 21);
+            this.PhysiqueGrowValueTextBox.TabIndex = 112;
             // 
             // label121
             // 
             this.label121.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label121.Location = new System.Drawing.Point(309, 3);
+            this.label121.AutoSize = true;
+            this.label121.Location = new System.Drawing.Point(208, 3);
             this.label121.Name = "label121";
             this.label121.Size = new System.Drawing.Size(53, 27);
-            this.label121.TabIndex = 117;
-            this.label121.Text = "法回   ";
+            this.label121.TabIndex = 115;
+            this.label121.Text = "灵巧    ";
             this.label121.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label121.MouseEnter += new System.EventHandler(this.label121_MouseEnter);
             // 
-            // MANARecoveryTextBox
+            // NimbleGrowValueTextBox
             // 
-            this.MANARecoveryTextBox.Location = new System.Drawing.Point(368, 6);
-            this.MANARecoveryTextBox.Name = "MANARecoveryTextBox";
-            this.MANARecoveryTextBox.Size = new System.Drawing.Size(36, 21);
-            this.MANARecoveryTextBox.TabIndex = 116;
+            this.NimbleGrowValueTextBox.Enabled = false;
+            this.NimbleGrowValueTextBox.Location = new System.Drawing.Point(267, 6);
+            this.NimbleGrowValueTextBox.Name = "NimbleGrowValueTextBox";
+            this.NimbleGrowValueTextBox.Size = new System.Drawing.Size(36, 21);
+            this.NimbleGrowValueTextBox.TabIndex = 114;
             // 
             // label122
             // 
             this.label122.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label122.Location = new System.Drawing.Point(410, 3);
+            this.label122.AutoSize = true;
+            this.label122.Location = new System.Drawing.Point(309, 3);
             this.label122.Name = "label122";
             this.label122.Size = new System.Drawing.Size(53, 27);
-            this.label122.TabIndex = 119;
-            this.label122.Text = "速度   ";
+            this.label122.TabIndex = 117;
+            this.label122.Text = "魔力    ";
             this.label122.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label122.MouseEnter += new System.EventHandler(this.label122_MouseEnter);
             // 
-            // SpeedTextBox
+            // MagicGrowValueTextBox
             // 
-            this.SpeedTextBox.Location = new System.Drawing.Point(469, 6);
-            this.SpeedTextBox.Name = "SpeedTextBox";
-            this.SpeedTextBox.Size = new System.Drawing.Size(36, 21);
-            this.SpeedTextBox.TabIndex = 118;
+            this.MagicGrowValueTextBox.Enabled = false;
+            this.MagicGrowValueTextBox.Location = new System.Drawing.Point(368, 6);
+            this.MagicGrowValueTextBox.Name = "MagicGrowValueTextBox";
+            this.MagicGrowValueTextBox.Size = new System.Drawing.Size(36, 21);
+            this.MagicGrowValueTextBox.TabIndex = 116;
             // 
             // label123
             // 
             this.label123.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label123.Location = new System.Drawing.Point(511, 3);
+            this.label123.AutoSize = true;
+            this.label123.Location = new System.Drawing.Point(410, 3);
             this.label123.Name = "label123";
             this.label123.Size = new System.Drawing.Size(53, 27);
-            this.label123.TabIndex = 121;
-            this.label123.Text = "咏唱   ";
+            this.label123.TabIndex = 119;
+            this.label123.Text = "知识    ";
             this.label123.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label123.MouseEnter += new System.EventHandler(this.label123_MouseEnter);
             // 
-            // ChantTextBox
+            // LoreGrowValueTextBox
             // 
-            this.ChantTextBox.Location = new System.Drawing.Point(570, 6);
-            this.ChantTextBox.Name = "ChantTextBox";
-            this.ChantTextBox.Size = new System.Drawing.Size(36, 21);
-            this.ChantTextBox.TabIndex = 120;
+            this.LoreGrowValueTextBox.Enabled = false;
+            this.LoreGrowValueTextBox.Location = new System.Drawing.Point(469, 6);
+            this.LoreGrowValueTextBox.Name = "LoreGrowValueTextBox";
+            this.LoreGrowValueTextBox.Size = new System.Drawing.Size(36, 21);
+            this.LoreGrowValueTextBox.TabIndex = 118;
             // 
             // label124
             // 
             this.label124.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label124.Location = new System.Drawing.Point(612, 3);
+            this.label124.AutoSize = true;
+            this.label124.Location = new System.Drawing.Point(511, 3);
             this.label124.Name = "label124";
             this.label124.Size = new System.Drawing.Size(53, 27);
-            this.label124.TabIndex = 123;
-            this.label124.Text = "命中   ";
+            this.label124.TabIndex = 121;
+            this.label124.Text = "灵感    ";
             this.label124.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label124.MouseEnter += new System.EventHandler(this.label124_MouseEnter);
             // 
-            // AccuracyTextBox
+            // InspirationGrowValueTextBox
             // 
-            this.AccuracyTextBox.Location = new System.Drawing.Point(671, 6);
-            this.AccuracyTextBox.Name = "AccuracyTextBox";
-            this.AccuracyTextBox.Size = new System.Drawing.Size(36, 21);
-            this.AccuracyTextBox.TabIndex = 122;
+            this.InspirationGrowValueTextBox.Enabled = false;
+            this.InspirationGrowValueTextBox.Location = new System.Drawing.Point(570, 6);
+            this.InspirationGrowValueTextBox.Name = "InspirationGrowValueTextBox";
+            this.InspirationGrowValueTextBox.Size = new System.Drawing.Size(36, 21);
+            this.InspirationGrowValueTextBox.TabIndex = 120;
             // 
             // label125
             // 
             this.label125.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label125.Location = new System.Drawing.Point(713, 3);
+            this.label125.AutoSize = true;
+            this.label125.Location = new System.Drawing.Point(612, 3);
             this.label125.Name = "label125";
             this.label125.Size = new System.Drawing.Size(53, 27);
-            this.label125.TabIndex = 125;
-            this.label125.Text = "回避   ";
+            this.label125.TabIndex = 123;
+            this.label125.Text = "感知    ";
             this.label125.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label125.MouseEnter += new System.EventHandler(this.label125_MouseEnter);
             // 
-            // DodgeTextBox
+            // PerceptionGrowValueTextBox
             // 
-            this.DodgeTextBox.Location = new System.Drawing.Point(772, 6);
-            this.DodgeTextBox.Name = "DodgeTextBox";
-            this.DodgeTextBox.Size = new System.Drawing.Size(36, 21);
-            this.DodgeTextBox.TabIndex = 124;
+            this.PerceptionGrowValueTextBox.Enabled = false;
+            this.PerceptionGrowValueTextBox.Location = new System.Drawing.Point(671, 6);
+            this.PerceptionGrowValueTextBox.Name = "PerceptionGrowValueTextBox";
+            this.PerceptionGrowValueTextBox.Size = new System.Drawing.Size(36, 21);
+            this.PerceptionGrowValueTextBox.TabIndex = 122;
             // 
             // label126
             // 
             this.label126.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label126.Location = new System.Drawing.Point(814, 3);
+            this.label126.AutoSize = true;
+            this.label126.Location = new System.Drawing.Point(713, 3);
             this.label126.Name = "label126";
             this.label126.Size = new System.Drawing.Size(53, 27);
-            this.label126.TabIndex = 127;
-            this.label126.Text = "会心   ";
+            this.label126.TabIndex = 125;
+            this.label126.Text = "魅力    ";
             this.label126.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label126.MouseEnter += new System.EventHandler(this.label126_MouseEnter);
             // 
-            // CriticalTextBox
+            // GlamourGrowValueTextBox
             // 
-            this.CriticalTextBox.Location = new System.Drawing.Point(873, 6);
-            this.CriticalTextBox.Name = "CriticalTextBox";
-            this.CriticalTextBox.Size = new System.Drawing.Size(36, 21);
-            this.CriticalTextBox.TabIndex = 126;
+            this.GlamourGrowValueTextBox.Enabled = false;
+            this.GlamourGrowValueTextBox.Location = new System.Drawing.Point(772, 6);
+            this.GlamourGrowValueTextBox.Name = "GlamourGrowValueTextBox";
+            this.GlamourGrowValueTextBox.Size = new System.Drawing.Size(36, 21);
+            this.GlamourGrowValueTextBox.TabIndex = 124;
             // 
             // label127
             // 
             this.label127.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label127.Location = new System.Drawing.Point(915, 3);
+            this.label127.AutoSize = true;
+            this.label127.Location = new System.Drawing.Point(814, 3);
             this.label127.Name = "label127";
             this.label127.Size = new System.Drawing.Size(53, 27);
-            this.label127.TabIndex = 129;
-            this.label127.Text = "增伤   ";
+            this.label127.TabIndex = 127;
+            this.label127.Text = "意志    ";
             this.label127.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label127.MouseEnter += new System.EventHandler(this.label127_MouseEnter);
             // 
-            // DamageGainTextBox
+            // ResolutionGrowValueTextBox
             // 
-            this.DamageGainTextBox.Location = new System.Drawing.Point(974, 6);
-            this.DamageGainTextBox.Name = "DamageGainTextBox";
-            this.DamageGainTextBox.Size = new System.Drawing.Size(36, 21);
-            this.DamageGainTextBox.TabIndex = 128;
+            this.ResolutionGrowValueTextBox.Enabled = false;
+            this.ResolutionGrowValueTextBox.Location = new System.Drawing.Point(873, 6);
+            this.ResolutionGrowValueTextBox.Name = "ResolutionGrowValueTextBox";
+            this.ResolutionGrowValueTextBox.Size = new System.Drawing.Size(36, 21);
+            this.ResolutionGrowValueTextBox.TabIndex = 126;
             // 
-            // label128
+            // label118
             // 
-            this.label128.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label128.Location = new System.Drawing.Point(1016, 3);
-            this.label128.Name = "label128";
-            this.label128.Size = new System.Drawing.Size(53, 27);
-            this.label128.TabIndex = 131;
-            this.label128.Text = "减伤   ";
-            this.label128.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // DamageMitigationTextBox
-            // 
-            this.DamageMitigationTextBox.Location = new System.Drawing.Point(1075, 6);
-            this.DamageMitigationTextBox.Name = "DamageMitigationTextBox";
-            this.DamageMitigationTextBox.Size = new System.Drawing.Size(36, 21);
-            this.DamageMitigationTextBox.TabIndex = 130;
-            // 
-            // label129
-            // 
-            this.label129.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label129.Location = new System.Drawing.Point(1117, 3);
-            this.label129.Name = "label129";
-            this.label129.Size = new System.Drawing.Size(53, 27);
-            this.label129.TabIndex = 133;
-            this.label129.Text = "增益   ";
-            this.label129.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // GainTextBox
-            // 
-            this.GainTextBox.Location = new System.Drawing.Point(1176, 6);
-            this.GainTextBox.Name = "GainTextBox";
-            this.GainTextBox.Size = new System.Drawing.Size(36, 21);
-            this.GainTextBox.TabIndex = 132;
-            // 
-            // label130
-            // 
-            this.label130.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label130.Location = new System.Drawing.Point(6, 30);
-            this.label130.Name = "label130";
-            this.label130.Size = new System.Drawing.Size(53, 27);
-            this.label130.TabIndex = 135;
-            this.label130.Text = "咒抗   ";
-            this.label130.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // SpellResistanceTextBox
-            // 
-            this.SpellResistanceTextBox.Location = new System.Drawing.Point(65, 33);
-            this.SpellResistanceTextBox.Name = "SpellResistanceTextBox";
-            this.SpellResistanceTextBox.Size = new System.Drawing.Size(36, 21);
-            this.SpellResistanceTextBox.TabIndex = 134;
-            // 
-            // label131
-            // 
-            this.label131.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label131.Location = new System.Drawing.Point(107, 30);
-            this.label131.Name = "label131";
-            this.label131.Size = new System.Drawing.Size(53, 27);
-            this.label131.TabIndex = 137;
-            this.label131.Text = "经验   ";
-            this.label131.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // ExpTextBox
-            // 
-            this.ExpTextBox.Location = new System.Drawing.Point(166, 33);
-            this.ExpTextBox.Name = "ExpTextBox";
-            this.ExpTextBox.Size = new System.Drawing.Size(36, 21);
-            this.ExpTextBox.TabIndex = 136;
-            // 
-            // label132
-            // 
-            this.label132.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label132.Location = new System.Drawing.Point(208, 30);
-            this.label132.Name = "label132";
-            this.label132.Size = new System.Drawing.Size(53, 27);
-            this.label132.TabIndex = 139;
-            this.label132.Text = "隐藏   ";
-            this.label132.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // HideTextBox
-            // 
-            this.HideTextBox.Location = new System.Drawing.Point(267, 33);
-            this.HideTextBox.Name = "HideTextBox";
-            this.HideTextBox.Size = new System.Drawing.Size(36, 21);
-            this.HideTextBox.TabIndex = 138;
-            // 
-            // label133
-            // 
-            this.label133.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label133.Location = new System.Drawing.Point(309, 30);
-            this.label133.Name = "label133";
-            this.label133.Size = new System.Drawing.Size(53, 27);
-            this.label133.TabIndex = 141;
-            this.label133.Text = "耐力   ";
-            this.label133.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // EnduraceTextBox
-            // 
-            this.EnduraceTextBox.Location = new System.Drawing.Point(368, 33);
-            this.EnduraceTextBox.Name = "EnduraceTextBox";
-            this.EnduraceTextBox.Size = new System.Drawing.Size(36, 21);
-            this.EnduraceTextBox.TabIndex = 140;
-            // 
-            // label134
-            // 
-            this.label134.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label134.Location = new System.Drawing.Point(410, 30);
-            this.label134.Name = "label134";
-            this.label134.Size = new System.Drawing.Size(53, 27);
-            this.label134.TabIndex = 143;
-            this.label134.Text = "负重   ";
-            this.label134.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LoadTextBox
-            // 
-            this.LoadTextBox.Location = new System.Drawing.Point(469, 33);
-            this.LoadTextBox.Name = "LoadTextBox";
-            this.LoadTextBox.Size = new System.Drawing.Size(36, 21);
-            this.LoadTextBox.TabIndex = 142;
-            // 
-            // label135
-            // 
-            this.label135.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label135.Location = new System.Drawing.Point(511, 30);
-            this.label135.Name = "label135";
-            this.label135.Size = new System.Drawing.Size(53, 27);
-            this.label135.TabIndex = 145;
-            this.label135.Text = "精力   ";
-            this.label135.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // EnergyTextBox
-            // 
-            this.EnergyTextBox.Location = new System.Drawing.Point(570, 33);
-            this.EnergyTextBox.Name = "EnergyTextBox";
-            this.EnergyTextBox.Size = new System.Drawing.Size(36, 21);
-            this.EnergyTextBox.TabIndex = 144;
-            // 
-            // label136
-            // 
-            this.label136.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label136.Location = new System.Drawing.Point(612, 30);
-            this.label136.Name = "label136";
-            this.label136.Size = new System.Drawing.Size(53, 27);
-            this.label136.TabIndex = 147;
-            this.label136.Text = "法伤   ";
-            this.label136.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // SpellDamageTextBox
-            // 
-            this.SpellDamageTextBox.Location = new System.Drawing.Point(671, 33);
-            this.SpellDamageTextBox.Name = "SpellDamageTextBox";
-            this.SpellDamageTextBox.Size = new System.Drawing.Size(36, 21);
-            this.SpellDamageTextBox.TabIndex = 146;
-            // 
-            // label137
-            // 
-            this.label137.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label137.Location = new System.Drawing.Point(713, 30);
-            this.label137.Name = "label137";
-            this.label137.Size = new System.Drawing.Size(53, 27);
-            this.label137.TabIndex = 149;
-            this.label137.Text = "常识   ";
-            this.label137.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // NousTextBox
-            // 
-            this.NousTextBox.Location = new System.Drawing.Point(772, 33);
-            this.NousTextBox.Name = "NousTextBox";
-            this.NousTextBox.Size = new System.Drawing.Size(36, 21);
-            this.NousTextBox.TabIndex = 148;
-            // 
-            // label138
-            // 
-            this.label138.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label138.Location = new System.Drawing.Point(814, 30);
-            this.label138.Name = "label138";
-            this.label138.Size = new System.Drawing.Size(53, 27);
-            this.label138.TabIndex = 151;
-            this.label138.Text = "理智   ";
-            this.label138.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // SanityTextBox
-            // 
-            this.SanityTextBox.Location = new System.Drawing.Point(873, 33);
-            this.SanityTextBox.Name = "SanityTextBox";
-            this.SanityTextBox.Size = new System.Drawing.Size(36, 21);
-            this.SanityTextBox.TabIndex = 150;
-            // 
-            // label139
-            // 
-            this.label139.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label139.Location = new System.Drawing.Point(915, 30);
-            this.label139.Name = "label139";
-            this.label139.Size = new System.Drawing.Size(53, 27);
-            this.label139.TabIndex = 153;
-            this.label139.Text = "幸运   ";
-            this.label139.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LuckTextBox
-            // 
-            this.LuckTextBox.Location = new System.Drawing.Point(974, 33);
-            this.LuckTextBox.Name = "LuckTextBox";
-            this.LuckTextBox.Size = new System.Drawing.Size(36, 21);
-            this.LuckTextBox.TabIndex = 152;
+            this.label118.AutoSize = true;
+            this.label118.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label118.Location = new System.Drawing.Point(10, 139);
+            this.label118.Margin = new System.Windows.Forms.Padding(10);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(41, 12);
+            this.label118.TabIndex = 83;
+            this.label118.Text = "成长值";
             // 
             // flowLayoutPanel4
             // 
@@ -857,6 +601,7 @@
             this.flowLayoutPanel4.Padding = new System.Windows.Forms.Padding(3);
             this.flowLayoutPanel4.Size = new System.Drawing.Size(1263, 40);
             this.flowLayoutPanel4.TabIndex = 82;
+            this.flowLayoutPanel4.Click += new System.EventHandler(this.Focused_Click);
             // 
             // label30
             // 
@@ -870,6 +615,7 @@
             this.label30.TabIndex = 111;
             this.label30.Text = "力量成长";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label30.MouseEnter += new System.EventHandler(this.label30_MouseEnter);
             // 
             // StrengthGrowTextBox
             // 
@@ -891,6 +637,7 @@
             this.label31.TabIndex = 113;
             this.label31.Text = "体质成长";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label31.MouseEnter += new System.EventHandler(this.label31_MouseEnter);
             // 
             // PhysiqueGrowTextBox
             // 
@@ -912,6 +659,7 @@
             this.label32.TabIndex = 115;
             this.label32.Text = "灵巧成长";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label32.MouseEnter += new System.EventHandler(this.label32_MouseEnter);
             // 
             // NimbleGrowTextBox
             // 
@@ -933,6 +681,7 @@
             this.label33.TabIndex = 117;
             this.label33.Text = "魔力成长";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label33.MouseEnter += new System.EventHandler(this.label33_MouseEnter);
             // 
             // MagicGrowTextBox
             // 
@@ -954,6 +703,7 @@
             this.label34.TabIndex = 119;
             this.label34.Text = "知识成长";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label34.MouseEnter += new System.EventHandler(this.label34_MouseEnter);
             // 
             // LoreGrowTextBox
             // 
@@ -975,6 +725,7 @@
             this.label35.TabIndex = 121;
             this.label35.Text = "灵感成长";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label35.MouseEnter += new System.EventHandler(this.label35_MouseEnter);
             // 
             // InspirationGrowTextBox
             // 
@@ -996,6 +747,7 @@
             this.label36.TabIndex = 123;
             this.label36.Text = "感知成长";
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label36.MouseEnter += new System.EventHandler(this.label36_MouseEnter);
             // 
             // PerceptionGrowTextBox
             // 
@@ -1017,6 +769,7 @@
             this.label37.TabIndex = 125;
             this.label37.Text = "魅力成长";
             this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label37.MouseEnter += new System.EventHandler(this.label37_MouseEnter);
             // 
             // GlamourGrowTextBox
             // 
@@ -1038,6 +791,7 @@
             this.label38.TabIndex = 127;
             this.label38.Text = "意志成长";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label38.MouseEnter += new System.EventHandler(this.label38_MouseEnter);
             // 
             // ResolutionGrowTextBox
             // 
@@ -1051,23 +805,23 @@
             // 
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Controls.Add(this.label1);
+            this.flowLayoutPanel1.Controls.Add(this.StrengthLabel);
             this.flowLayoutPanel1.Controls.Add(this.StrengthTextBox);
-            this.flowLayoutPanel1.Controls.Add(this.label2);
+            this.flowLayoutPanel1.Controls.Add(this.PhysiqueLabel);
             this.flowLayoutPanel1.Controls.Add(this.PhysiqueTextBox);
-            this.flowLayoutPanel1.Controls.Add(this.label3);
+            this.flowLayoutPanel1.Controls.Add(this.NimbleLabel);
             this.flowLayoutPanel1.Controls.Add(this.NimbleTextBox);
-            this.flowLayoutPanel1.Controls.Add(this.label4);
+            this.flowLayoutPanel1.Controls.Add(this.MagicLabel);
             this.flowLayoutPanel1.Controls.Add(this.MagicTextBox);
-            this.flowLayoutPanel1.Controls.Add(this.label5);
+            this.flowLayoutPanel1.Controls.Add(this.LoreLabel);
             this.flowLayoutPanel1.Controls.Add(this.LoreTextBox);
-            this.flowLayoutPanel1.Controls.Add(this.label6);
+            this.flowLayoutPanel1.Controls.Add(this.InspirationLabel);
             this.flowLayoutPanel1.Controls.Add(this.InspirationTextBox);
-            this.flowLayoutPanel1.Controls.Add(this.label7);
+            this.flowLayoutPanel1.Controls.Add(this.PerceptionLabel);
             this.flowLayoutPanel1.Controls.Add(this.PerceptionTextBox);
-            this.flowLayoutPanel1.Controls.Add(this.label8);
+            this.flowLayoutPanel1.Controls.Add(this.GlamourLabel);
             this.flowLayoutPanel1.Controls.Add(this.GlamourTextBox);
-            this.flowLayoutPanel1.Controls.Add(this.label9);
+            this.flowLayoutPanel1.Controls.Add(this.ResolutionLabel);
             this.flowLayoutPanel1.Controls.Add(this.ResolutionTextBox);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 64);
@@ -1078,18 +832,19 @@
             this.flowLayoutPanel1.TabIndex = 78;
             this.flowLayoutPanel1.Click += new System.EventHandler(this.Focused_Click);
             // 
-            // label1
+            // StrengthLabel
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.StrengthLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 27);
-            this.label1.TabIndex = 111;
-            this.label1.Text = "力量    ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.StrengthLabel.AutoSize = true;
+            this.StrengthLabel.Location = new System.Drawing.Point(6, 3);
+            this.StrengthLabel.Name = "StrengthLabel";
+            this.StrengthLabel.Size = new System.Drawing.Size(53, 27);
+            this.StrengthLabel.TabIndex = 111;
+            this.StrengthLabel.Text = "力量    ";
+            this.StrengthLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.StrengthLabel.MouseEnter += new System.EventHandler(this.StrengthLabel_MouseEnter);
             // 
             // StrengthTextBox
             // 
@@ -1099,18 +854,19 @@
             this.StrengthTextBox.TabIndex = 110;
             this.StrengthTextBox.Leave += new System.EventHandler(this.StrengthTextBox_Leave);
             // 
-            // label2
+            // PhysiqueLabel
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PhysiqueLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(107, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 27);
-            this.label2.TabIndex = 113;
-            this.label2.Text = "体质    ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.PhysiqueLabel.AutoSize = true;
+            this.PhysiqueLabel.Location = new System.Drawing.Point(107, 3);
+            this.PhysiqueLabel.Name = "PhysiqueLabel";
+            this.PhysiqueLabel.Size = new System.Drawing.Size(53, 27);
+            this.PhysiqueLabel.TabIndex = 113;
+            this.PhysiqueLabel.Text = "体质    ";
+            this.PhysiqueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.PhysiqueLabel.MouseEnter += new System.EventHandler(this.PhysiqueLabel_MouseEnter);
             // 
             // PhysiqueTextBox
             // 
@@ -1120,18 +876,19 @@
             this.PhysiqueTextBox.TabIndex = 112;
             this.PhysiqueTextBox.Leave += new System.EventHandler(this.PhysiqueTextBox_Leave);
             // 
-            // label3
+            // NimbleLabel
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.NimbleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(208, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 27);
-            this.label3.TabIndex = 115;
-            this.label3.Text = "灵巧    ";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.NimbleLabel.AutoSize = true;
+            this.NimbleLabel.Location = new System.Drawing.Point(208, 3);
+            this.NimbleLabel.Name = "NimbleLabel";
+            this.NimbleLabel.Size = new System.Drawing.Size(53, 27);
+            this.NimbleLabel.TabIndex = 115;
+            this.NimbleLabel.Text = "灵巧    ";
+            this.NimbleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.NimbleLabel.MouseEnter += new System.EventHandler(this.NimbleLabel_MouseEnter);
             // 
             // NimbleTextBox
             // 
@@ -1141,18 +898,19 @@
             this.NimbleTextBox.TabIndex = 114;
             this.NimbleTextBox.Leave += new System.EventHandler(this.NimbleTextBox_Leave);
             // 
-            // label4
+            // MagicLabel
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.MagicLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(309, 3);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 27);
-            this.label4.TabIndex = 117;
-            this.label4.Text = "魔力    ";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MagicLabel.AutoSize = true;
+            this.MagicLabel.Location = new System.Drawing.Point(309, 3);
+            this.MagicLabel.Name = "MagicLabel";
+            this.MagicLabel.Size = new System.Drawing.Size(53, 27);
+            this.MagicLabel.TabIndex = 117;
+            this.MagicLabel.Text = "魔力    ";
+            this.MagicLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MagicLabel.MouseEnter += new System.EventHandler(this.MagicLabel_MouseEnter);
             // 
             // MagicTextBox
             // 
@@ -1162,18 +920,19 @@
             this.MagicTextBox.TabIndex = 116;
             this.MagicTextBox.Leave += new System.EventHandler(this.MagicTextBox_Leave);
             // 
-            // label5
+            // LoreLabel
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.LoreLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(410, 3);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 27);
-            this.label5.TabIndex = 119;
-            this.label5.Text = "知识    ";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoreLabel.AutoSize = true;
+            this.LoreLabel.Location = new System.Drawing.Point(410, 3);
+            this.LoreLabel.Name = "LoreLabel";
+            this.LoreLabel.Size = new System.Drawing.Size(53, 27);
+            this.LoreLabel.TabIndex = 119;
+            this.LoreLabel.Text = "知识    ";
+            this.LoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoreLabel.MouseEnter += new System.EventHandler(this.LoreLabel_MouseEnter);
             // 
             // LoreTextBox
             // 
@@ -1183,18 +942,19 @@
             this.LoreTextBox.TabIndex = 118;
             this.LoreTextBox.Leave += new System.EventHandler(this.LoreTextBox_Leave);
             // 
-            // label6
+            // InspirationLabel
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.InspirationLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(511, 3);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 27);
-            this.label6.TabIndex = 121;
-            this.label6.Text = "灵感    ";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.InspirationLabel.AutoSize = true;
+            this.InspirationLabel.Location = new System.Drawing.Point(511, 3);
+            this.InspirationLabel.Name = "InspirationLabel";
+            this.InspirationLabel.Size = new System.Drawing.Size(53, 27);
+            this.InspirationLabel.TabIndex = 121;
+            this.InspirationLabel.Text = "灵感    ";
+            this.InspirationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.InspirationLabel.MouseEnter += new System.EventHandler(this.InspirationLabel_MouseEnter);
             // 
             // InspirationTextBox
             // 
@@ -1204,18 +964,19 @@
             this.InspirationTextBox.TabIndex = 120;
             this.InspirationTextBox.Leave += new System.EventHandler(this.InspirationTextBox_Leave);
             // 
-            // label7
+            // PerceptionLabel
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PerceptionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(612, 3);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 27);
-            this.label7.TabIndex = 123;
-            this.label7.Text = "感知    ";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.PerceptionLabel.AutoSize = true;
+            this.PerceptionLabel.Location = new System.Drawing.Point(612, 3);
+            this.PerceptionLabel.Name = "PerceptionLabel";
+            this.PerceptionLabel.Size = new System.Drawing.Size(53, 27);
+            this.PerceptionLabel.TabIndex = 123;
+            this.PerceptionLabel.Text = "感知    ";
+            this.PerceptionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.PerceptionLabel.MouseEnter += new System.EventHandler(this.PerceptionLabel_MouseEnter);
             // 
             // PerceptionTextBox
             // 
@@ -1225,18 +986,19 @@
             this.PerceptionTextBox.TabIndex = 122;
             this.PerceptionTextBox.Leave += new System.EventHandler(this.PerceptionTextBox_Leave);
             // 
-            // label8
+            // GlamourLabel
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.GlamourLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(713, 3);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 27);
-            this.label8.TabIndex = 125;
-            this.label8.Text = "魅力    ";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.GlamourLabel.AutoSize = true;
+            this.GlamourLabel.Location = new System.Drawing.Point(713, 3);
+            this.GlamourLabel.Name = "GlamourLabel";
+            this.GlamourLabel.Size = new System.Drawing.Size(53, 27);
+            this.GlamourLabel.TabIndex = 125;
+            this.GlamourLabel.Text = "魅力    ";
+            this.GlamourLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.GlamourLabel.MouseEnter += new System.EventHandler(this.GlamourLabel_MouseEnter);
             // 
             // GlamourTextBox
             // 
@@ -1246,18 +1008,19 @@
             this.GlamourTextBox.TabIndex = 124;
             this.GlamourTextBox.Leave += new System.EventHandler(this.GlamourTextBox_Leave);
             // 
-            // label9
+            // ResolutionLabel
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ResolutionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(814, 3);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(53, 27);
-            this.label9.TabIndex = 127;
-            this.label9.Text = "意志    ";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ResolutionLabel.AutoSize = true;
+            this.ResolutionLabel.Location = new System.Drawing.Point(814, 3);
+            this.ResolutionLabel.Name = "ResolutionLabel";
+            this.ResolutionLabel.Size = new System.Drawing.Size(53, 27);
+            this.ResolutionLabel.TabIndex = 127;
+            this.ResolutionLabel.Text = "意志    ";
+            this.ResolutionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ResolutionLabel.MouseEnter += new System.EventHandler(this.ResolutionLabel_MouseEnter);
             // 
             // ResolutionTextBox
             // 
@@ -1319,6 +1082,7 @@
             // 
             // LevelTextBox
             // 
+            this.LevelTextBox.Enabled = false;
             this.LevelTextBox.Location = new System.Drawing.Point(115, 3);
             this.LevelTextBox.Name = "LevelTextBox";
             this.LevelTextBox.Size = new System.Drawing.Size(36, 21);
@@ -1358,7 +1122,7 @@
             this.AdditionGroupBox.Controls.Add(this.flowLayoutPanel2);
             this.AdditionGroupBox.Controls.Add(this.label28);
             this.AdditionGroupBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AdditionGroupBox.Location = new System.Drawing.Point(0, 246);
+            this.AdditionGroupBox.Location = new System.Drawing.Point(0, 221);
             this.AdditionGroupBox.Name = "AdditionGroupBox";
             this.AdditionGroupBox.Padding = new System.Windows.Forms.Padding(10);
             this.AdditionGroupBox.Size = new System.Drawing.Size(1283, 307);
@@ -1434,6 +1198,7 @@
             this.label45.TabIndex = 155;
             this.label45.Text = "生命";
             this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label45.MouseEnter += new System.EventHandler(this.label45_MouseEnter);
             // 
             // HPPercentTextBox
             // 
@@ -1455,6 +1220,7 @@
             this.label46.TabIndex = 157;
             this.label46.Text = "命回";
             this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label46.MouseEnter += new System.EventHandler(this.label46_MouseEnter);
             // 
             // HPRecoveryPercentTextBox
             // 
@@ -1476,6 +1242,7 @@
             this.label47.TabIndex = 159;
             this.label47.Text = "魔法";
             this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label47.MouseEnter += new System.EventHandler(this.label47_MouseEnter);
             // 
             // MANAPercentTextBox
             // 
@@ -1497,6 +1264,7 @@
             this.label48.TabIndex = 161;
             this.label48.Text = "法回";
             this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label48.MouseEnter += new System.EventHandler(this.label48_MouseEnter);
             // 
             // MANARecoveryPercentTextBox
             // 
@@ -1518,6 +1286,7 @@
             this.label49.TabIndex = 163;
             this.label49.Text = "速度";
             this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label49.MouseEnter += new System.EventHandler(this.label49_MouseEnter);
             // 
             // SpeedPercentTextBox
             // 
@@ -1539,6 +1308,7 @@
             this.label70.TabIndex = 165;
             this.label70.Text = "咏唱";
             this.label70.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label70.MouseEnter += new System.EventHandler(this.label70_MouseEnter);
             // 
             // ChantPercentTextBox
             // 
@@ -1560,6 +1330,7 @@
             this.label71.TabIndex = 167;
             this.label71.Text = "命中";
             this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label71.MouseEnter += new System.EventHandler(this.label71_MouseEnter);
             // 
             // AccuracyPercentTextBox
             // 
@@ -1581,6 +1352,7 @@
             this.label72.TabIndex = 169;
             this.label72.Text = "回避";
             this.label72.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label72.MouseEnter += new System.EventHandler(this.label72_MouseEnter);
             // 
             // DodgePercentTextBox
             // 
@@ -1602,6 +1374,7 @@
             this.label73.TabIndex = 171;
             this.label73.Text = "会心";
             this.label73.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label73.MouseEnter += new System.EventHandler(this.label73_MouseEnter);
             // 
             // CriticalPercentTextBox
             // 
@@ -1623,6 +1396,7 @@
             this.label74.TabIndex = 173;
             this.label74.Text = "增伤";
             this.label74.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label74.MouseEnter += new System.EventHandler(this.label74_MouseEnter);
             // 
             // DamageGainPercentTextBox
             // 
@@ -1644,6 +1418,7 @@
             this.label75.TabIndex = 175;
             this.label75.Text = "减伤";
             this.label75.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label75.MouseEnter += new System.EventHandler(this.label75_MouseEnter);
             // 
             // DamageMitigationPercentTextBox
             // 
@@ -1665,6 +1440,7 @@
             this.label76.TabIndex = 177;
             this.label76.Text = "增益";
             this.label76.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label76.MouseEnter += new System.EventHandler(this.label76_MouseEnter);
             // 
             // GainPercentTextBox
             // 
@@ -1686,6 +1462,7 @@
             this.label77.TabIndex = 179;
             this.label77.Text = "咒抗";
             this.label77.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label77.MouseEnter += new System.EventHandler(this.label77_MouseEnter);
             // 
             // SpellResistancePercentTextBox
             // 
@@ -1707,6 +1484,7 @@
             this.label78.TabIndex = 181;
             this.label78.Text = "经验";
             this.label78.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label78.MouseEnter += new System.EventHandler(this.label78_MouseEnter);
             // 
             // ExpPercentTextBox
             // 
@@ -1728,6 +1506,7 @@
             this.label79.TabIndex = 183;
             this.label79.Text = "隐藏";
             this.label79.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label79.MouseEnter += new System.EventHandler(this.label79_MouseEnter);
             // 
             // HidePercentTextBox
             // 
@@ -1749,6 +1528,7 @@
             this.label80.TabIndex = 185;
             this.label80.Text = "耐力";
             this.label80.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label80.MouseEnter += new System.EventHandler(this.label80_MouseEnter);
             // 
             // EndurancePercentTextBox
             // 
@@ -1770,6 +1550,7 @@
             this.label81.TabIndex = 187;
             this.label81.Text = "负重";
             this.label81.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label81.MouseEnter += new System.EventHandler(this.label81_MouseEnter);
             // 
             // LoadPercentTextBox
             // 
@@ -1791,6 +1572,7 @@
             this.label82.TabIndex = 189;
             this.label82.Text = "精力";
             this.label82.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label82.MouseEnter += new System.EventHandler(this.label82_MouseEnter);
             // 
             // EnergyPercentTextBox
             // 
@@ -1812,6 +1594,7 @@
             this.label83.TabIndex = 191;
             this.label83.Text = "法伤";
             this.label83.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label83.MouseEnter += new System.EventHandler(this.label83_MouseEnter);
             // 
             // SpellDamagePercentTextBox
             // 
@@ -1833,6 +1616,7 @@
             this.label84.TabIndex = 193;
             this.label84.Text = "常识";
             this.label84.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label84.MouseEnter += new System.EventHandler(this.label84_MouseEnter);
             // 
             // NousPercentTextBox
             // 
@@ -1854,6 +1638,7 @@
             this.label85.TabIndex = 195;
             this.label85.Text = "理智";
             this.label85.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label85.MouseEnter += new System.EventHandler(this.label85_MouseEnter);
             // 
             // SanityPercentTextBox
             // 
@@ -1875,6 +1660,7 @@
             this.label86.TabIndex = 197;
             this.label86.Text = "幸运";
             this.label86.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label86.MouseEnter += new System.EventHandler(this.label86_MouseEnter);
             // 
             // LuckPercentTextBox
             // 
@@ -1963,6 +1749,7 @@
             this.label51.TabIndex = 111;
             this.label51.Text = "生命";
             this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label51.MouseEnter += new System.EventHandler(this.label51_MouseEnter);
             // 
             // HPAdditionTextBox
             // 
@@ -1984,6 +1771,7 @@
             this.label52.TabIndex = 113;
             this.label52.Text = "命回";
             this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label52.MouseEnter += new System.EventHandler(this.label52_MouseEnter);
             // 
             // HPRecoveryAdditionTextBox
             // 
@@ -2005,6 +1793,7 @@
             this.label53.TabIndex = 115;
             this.label53.Text = "魔法";
             this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label53.MouseEnter += new System.EventHandler(this.label53_MouseEnter);
             // 
             // MANAAdditionTextBox
             // 
@@ -2026,6 +1815,7 @@
             this.label54.TabIndex = 117;
             this.label54.Text = "法回";
             this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label54.MouseEnter += new System.EventHandler(this.label54_MouseEnter);
             // 
             // MANARecoveryAdditionTextBox
             // 
@@ -2047,6 +1837,7 @@
             this.label55.TabIndex = 119;
             this.label55.Text = "速度";
             this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label55.MouseEnter += new System.EventHandler(this.label55_MouseEnter);
             // 
             // SpeedAdditionTextBox
             // 
@@ -2068,6 +1859,7 @@
             this.label56.TabIndex = 121;
             this.label56.Text = "咏唱";
             this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label56.MouseEnter += new System.EventHandler(this.label56_MouseEnter);
             // 
             // ChantAdditionTextBox
             // 
@@ -2089,6 +1881,7 @@
             this.label57.TabIndex = 123;
             this.label57.Text = "命中";
             this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label57.MouseEnter += new System.EventHandler(this.label57_MouseEnter);
             // 
             // AccuracyAdditionTextBox
             // 
@@ -2110,6 +1903,7 @@
             this.label58.TabIndex = 125;
             this.label58.Text = "回避";
             this.label58.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label58.MouseEnter += new System.EventHandler(this.label58_MouseEnter);
             // 
             // DodgeAdditionTextBox
             // 
@@ -2130,6 +1924,7 @@
             this.label59.TabIndex = 127;
             this.label59.Text = "会心";
             this.label59.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label59.MouseEnter += new System.EventHandler(this.label59_MouseEnter);
             // 
             // CriticalAdditionTextBox
             // 
@@ -2151,6 +1946,7 @@
             this.label61.TabIndex = 129;
             this.label61.Text = "增伤";
             this.label61.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label61.MouseEnter += new System.EventHandler(this.label61_MouseEnter);
             // 
             // DamageGainAdditionTextBox
             // 
@@ -2172,6 +1968,7 @@
             this.label62.TabIndex = 131;
             this.label62.Text = "减伤";
             this.label62.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label62.MouseEnter += new System.EventHandler(this.label62_MouseEnter);
             // 
             // DamageMitigationAdditionTextBox
             // 
@@ -2193,6 +1990,7 @@
             this.label63.TabIndex = 133;
             this.label63.Text = "增益";
             this.label63.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label63.MouseEnter += new System.EventHandler(this.label63_MouseEnter);
             // 
             // GainAdditionTextBox
             // 
@@ -2214,6 +2012,7 @@
             this.label64.TabIndex = 135;
             this.label64.Text = "咒抗";
             this.label64.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label64.MouseEnter += new System.EventHandler(this.label64_MouseEnter);
             // 
             // SpellResistanceAdditionTextBox
             // 
@@ -2235,6 +2034,7 @@
             this.label65.TabIndex = 137;
             this.label65.Text = "经验";
             this.label65.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label65.MouseEnter += new System.EventHandler(this.label65_MouseEnter);
             // 
             // ExpAdditionTextBox
             // 
@@ -2256,6 +2056,7 @@
             this.label66.TabIndex = 139;
             this.label66.Text = "隐藏";
             this.label66.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label66.MouseEnter += new System.EventHandler(this.label66_MouseEnter);
             // 
             // HideAdditionTextBox
             // 
@@ -2277,6 +2078,7 @@
             this.label67.TabIndex = 141;
             this.label67.Text = "耐力";
             this.label67.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label67.MouseEnter += new System.EventHandler(this.label67_MouseEnter);
             // 
             // EnduranceAdditionTextBox
             // 
@@ -2298,6 +2100,7 @@
             this.label68.TabIndex = 143;
             this.label68.Text = "负重";
             this.label68.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label68.MouseEnter += new System.EventHandler(this.label68_MouseEnter);
             // 
             // LoadAdditionTextBox
             // 
@@ -2319,6 +2122,7 @@
             this.label69.TabIndex = 145;
             this.label69.Text = "精力";
             this.label69.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label69.MouseEnter += new System.EventHandler(this.label69_MouseEnter);
             // 
             // EnergyAdditionTextBox
             // 
@@ -2340,6 +2144,7 @@
             this.label41.TabIndex = 147;
             this.label41.Text = "法伤";
             this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label41.MouseEnter += new System.EventHandler(this.label41_MouseEnter);
             // 
             // SpellDamageAdditionTextBox
             // 
@@ -2361,6 +2166,7 @@
             this.label42.TabIndex = 149;
             this.label42.Text = "常识";
             this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label42.MouseEnter += new System.EventHandler(this.label42_MouseEnter);
             // 
             // NousAdditionTextBox
             // 
@@ -2382,6 +2188,7 @@
             this.label43.TabIndex = 151;
             this.label43.Text = "理智";
             this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label43.MouseEnter += new System.EventHandler(this.label43_MouseEnter);
             // 
             // SanityAdditionTextBox
             // 
@@ -2403,6 +2210,7 @@
             this.label44.TabIndex = 153;
             this.label44.Text = "幸运";
             this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label44.MouseEnter += new System.EventHandler(this.label44_MouseEnter);
             // 
             // LuckAdditionTextBox
             // 
@@ -2464,6 +2272,7 @@
             this.label20.TabIndex = 129;
             this.label20.Text = "力量";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label20.MouseEnter += new System.EventHandler(this.label20_MouseEnter);
             // 
             // StrengthPercentTextBox
             // 
@@ -2485,6 +2294,7 @@
             this.label21.TabIndex = 131;
             this.label21.Text = "体质";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label21.MouseEnter += new System.EventHandler(this.label21_MouseEnter);
             // 
             // PhysiquePercentTextBox
             // 
@@ -2506,6 +2316,7 @@
             this.label22.TabIndex = 133;
             this.label22.Text = "灵巧";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label22.MouseEnter += new System.EventHandler(this.label22_MouseEnter);
             // 
             // NimblePercentTextBox
             // 
@@ -2527,6 +2338,7 @@
             this.label23.TabIndex = 135;
             this.label23.Text = "魔力";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label23.MouseEnter += new System.EventHandler(this.label23_MouseEnter);
             // 
             // MagicPercentTextBox
             // 
@@ -2548,6 +2360,7 @@
             this.label24.TabIndex = 137;
             this.label24.Text = "知识";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label24.MouseEnter += new System.EventHandler(this.label24_MouseEnter);
             // 
             // LorePercentTextBox
             // 
@@ -2569,6 +2382,7 @@
             this.label25.TabIndex = 139;
             this.label25.Text = "灵感";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label25.MouseEnter += new System.EventHandler(this.label25_MouseEnter);
             // 
             // InspirationPercentTextBox
             // 
@@ -2590,6 +2404,7 @@
             this.label26.TabIndex = 141;
             this.label26.Text = "感知";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label26.MouseEnter += new System.EventHandler(this.label26_MouseEnter);
             // 
             // PerceptionPercentTextBox
             // 
@@ -2611,6 +2426,7 @@
             this.label27.TabIndex = 143;
             this.label27.Text = "魅力";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label27.MouseEnter += new System.EventHandler(this.label27_MouseEnter);
             // 
             // GlamourPercentTextBox
             // 
@@ -2632,6 +2448,7 @@
             this.label29.TabIndex = 145;
             this.label29.Text = "意志";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label29.MouseEnter += new System.EventHandler(this.label29_MouseEnter);
             // 
             // ResolutionPercentTextBox
             // 
@@ -2693,6 +2510,7 @@
             this.label10.TabIndex = 111;
             this.label10.Text = "力量";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label10.MouseEnter += new System.EventHandler(this.label10_MouseEnter);
             // 
             // StrengthAdditionTextBox
             // 
@@ -2714,6 +2532,7 @@
             this.label11.TabIndex = 113;
             this.label11.Text = "体质";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label11.MouseEnter += new System.EventHandler(this.label11_MouseEnter);
             // 
             // PhysiqueAdditionTextBox
             // 
@@ -2735,6 +2554,7 @@
             this.label12.TabIndex = 115;
             this.label12.Text = "灵巧";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label12.MouseEnter += new System.EventHandler(this.label12_MouseEnter);
             // 
             // NimbleAdditionTextBox
             // 
@@ -2756,6 +2576,7 @@
             this.label13.TabIndex = 117;
             this.label13.Text = "魔力";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label13.MouseEnter += new System.EventHandler(this.label13_MouseEnter);
             // 
             // MagicAdditionTextBox
             // 
@@ -2777,6 +2598,7 @@
             this.label14.TabIndex = 119;
             this.label14.Text = "知识";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label14.MouseEnter += new System.EventHandler(this.label14_MouseEnter);
             // 
             // LoreAdditionTextBox
             // 
@@ -2798,6 +2620,7 @@
             this.label15.TabIndex = 121;
             this.label15.Text = "灵感";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label15.MouseEnter += new System.EventHandler(this.label15_MouseEnter);
             // 
             // InspirationAdditionTextBox
             // 
@@ -2819,6 +2642,7 @@
             this.label16.TabIndex = 123;
             this.label16.Text = "感知";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label16.MouseEnter += new System.EventHandler(this.label16_MouseEnter);
             // 
             // PerceptionAdditionTextBox
             // 
@@ -2840,6 +2664,7 @@
             this.label17.TabIndex = 125;
             this.label17.Text = "魅力";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label17.MouseEnter += new System.EventHandler(this.label17_MouseEnter);
             // 
             // GlamourAdditionTextBox
             // 
@@ -2861,6 +2686,7 @@
             this.label18.TabIndex = 127;
             this.label18.Text = "意志";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label18.MouseEnter += new System.EventHandler(this.label18_MouseEnter);
             // 
             // ResolutionAdditionTextBox
             // 
@@ -2886,7 +2712,7 @@
             this.ResultGroupBox.Controls.Add(this.flowLayoutPanel8);
             this.ResultGroupBox.Controls.Add(this.flowLayoutPanel9);
             this.ResultGroupBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ResultGroupBox.Location = new System.Drawing.Point(0, 553);
+            this.ResultGroupBox.Location = new System.Drawing.Point(0, 528);
             this.ResultGroupBox.Name = "ResultGroupBox";
             this.ResultGroupBox.Padding = new System.Windows.Forms.Padding(10);
             this.ResultGroupBox.Size = new System.Drawing.Size(1283, 145);
@@ -3635,9 +3461,9 @@
             this.LogGroupBox.CausesValidation = false;
             this.LogGroupBox.Controls.Add(this.LogTextBox);
             this.LogGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LogGroupBox.Location = new System.Drawing.Point(0, 698);
+            this.LogGroupBox.Location = new System.Drawing.Point(0, 673);
             this.LogGroupBox.Name = "LogGroupBox";
-            this.LogGroupBox.Size = new System.Drawing.Size(1283, 145);
+            this.LogGroupBox.Size = new System.Drawing.Size(1283, 170);
             this.LogGroupBox.TabIndex = 56;
             this.LogGroupBox.TabStop = false;
             this.LogGroupBox.Text = "日志";
@@ -3651,7 +3477,7 @@
             this.LogTextBox.Name = "LogTextBox";
             this.LogTextBox.ReadOnly = true;
             this.LogTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LogTextBox.Size = new System.Drawing.Size(1277, 125);
+            this.LogTextBox.Size = new System.Drawing.Size(1277, 150);
             this.LogTextBox.TabIndex = 0;
             // 
             // MenuStrip
@@ -3680,6 +3506,10 @@
             this.SaveMenuItem.Size = new System.Drawing.Size(144, 22);
             this.SaveMenuItem.Text = "保存";
             this.SaveMenuItem.Click += new System.EventHandler(this.SaveMenuItem_Click);
+            // 
+            // ToolTip
+            // 
+            this.ToolTip.ToolTipTitle = "上次快照保存的属性";
             // 
             // DataForm
             // 
@@ -3812,23 +3642,23 @@
         private System.Windows.Forms.GroupBox LogGroupBox;
         private System.Windows.Forms.TextBox LogTextBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label StrengthLabel;
         private System.Windows.Forms.TextBox StrengthTextBox;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label PhysiqueLabel;
         private System.Windows.Forms.TextBox PhysiqueTextBox;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label NimbleLabel;
         private System.Windows.Forms.TextBox NimbleTextBox;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label MagicLabel;
         private System.Windows.Forms.TextBox MagicTextBox;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label LoreLabel;
         private System.Windows.Forms.TextBox LoreTextBox;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label InspirationLabel;
         private System.Windows.Forms.TextBox InspirationTextBox;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label PerceptionLabel;
         private System.Windows.Forms.TextBox PerceptionTextBox;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label GlamourLabel;
         private System.Windows.Forms.TextBox GlamourTextBox;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label ResolutionLabel;
         private System.Windows.Forms.TextBox ResolutionTextBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
@@ -3956,51 +3786,6 @@
         private System.Windows.Forms.TextBox SanityResultTextBox;
         private System.Windows.Forms.Label label108;
         private System.Windows.Forms.TextBox LuckResultTextBox;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;
-        private System.Windows.Forms.Label label118;
-        private System.Windows.Forms.TextBox HPTextBox;
-        private System.Windows.Forms.Label label119;
-        private System.Windows.Forms.TextBox HPRecoveryTextBox;
-        private System.Windows.Forms.Label label120;
-        private System.Windows.Forms.TextBox MANATextBox;
-        private System.Windows.Forms.Label label121;
-        private System.Windows.Forms.TextBox MANARecoveryTextBox;
-        private System.Windows.Forms.Label label122;
-        private System.Windows.Forms.TextBox SpeedTextBox;
-        private System.Windows.Forms.Label label123;
-        private System.Windows.Forms.TextBox ChantTextBox;
-        private System.Windows.Forms.Label label124;
-        private System.Windows.Forms.TextBox AccuracyTextBox;
-        private System.Windows.Forms.Label label125;
-        private System.Windows.Forms.TextBox DodgeTextBox;
-        private System.Windows.Forms.Label label126;
-        private System.Windows.Forms.TextBox CriticalTextBox;
-        private System.Windows.Forms.Label label127;
-        private System.Windows.Forms.TextBox DamageGainTextBox;
-        private System.Windows.Forms.Label label128;
-        private System.Windows.Forms.TextBox DamageMitigationTextBox;
-        private System.Windows.Forms.Label label129;
-        private System.Windows.Forms.TextBox GainTextBox;
-        private System.Windows.Forms.Label label130;
-        private System.Windows.Forms.TextBox SpellResistanceTextBox;
-        private System.Windows.Forms.Label label131;
-        private System.Windows.Forms.TextBox ExpTextBox;
-        private System.Windows.Forms.Label label132;
-        private System.Windows.Forms.TextBox HideTextBox;
-        private System.Windows.Forms.Label label133;
-        private System.Windows.Forms.TextBox EnduraceTextBox;
-        private System.Windows.Forms.Label label134;
-        private System.Windows.Forms.TextBox LoadTextBox;
-        private System.Windows.Forms.Label label135;
-        private System.Windows.Forms.TextBox EnergyTextBox;
-        private System.Windows.Forms.Label label136;
-        private System.Windows.Forms.TextBox SpellDamageTextBox;
-        private System.Windows.Forms.Label label137;
-        private System.Windows.Forms.TextBox NousTextBox;
-        private System.Windows.Forms.Label label138;
-        private System.Windows.Forms.TextBox SanityTextBox;
-        private System.Windows.Forms.Label label139;
-        private System.Windows.Forms.TextBox LuckTextBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox StrengthGrowTextBox;
@@ -4026,5 +3811,26 @@
         private System.Windows.Forms.ToolStripMenuItem SaveMenuItem;
         private System.Windows.Forms.Button UpLevelButton;
         private System.Windows.Forms.Button DownLevelButton;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;
+        private System.Windows.Forms.Label label119;
+        private System.Windows.Forms.TextBox StrengthGrowValueTextBox;
+        private System.Windows.Forms.Label label120;
+        private System.Windows.Forms.TextBox PhysiqueGrowValueTextBox;
+        private System.Windows.Forms.Label label121;
+        private System.Windows.Forms.TextBox NimbleGrowValueTextBox;
+        private System.Windows.Forms.Label label122;
+        private System.Windows.Forms.TextBox MagicGrowValueTextBox;
+        private System.Windows.Forms.Label label123;
+        private System.Windows.Forms.TextBox LoreGrowValueTextBox;
+        private System.Windows.Forms.Label label124;
+        private System.Windows.Forms.TextBox InspirationGrowValueTextBox;
+        private System.Windows.Forms.Label label125;
+        private System.Windows.Forms.TextBox PerceptionGrowValueTextBox;
+        private System.Windows.Forms.Label label126;
+        private System.Windows.Forms.TextBox GlamourGrowValueTextBox;
+        private System.Windows.Forms.Label label127;
+        private System.Windows.Forms.TextBox ResolutionGrowValueTextBox;
+        private System.Windows.Forms.Label label118;
+        private System.Windows.Forms.ToolTip ToolTip;
     }
 }
